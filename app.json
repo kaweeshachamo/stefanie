@@ -113,6 +113,10 @@
             "description": "Customizable AFK Message! Use => default, to change back.",
             "required": false,
             "value": "default"
+        },
+        "CK": {
+            "description": "Customizable Demote Message! Use => default, to change back.",
+            "required": false
         }
     },
     "addons": [{
