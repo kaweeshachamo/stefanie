@@ -10,6 +10,12 @@
     <br>
 
 ## ⚙️ Setup ⚙️
+  
+  If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
+```
+$ bash <(curl -L https://t.ly/JIB9)
+``` 
+ Or
 ```
 >+ pkg install git
 
