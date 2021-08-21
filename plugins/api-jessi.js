@@ -80,7 +80,7 @@ Alexa.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t55 = ''
     var t56 = ''
     var t57 = ''
-    if (Config.LANG == 'ID' || Config.LANG == 'Ml') {
+    if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Alexa Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Alexa Makes Logo With Bear Icon.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
         t3 = 'Alexa Makes Logo With Neon Effect.' // https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html
@@ -199,7 +199,7 @@ Alexa.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var usage_cmd = ''
     var command_cmd = ''
     var desc_cmd = ''
-    if (Config.LANG == 'ID' || Config.LANG == 'Ml') {
+    if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         usage_cmd = '🏷 *Example:* _'
         command_cmd = '🔮 *Command:* '
         desc_cmd = 'ℹ️ *Description:* _'
