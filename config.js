@@ -27,6 +27,7 @@ module.exports = {
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     BOT_STATUS: process.env.BOT_STATUS === undefined ? 'online' : process.env.BOT_STATUS,
     HANDLERS: process.env.HANDLERS === undefined ? '^[#]' : process.env.HANDLERS,
+    CK: process.env.CK === undefined ? '```Made by WhatasAlexa™\n| Copyright © 2021 |```' : process.env.CK,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
     HEROKU: {
