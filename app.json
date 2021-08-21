@@ -115,7 +115,7 @@
             "value": "default"
         },
         "CK": {
-            "description": "Customizable Demote Message! Use => default, to change back.",
+            "description": "Caption text.",
             "required": false
         }
     },
