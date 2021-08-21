@@ -6,7 +6,7 @@
   <h1>WhatsAlexa</h1>
 </div>
 <p align="center">
-    WhatsAlexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Baileys. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
+    WhatsAlexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Modifiying as public @MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
     <br>
 
 ## ⚙️ Setup ⚙️
@@ -28,7 +28,7 @@
 
 ## 💫 Deploy WhatsAlexa on Heroku 💫
 
-[![Deploy-WhatsAlexa](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TOXIC-DEVIL/WhatsAlexa)
+[![Deploy-WhatsAlexa](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrChaby/WhatsAlexa)
 
 ## ❔ F A Q ( Frequently Asked Questions ) ❔
 
@@ -46,7 +46,7 @@ If you are concerned about security, you can install it on your own computer. If
 
 ### 📃 How Can I Download the Bot Script?
 
-You Can **[Click Here](https://github.com/TOXIC-DEVIL/WhatsAlexa/archive/refs/heads/master.zip)** To Download The **Bot Script**.. This Script is Free, So **Don't Sell This Script in High Price.**
+You Can **[Click Here](https://github.com/MrChaby/WhatsAlexa/archive/refs/heads/master.zip)** To Download The **Bot Script**.. This Script is Free, So **Don't Sell This Script in High Price.**
 
 ### ⚙ Is this a Heroku bot?
 
@@ -58,7 +58,7 @@ There are **3 Languages** in this Bot - **English ( US ), Malayalam ( India ), I
 
 ### ❗ Does our number will banned from WhatsApp by Using This Bot?
 
-If you are concerned about that, Then you can just use bot on a [Fake Number](https://youtu.be/v8lGcQp0RjQ). **[Also Read This](https://github.com/TOXIC-DEVIL/WhatsAlexa#-warnings--disclaimers-)**
+If you are concerned about that, Then you can just use bot on a [Fake Number](https://youtu.be/v8lGcQp0RjQ). **[Also Read This](https://github.com/MrChaby/WhatsAlexa#-warnings--disclaimers-)**
 
 ### 🔄 Can I Edit this bot?
 
