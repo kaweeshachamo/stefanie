@@ -277,7 +277,7 @@ Alexa.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/devil.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/devil.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -296,7 +296,7 @@ Alexa.addCommand({pattern: 'sci ?(.*)', fromMe: wk, dontAddCommandList: true}, (
               };
 
               await download(`${data}`, '/root/WhatsAlexa/sci.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/sci.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/sci.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -315,7 +315,7 @@ Alexa.addCommand({pattern: '2devil ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/devil2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/devil2.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/devil2.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -343,7 +343,7 @@ Alexa.addCommand({pattern: 'hub ?(.*)', fromMe: wk, dontAddCommandList: true}, (
               };
 
               await download(`${data}`, '/root/WhatsAlexa/hub.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/hub.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/hub.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -371,7 +371,7 @@ Alexa.addCommand({pattern: 'retro ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/retr.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/retr.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/retr.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -390,7 +390,7 @@ Alexa.addCommand({pattern: '3graf ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t3gr.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t3gr.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t3gr.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -409,7 +409,7 @@ Alexa.addCommand({pattern: 'berry ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/bry.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bry.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bry.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -428,7 +428,7 @@ Alexa.addCommand({pattern: '4sand ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t4snd.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t4snd.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t4snd.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -447,7 +447,7 @@ Alexa.addCommand({pattern: '3sand ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t3snd.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t3snd.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t3snd.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -466,7 +466,7 @@ Alexa.addCommand({pattern: '2sand ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t2snd.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2snd.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2snd.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -485,7 +485,7 @@ Alexa.addCommand({pattern: 'sand ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/snd.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/snd.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/snd.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -504,7 +504,7 @@ Alexa.addCommand({pattern: '2fire ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/fh.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/fh.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/fh.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -523,7 +523,7 @@ Alexa.addCommand({pattern: 'pink ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/tpink.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tpink.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tpink.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -542,7 +542,7 @@ Alexa.addCommand({pattern: '2blood ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/cbld.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/cbld.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/cbld.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -561,7 +561,7 @@ Alexa.addCommand({pattern: 'blood ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/bld.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bld.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bld.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -580,7 +580,7 @@ Alexa.addCommand({pattern: '2light ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t2lgh.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2lgh.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2lgh.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -599,7 +599,7 @@ Alexa.addCommand({pattern: 'robo ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/robo.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/robo.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/robo.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -627,7 +627,7 @@ Alexa.addCommand({pattern: '3d ?(.*)', fromMe: wk, dontAddCommandList: true}, (a
               };
 
               await download(`${data}`, '/root/WhatsAlexa/3dl.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/3dl.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/3dl.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -646,7 +646,7 @@ Alexa.addCommand({pattern: 'art ?(.*)', fromMe: wk, dontAddCommandList: true}, (
               };
 
               await download(`${data}`, '/root/WhatsAlexa/tart.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tart.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tart.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -665,7 +665,7 @@ Alexa.addCommand({pattern: 'wcolor ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/wcolor.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/wcolor.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/wcolor.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -684,7 +684,7 @@ Alexa.addCommand({pattern: 'magma ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/magma.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/magma.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/magma.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -703,7 +703,7 @@ Alexa.addCommand({pattern: 'metal ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/metal.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/metal.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/metal.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -722,7 +722,7 @@ Alexa.addCommand({pattern: 'paper ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/papert.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/papert.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/papert.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -741,7 +741,7 @@ Alexa.addCommand({pattern: 'bglass ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/glass.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/glass.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/glass.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -760,7 +760,7 @@ Alexa.addCommand({pattern: '5neon ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t5neon.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t5neon.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t5neon.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -779,7 +779,7 @@ Alexa.addCommand({pattern: 'gradient ?(.*)', fromMe: wk, dontAddCommandList: tru
               };
 
               await download(`${data}`, '/root/WhatsAlexa/tgrone.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tgrone.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tgrone.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -798,7 +798,7 @@ Alexa.addCommand({pattern: '2harry ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/hp2n.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/hp2n.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/hp2n.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -817,7 +817,7 @@ Alexa.addCommand({pattern: 'stone ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/stone.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/stone.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/stone.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -836,7 +836,7 @@ Alexa.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/bear.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bear.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bear.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -864,7 +864,7 @@ Alexa.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/wolf.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/wolf.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/wolf.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -883,7 +883,7 @@ Alexa.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/neon.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/neon.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/neon.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -902,7 +902,7 @@ Alexa.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/neon2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/neon2.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/neon2.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -921,7 +921,7 @@ Alexa.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/li.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/li.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/li.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -940,7 +940,7 @@ Alexa.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/joker.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/joker.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/joker.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -968,7 +968,7 @@ Alexa.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/ninja.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/ninja.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/ninja.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -987,7 +987,7 @@ Alexa.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true
               };
 
               await download(`${data}`, '/root/WhatsAlexa/tt.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tt.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tt.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1006,7 +1006,7 @@ Alexa.addCommand({pattern: 'tbokeh ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/bkh.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bkh.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/bkh.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1034,7 +1034,7 @@ Alexa.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/marvel.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/marvel.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/marvel.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1062,7 +1062,7 @@ Alexa.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true
               };
 
               await download(`${data}`, '/root/WhatsAlexa/mar2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/mar2.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/mar2.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1090,7 +1090,7 @@ Alexa.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: tru
               };
 
               await download(`${data}`, '/root/WhatsAlexa/aven.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/aven.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/aven.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1117,7 +1117,7 @@ Alexa.addCommand({pattern: '2glitch ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
               await download(`${data}`, '/root/WhatsAlexa/t2gl.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2gl.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2gl.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1145,7 +1145,7 @@ Alexa.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAlexa/tt2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tt2.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tt2.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1173,7 +1173,7 @@ Alexa.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/ttgra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/ttgra.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/ttgra.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1201,7 +1201,7 @@ Alexa.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t2gra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2gra.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t2gra.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1229,7 +1229,7 @@ Alexa.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/lion.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/lion.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/lion.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1248,7 +1248,7 @@ Alexa.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/neon3.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/neon3.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/neon3.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1267,7 +1267,7 @@ Alexa.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (
               };
 
               await download(`${data}`, '/root/WhatsAlexa/ice.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/ice.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/ice.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1295,7 +1295,7 @@ Alexa.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/space.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/space.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/space.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1314,7 +1314,7 @@ Alexa.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/smoke.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/smoke.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/smoke.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1329,7 +1329,7 @@ Alexa.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, 
     };
     var uri = encodeURI(match[1])
     await download(`https://api.xteam.xyz/photooxy/neonlight?text=${uri}&APIKEY=da5fb2b73ae3e451`, '/root/WhatsAlexa/glowttp.jpg', async() => {                          
-        await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/glowttp.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+        await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/glowttp.jpg'), MessageType.image, { caption: Config.CK})
     })
 }));
 Alexa.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
@@ -1344,7 +1344,7 @@ Alexa.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAlexa/tfire.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tfire.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/tfire.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1363,7 +1363,7 @@ Alexa.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/hp.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/hp.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1382,7 +1382,7 @@ Alexa.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAlexa/t4n.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t4n.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/t4n.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1401,7 +1401,7 @@ Alexa.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: tru
               };
 
               await download(`${data}`, '/root/WhatsAlexa/cmth.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/cmth.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/cmth.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
@@ -1420,7 +1420,7 @@ Alexa.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (
               };
 
               await download(`${data}`, '/root/WhatsAlexa/cup.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/cup.jpg'), MessageType.image, { caption: 'Made by WhatsAlexa' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAlexa/cup.jpg'), MessageType.image, { caption: Config.CK})
               })
           } catch(err) { 
               console.log(err)
