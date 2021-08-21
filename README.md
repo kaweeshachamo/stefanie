@@ -25,6 +25,9 @@
 
 >+ node alexa.js
 ```
+## 🪀 Get Baileys-Api 🪀
+  
+ [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@SlChaBy/WhatsAlexa-BaileysApi)
 
 ## 💫 Deploy WhatsAlexa on Heroku 💫
 
