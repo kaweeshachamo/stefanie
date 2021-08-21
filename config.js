@@ -39,5 +39,6 @@ module.exports = {
     RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? false : process.env.REMOVE_BG_API_KEY,
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
     DEBUG: DEBUG,
-    WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG"
+    WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG",
+    SUPPORT: "94757534153-1620882073"
 };
