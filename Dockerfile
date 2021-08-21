@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/TOXIC-DEVIL/WhatsAlexa /root/WhatsAlexa
+RUN git clone https://github.com/MrChaby/WhatsAlexa /root/WhatsAlexa
 WORKDIR /root/WhatsAlexa/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
