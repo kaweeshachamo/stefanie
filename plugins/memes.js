@@ -5,11 +5,13 @@ const fs = require('fs')
 const Config = require('../config');
 
 const Language = require('../language');
-const Lang = Language.getString('memes');
+const MEMES_DESC = "its make meme txts"
+const DOWNLOADING = "*whatsalexa making meme plz wait 😂👍*"
+const 
 
 if (Config.WORKTYPE == 'private') {
 
-    whatsalexa.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC}, (async (message, match) => {   
+    whatsalexa.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: MEMES_DESC}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
@@ -23,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
             bottomText = '';
         }
     
-	    var info = await message.reply(Lang.DOWNLOADING);
+	    var info = await message.reply(DOWNLOADING);
 	
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -47,7 +49,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    whatsalexa.addCommand({pattern: 'meme ?(.*)', fromMe: false, desc: Lang.MEMES_DESC}, (async (message, match) => {    
+    whatsalexa.addCommand({pattern: 'meme ?(.*)', fromMe: false, desc: MEMES_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
@@ -61,7 +63,7 @@ else if (Config.WORKTYPE == 'public') {
             bottomText = '';
         }
     
-	    var info = await message.reply(Lang.DOWNLOADING);
+	    var info = await message.reply(DOWNLOADING);
 	
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
