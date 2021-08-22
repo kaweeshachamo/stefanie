@@ -6,7 +6,7 @@
   <h1>WhatsAlexa Modified Version</h1>
 </div>
 <p align="center">
-    WhatsAlexa Modified Version is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Modified @MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
+    WhatsAlexa Modified Version is a Helper WhatsApp Bot Written By @TOXIC-DEVIL & Modified @MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
     <br>
 
 ## ⚙️ Setup ⚙️
