@@ -3,10 +3,10 @@
 
 <div align="center">
   <img src="https://rotf.lol/Whats-Alexa-Gif-TOXIC-DEVIL" width="200" height="200">
-  <h1>WhatsAlexa</h1>
+  <h1>WhatsAlexa Modified Version</h1>
 </div>
 <p align="center">
-    WhatsAlexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Modifiying as public @MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
+    WhatsAlexa Modified Version is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Modified @MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
     <br>
 
 ## ⚙️ Setup ⚙️
