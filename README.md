@@ -92,3 +92,12 @@ There are **50+** Features/Commands Are there in **this bot!** You can see **all
 - [x] simi simi chatbot
 
 - [ ] Replika chatbot
+
+## 💗 Credit 💗
+ 
+-**whatsalexa**
+  I will give toxic devil credits on my forked/cloned ropo of WhatsAlexa. I will never change it [©TOXIC-DEVIL 💗 WhatsAlexa](https://github.com/TOXIC-DEVIL/WhatsAlexa).
+
+  Also Feel free to contribute & issue [report issues & feature request on issue session of the ropo](https://github.com/TOXIC-DEVIL/WhatsAlexa)... 🙂❤️
+  
+  **Copyright © 2021 whatsalexa**
