@@ -117,6 +117,10 @@
         "CK": {
             "description": "Caption text.",
             "required": false
+        },
+        "RBG_API": {
+            "description": "Removes the background of the photos. Get Api https://remove.bg",
+            "required": false
         }
     },
     "addons": [{
