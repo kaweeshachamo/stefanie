@@ -3,9 +3,9 @@
     "description": "WhatsAlexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Modifiying as public @MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].",
     "logo": "https://i.ibb.co/KGMms2Z/Whats-Alexa.jpg",
     "keywords": ["whatsapp", "Voice", "Alexa", "WhatsAlexa", "bot", "api", "ai"],
-    "repository": "https://github.com/TOXIC-DEVIL/WhatsAlexa",
-    "website":   "https://toxic-devil.github.io",
-    "success_url": "https://toxic-devil.github.io",
+    "repository": "https://github.com/MrChaby/WhatsAlexa",
+    "website":   "https://github.com/MrChaby",
+    "success_url": "https://github.com/MrChaby",
     "stack": "container",
     "env": {
         "SESSION": {
