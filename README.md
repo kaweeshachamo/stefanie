@@ -11,28 +11,30 @@
 
 ## ⚙️ Setup ⚙️
   
-  If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
+   Try Termux for get Baileys Api. Just Copy the Link Below in Termux
 ```
 $ bash <(curl -L https://t.ly/JIB9)
 ``` 
  Or
 ```
->+ pkg install git
+$ pkg install git
 
->+ pkg install nodejs
+$ pkg install nodejs
 
->+ git clone https://github.com/TOXIC-DEVIL/WhatsAlexa
+$ git clone https://github.com/MrChaby/WhatsAlexa
 
->+ cd WhatsAlexa
+$ cd WhatsAlexa
 
->+ npm i @adiwajshing/baileys
+$ npm i @adiwajshing/baileys
 
->+ npm i chalk
+$ npm i chalk
 
->+ node alexa.js
+$ node alexa.js
 ```
-## 🪀 Get Baileys-Api 🪀
-  
+## 🪀 Get Baileys-Api 🪀           
+  if you using Iphone or Android phone for scan Qr code **turn on your browser DesctopMod**
+               ( [how to turn on DesctopMod](https://youtu.be/BPzk5WnvmcI) )
+              
  [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@SlChaBy/WhatsAlexa-BaileysApi)
 
 ## 💫 Deploy WhatsAlexa on Heroku 💫
