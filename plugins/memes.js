@@ -7,7 +7,6 @@ const Config = require('../config');
 const Language = require('../language');
 const MEMES_DESC = "its make meme txts"
 const DOWNLOADING = "*whatsalexa making meme plz wait 😂👍*"
-const 
 
 if (Config.WORKTYPE == 'private') {
 
