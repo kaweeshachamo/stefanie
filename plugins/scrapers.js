@@ -147,7 +147,7 @@ if (config.WORKTYPE == 'private') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', quoted: message.data});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
             });
     }));
 
@@ -173,7 +173,7 @@ if (config.WORKTYPE == 'private') {
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, quoted: message.data});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
         });
     }));
 
@@ -190,7 +190,7 @@ if (config.WORKTYPE == 'private') {
         try {
             var arama = await yts(match[1]);
         } catch {
-            return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text, {quoted: message.data});
+            return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
         }
     
         var mesaj = '';
@@ -216,7 +216,7 @@ if (config.WORKTYPE == 'private') {
             .page(match[1]);
 
         var info = await arama.rawContent();
-        await message.client.sendMessage(message.jid, info, MessageType.text);
+        await message.client.sendMessage(message.jid, info, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }});
         await reply.delete();
     }));
 
@@ -234,7 +234,7 @@ if (config.WORKTYPE == 'private') {
                 var stream = get.buffer();
                 
                 stream.then(async (image) => {
-                    await message.client.sendMessage(message.jid,image, MessageType.image);
+                    await message.client.sendMessage(message.jid,image, MessageType.image, {contextInfo: { forwardingScore: 1000, isForwarded: true }});
                 });
             }
 
@@ -414,7 +414,7 @@ else if (config.WORKTYPE == 'public') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', quoted: message.data});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
             });
     }));
 
@@ -440,7 +440,7 @@ else if (config.WORKTYPE == 'public') {
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, quoted: message.data});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
         });
     }));
 
@@ -462,10 +462,10 @@ else if (config.WORKTYPE == 'public') {
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '*» ' + video.title + '* \n♪ ' + video.url + '\n'
+            mesaj += '*» ' + video.title + '* \n ✲ ' + video.url + '\n'
         });
 
-        await message.client.sendMessage(message.jid,mesaj,MessageType.text, {quoted: message.data});
+        await message.client.sendMessage(message.jid,mesaj,MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
         await reply.delete();
     }));
 
@@ -501,7 +501,7 @@ else if (config.WORKTYPE == 'public') {
                 var stream = get.buffer();
                 
                 stream.then(async (image) => {
-                    await message.client.sendMessage(message.jid,image, MessageType.image);
+                    await message.client.sendMessage(message.jid,image, MessageType.image, {contextInfo: { forwardingScore: 1000, isForwarded: true }});
                 });
             }
 
