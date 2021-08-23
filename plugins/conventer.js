@@ -11,7 +11,6 @@ const Axios = require('axios');
 
 const Language = require('../language');
 const Lang = Language.getString('conventer');
-const MP4TOAUDİO_DESC = "Convert animated sticker to video"
 
 function webp2mp4File(path) {
     return new Promise(async (resolve, reject) => {
@@ -61,7 +60,7 @@ function webp2mp4File(path) {
 
 if (Config.WORKTYPE == 'private') {
 
-    whatsalexa.addCommand({pattern: 'mp3$', fromMe: true, desc: MP4TOAUDİO_DESC}, (async (message, match) => {    
+    whatsalexa.addCommand({pattern: 'mp3$', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -126,7 +125,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    whatsalexa.addCommand({pattern: 'mp3$', fromMe: false, desc: MP4TOAUDİO_DESC}, (async (message, match) => {    
+    whatsalexa.addCommand({pattern: 'mp3$', fromMe: false, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
