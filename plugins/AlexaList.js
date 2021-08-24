@@ -3,6 +3,7 @@ let Config = require('../config');
 let {MessageType} = require('@adiwajshing/baileys');
 let Language = require('../language');
 let Lang = Language.getString('list');
+let WhatsAlexa = fs.readFileSync('./src/image/alexa.jpg') 
 
 if (Config.WORKTYPE == 'private') {
 
