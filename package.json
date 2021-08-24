@@ -64,7 +64,6 @@
     "translatte": "^3.0.0",
     "wikijs": "^6.2.3",
     "yt-search": "^2.7.4",
-    "ytdl-core": "^4.8.3",
-    "textmaker-thiccy": "1.2.1"
+    "ytdl-core": "^4.8.3"
   }
 }
