@@ -5,7 +5,6 @@ const {MessageType} = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Lang = Language.getString('list');
 const fs = require("fs")
-const WhatsAlexa = fs.readFileSync('./src/image/alexa.jpg')  
 
 if (Config.WORKTYPE == 'private') {
 
