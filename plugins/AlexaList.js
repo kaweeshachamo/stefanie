@@ -40,7 +40,7 @@ if (Config.WORKTYPE == 'private') {
             );
         
             await message.client.sendMessage(
-                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }
+                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 9, isForwarded: true }
             })
         } else {
 
@@ -76,7 +76,7 @@ if (Config.WORKTYPE == 'private') {
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
             await message.client.sendMessage(
-                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }
+                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 9, isForwarded: true }
             })
         }
     }));
@@ -117,7 +117,7 @@ else if (Config.WORKTYPE == 'public') {
             );
         
             await message.client.sendMessage(
-                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }
+                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 9, isForwarded: true }
             })
         } else {
 
@@ -153,7 +153,7 @@ else if (Config.WORKTYPE == 'public') {
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
             await message.client.sendMessage(
-                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }
+                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 9, isForwarded: true }
             })
         }
     }));
