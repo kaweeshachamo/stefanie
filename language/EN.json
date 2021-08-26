@@ -162,7 +162,7 @@
             "PLAY_DESC": "Uploads the document mp3 format ( recomend for ios ).",
             "NEED_TEXT_SONG": "*Please write a song!*\n*Example:* ```.song eminem - rap god```",
             "NO_RESULT": "*I couldn't find anything :(*",
-            "DOWNLOADING_SONG": "```Downloading your song```",
+            "DOWNLOADING_SONG": "```Now I am Downloading Your Song ⏳\n\nPlease Wait 😊```",
             "UPLOADING_SONG": "```Uploading your song```",
             "VIDEO_DESC": "Downloads video from YouTube.",
             "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=S7cQ3b0iqLo```",
