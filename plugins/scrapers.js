@@ -113,7 +113,7 @@ if (config.WORKTYPE == 'private') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*« Title* : '+ title +'\n* Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, ptt: false});
             });
     }));
@@ -146,7 +146,7 @@ if (config.WORKTYPE == 'private') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*« Title* : '+ title +'\n* Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
             });
     }));
@@ -380,7 +380,7 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*« Title* : '+ title +'\n* Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, ptt: false});
             });
     }));
@@ -413,7 +413,7 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*« Title* : '+ title +'\n* Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
             });
     }));
