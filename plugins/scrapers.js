@@ -118,7 +118,7 @@ if (config.WORKTYPE == 'private') {
             });
     }));
     
-    WhatsAlexa.addCommand({pattern: 'play ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    WhatsAlexa.addCommand({pattern: 'play ?(.*)', fromMe: true, desc: Lang.PLAY_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -385,7 +385,7 @@ else if (config.WORKTYPE == 'public') {
             });
     }));
     
-    WhatsAlexa.addCommand({pattern: 'play ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    WhatsAlexa.addCommand({pattern: 'play ?(.*)', fromMe: false, desc: Lang.PLAY_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
