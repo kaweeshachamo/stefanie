@@ -159,12 +159,13 @@
             "TTS_DESC": "It converts text to sound.",
             "TTS_ERROR": "```Error, Speech example of your sentence couldn't be made!```",
             "SONG_DESC": "Uploads the song you wrote.",
+            "PLAY_DESC": "Uploads the document mp3 format ( recomend for ios ).",
             "NEED_TEXT_SONG": "*Please write a song!*\n*Example:* ```.song eminem - rap god```",
             "NO_RESULT": "*I couldn't find anything :(*",
             "DOWNLOADING_SONG": "```Downloading your song```",
             "UPLOADING_SONG": "```Uploading your song```",
             "VIDEO_DESC": "Downloads video from YouTube.",
-            "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=S7cQ3b0iqLo```",
             "DOWNLOADING_VIDEO": "```Downloading your video```",
             "UPLOADING_VIDEO": "```Uploading your video```",
             "YT_DESC": "It searchs on YouTube.",
@@ -385,7 +386,7 @@
             "NOT_FOUND":"User not found: "
         },
         "github": {
-            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github TOXIC-DEVIL",
+            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: command under maintenance",
             "REPLY": "```You Need To Type Any Username!```",
             "NOT": "```User not found!```",
             "FOLLOWERS": "Followers:",
