@@ -69,27 +69,24 @@ WhatsAlexa.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }
     }
 }));
 
-WhatsAlexa.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
-    if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_PLUGIN, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
+WhatsAlexa.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
-    var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
-    if (plugin.length < 1) {
-        return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
-    } else {
-        await plugin[0].destroy();
-        delete require.cache[require.resolve('./' + match[1] + '.js')]
-        fs.unlinkSync('./plugins/' + match[1] + '.js');
-        await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
-        
-        await new Promise(r => setTimeout(r, 1000));
-    
-        await message.sendMessage(message.jid, NLang.AFTER_UPDATE, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
-
-        console.log(baseURI);
-        await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-            await message.sendMessage(message.jid, error.message, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
-
-        });
-    }
-
+    try {
+        var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
+        if (plugin.length < 1) {
+            return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
+        } else {
+            await plugin[0].destroy();
+            delete require.cache[require.resolve('./' + match[1] + '.js')]
+            fs.unlinkSync('./plugins/' + match[1] + '.js');
+            await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);        
+            await new Promise(r => setTimeout(r, 1000));  
+            await message.sendMessage(NLang.AFTER_UPDATE);
+            console.log(baseURI);
+            await heroku.delete(baseURI + '/dynos').catch(async (error) => {
+                await message.sendMessage(error.message);
+            });
+        }
+    } catch (errormsg) { return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text) }
 }));
