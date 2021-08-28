@@ -14,7 +14,7 @@
 <a href="https://github.com/MrChaby/Stefanie/network/members"><img title="Forks" src="https://img.shields.io/github/forks/MrChaby/Stefanie?color=pink&style=flat-square"></a>
 <a href="https://github.com/MrChaby/Stefanie/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/MrChaby/Stefanie?label=Watchers&color=blue&style=flat-square"></a>
   <p align="center">
-<a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-pink.svg"</a>
+<a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-green.svg"</a>
 </p>
 
   
