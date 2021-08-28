@@ -1,14 +1,23 @@
 ## 🤔 What is WhatsAlexa?! 🤔
 - **WhatsAlexa** is a Helper WhatsApp Bot Written with **[Baileys](https://github.com/adiwajshing/baileys)** Which is hosted on **[Heroku Cloud Server](https://heroku.com).** Also Alexa has a **Lot of Commands/Features,** Including **Voice Chat.**
 
-<div align="center">
-  <img src="https://rotf.lol/Whats-Alexa-Gif-TOXIC-DEVIL" width="200" height="200">
-  <h1>Stefanie (Modified Version of WhatsAlexa )</h1>
-</div>
+
 <p align="center">
     WhatsAlexa Modified Version is a Helper WhatsApp Bot Written By @TOXIC-DEVIL & Modified by MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
     <br>
+<p align="center">
+  <a href="https://github.com/MrChaby/Stefanie">
+    <img src="https://img.shields.io/github/repo-size/MrChaby/Stefanie?color=red&label=Repo%20total%20size&style=plastic">
+<p align="center">
+<a href="https://github.com/MrChaby/Stefanie/followers"><img title="Followers" src="https://img.shields.io/github/followers/MrChaby?color=pink&style=flat-square"></a>
+<a href="https://github.com/MrChaby/Stefanie/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/MrChaby/Stefanie?color=blue&style=flat-square"></a>
+<a href="https://github.com/MrChaby/Stefanie/network/members"><img title="Forks" src="https://img.shields.io/github/forks/MrChaby/Stefanie?color=pink&style=flat-square"></a>
+<a href="https://github.com/MrChaby/Stefanie/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/MrChaby/Stefanie?label=Watchers&color=blue&style=flat-square"></a>
+  <p align="center">
+<a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-pink.svg"</a>
+</p>
 
+  
 ## ⚙️ Setup ⚙️
   
    Try Termux for get Baileys Api. Just Copy the Link Below in Termux
