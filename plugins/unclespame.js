@@ -9,10 +9,6 @@ const Lang = Language.getString('evaluators');
 const googleTTS = require('google-translate-tts');
 const Heroku = require('heroku-client');
 const unclespam = ('WarnWarnWarnWarnWarnWarnWarnWarnWarn\n\n\n_WarnWarnWarnWarnWarnWarnWarnWarnWarn_\n\n\n    Group    ' + Config.CK + '\n       \n\n\n\nWarnWarnWarnWarnWarnWarnWarnWarnWarn\n\nWarnWarnWarnWarnWarnWarnWarnWarnWarn            \n         ' + Config.CK + '\n    \n    \n\n\n\n\n\n\n1\n\n\n\n\n2\n            \n\n\n\n\n\n3\n\n\n\n\n\n' + Config.CK + '\n    \n\n\n\n             \nWarnWarnWarnWarnWarnWarnWarnWarnWarn\n          \n  WarnWarnWarnWarnWarnWarnWarnWarnWarn_\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarnWarnWarnWarnWarnWarnWarnWarnWarn');
-const heroku = new Heroku({
-    token: Config.HEROKU.API_KEY
-});
-let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 async function checkUsAdmin(message, user = message.data.participant) {
     var grup = await message.client.groupMetadata(message.jid);
@@ -29,7 +25,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-WhatsAlexa.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+WhatsAlexa.addCommand({on: 'text', fromMe: false, deleteCommand: false}, async (message, match) => {
     if (badkick_var == 'true' && message.jid !== '905524317852-1612300121@g.us') {
         let regex1 = new RegExp('ท้เึางืผ')
         let regex2 = new RegExp('๒')
@@ -330,4 +326,4 @@ WhatsAlexa.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async 
         }
 
     }
-}));
+});
