@@ -79,11 +79,6 @@
             "required": true,
             "value": "false"
         },
-        "REMOVE_BG_API_KEY": {
-            "description": "Type the remove bg api. This is an Important one! ( RemoveBg Api : https://remove.bg  , Type this on the blank )",
-            "required": false,
-            "value": "https://remove.bg"
-        },
         "ALIVE_MESSAGE": {
             "description": "Customizable Alive Message! Use => default, to change back.",
             "required": false,
