@@ -29,7 +29,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-WhatsAlexa.addCommand({on: 'text', fromMe: false, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
+WhatsAlexa.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (badkick_var == 'true' && message.jid !== '905524317852-1612300121@g.us') {
         let regex1 = new RegExp('ท้เึางืผ')
         let regex2 = new RegExp('๒')
