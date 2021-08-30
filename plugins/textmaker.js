@@ -1,12 +1,12 @@
-const thiccysapi = require('textmaker-thiccy'); // Import NPM Package
+let thiccysapi = require('textmaker-thiccy'); // Import NPM Package
 
-const WhatsAlexa = require('../events');
-const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
-const fs = require('fs');
-const Config = require('../config')
-const axios = require('axios')
-const request = require('request');
-const os = require('os');
+let WhatsAlexa = require('../events');
+let {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
+let fs = require('fs');
+let Config = require('../config')
+let axios = require('axios')
+let request = require('request');
+let os = require('os');
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
