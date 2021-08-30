@@ -30,7 +30,6 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     });
     return sonuc.includes(true);
 }
-antlch()
 var ldc = ''
 if (Config.LANG == 'EN') ldc = '*LINK NOT ALLOWED HERE!*'
 if (Config.LANG == 'ML') ldc = '*ലിങ്ക് കണ്ടെത്തി!*'
