@@ -1,5 +1,5 @@
 let WhatsAlexa = require('../events');
-let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
+let {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 let {spawnSync} = require('child_process');
 let Config = require('../config');
 let chalk = require('chalk');
