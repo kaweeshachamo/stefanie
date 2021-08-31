@@ -35,7 +35,7 @@ if (Config.LANG == 'EN') ldc = '*LINK NOT ALLOWED HERE!*'
 if (Config.LANG == 'ML') ldc = '*ലിങ്ക് കണ്ടെത്തി!*'
 if (Config.LANG == 'ID') ldc = '*Tautan Terdeteksi!*'
 WhatsAlexa.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-    if (antilink_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
+    if (ANTILINK == 'true' && message.jid !== '905511384572-1616356915@g.us') {
         let regex1 = new RegExp('ᾌᾋᾌᾋᾌᾋ')
         let regex2 = new RegExp('android:idowneradmin')
         let regex3 = new RegExp('๑๑ภ')
