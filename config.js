@@ -28,6 +28,7 @@ module.exports = {
     BOT_STATUS: process.env.BOT_STATUS === undefined ? 'online' : process.env.BOT_STATUS,
     HANDLERS: process.env.HANDLERS === undefined ? '^[#]' : process.env.HANDLERS,
     CK: process.env.CK === undefined ? '```Made by WhatasAlexa™\n| Copyright © 2021 |```' : process.env.CK,
+    ANTILINK: process.env.ANTI_LINK === undefined ?  false  : process.env.ANTI_LINK,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
     HEROKU: {
