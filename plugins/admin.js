@@ -1,4 +1,60 @@
-ssage.mention}});
+let {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
+let WhatsAlexa = require('../events');
+let Config = require('../config');
+let FilterDb = require('./sql/filters');
+let Language = require('../language');
+let FLang = Language.getString('filters');
+let Lang = Language.getString('admin');
+let td = Config.WORKTYPE == 'public' ? false : true
+
+ async function checkUsAdmin(message, user = message.data.participant) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+async function checkImAdmin(message, user = message.client.user.jid) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {
+        if (member.id.split('@')[0] === user.split('@')[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+
+WhatsAlexa.addCommand({pattern: 'kick ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
+    var im = await checkImAdmin(message);
+    var us = await checkUsAdmin(message);
+    if (!us) return await message.client.sendMessage(message.jid,Lang.USER_NOT_ADMIN ,MessageType.text);
+    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
+
+    if (Config.BANMSG == 'default') {
+        if (message.reply_message !== false) {
+            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split('@')[0] + '```, ' + Lang.BANNED + '```', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
+        } else if (message.reply_message === false && message.mention !== false) {
+            var etiketler = '';
+            message.mention.map(async (user) => {
+                etiketler += '@' + user.split('@')[0] + ',';
+            });
+
+            await message.client.sendMessage(message.jid,etiketler + '```, ' + Lang.BANNED + '```', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
+            await message.client.groupRemove(message.jid, message.mention);
+        } else {
+            return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
+        }
+    }
+    else {
+        if (message.reply_message !== false) {
+            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split('@')[0] + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
+        } else if (message.reply_message === false && message.mention !== false) {
+            var etiketler = '';
+            message.mention.map(async (user) => {
+                etiketler += '@' + user.split('@')[0] + ',';
+            });
+
+            await message.client.sendMessage(message.jid,etiketler + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: message.mention}});
             await message.client.groupRemove(message.jid, message.mention);
         } else {
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
@@ -174,7 +230,7 @@ WhatsAlexa.addCommand({pattern: 'opengc ?(.*)', fromMe: true, onlyGroup: true, d
     }
 }));
 
-WhatsAlexa.addCommand({pattern: 'linkgc ?(.*)', fromMe: false, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
+WhatsAlexa.addCommand({pattern: 'linkgc ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.USER_NOT_ADMIN ,MessageType.text);
