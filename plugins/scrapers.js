@@ -113,8 +113,8 @@ if (config.WORKTYPE == 'private') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, ptt: false});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n\n```»» Name : '+ title +'\n\n» Ext : MP3```\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 100, isForwarded: true }, quoted: message.data, ptt: false});
             });
     }));
     
@@ -146,8 +146,8 @@ if (config.WORKTYPE == 'private') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n\n```»» Name : '+ title +'\n\n» Ext* : MP3 Document```\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 100, isForwarded: true }, quoted: message.data});
             });
     }));
 
@@ -173,7 +173,7 @@ if (config.WORKTYPE == 'private') {
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, caption: arama.title});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 100, isForwarded: true }, quoted: message.data, caption: arama.title});
         });
     }));
 
@@ -190,7 +190,7 @@ if (config.WORKTYPE == 'private') {
         try {
             var arama = await yts(match[1]);
         } catch {
-            return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
+            return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text, {contextInfo: { forwardingScore: 100, isForwarded: true }, quoted: message.data});
         }
     
         var mesaj = '';
@@ -234,7 +234,7 @@ if (config.WORKTYPE == 'private') {
                 var stream = get.buffer();
                 
                 stream.then(async (image) => {
-                    await message.client.sendMessage(message.jid,image, MessageType.image, {contextInfo: { forwardingScore: 1000, isForwarded: true }});
+                    await message.client.sendMessage(message.jid,image, MessageType.image, {contextInfo: { forwardingScore: 100, isForwarded: true }});
                 });
             }
 
@@ -380,8 +380,8 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, ptt: false});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n\n```»» Name : '+ title +'\n\n» Ext* : MP3```\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 100, isForwarded: true }, quoted: message.data, ptt: false});
             });
     }));
     
@@ -413,8 +413,8 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n\n```»» Name : '+ title +'\n\n» Ext* : MP3 Document```\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 100, isForwarded: true }, quoted: message.data});
             });
     }));
 
@@ -440,7 +440,7 @@ else if (config.WORKTYPE == 'public') {
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, caption: arama.title});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 100, isForwarded: true }, quoted: message.data, caption: arama.title});
         });
     }));
 
@@ -462,7 +462,7 @@ else if (config.WORKTYPE == 'public') {
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '*» ' + video.title + '* \n ✲ ' + video.url + '\n'
+            mesaj += '*» ' + video.title + '* \n ✲ ' + video.url + '\n\n'
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
