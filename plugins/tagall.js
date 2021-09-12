@@ -60,7 +60,7 @@ if (Config.LANG == 'ML') stag_dsc = 'ഗ്രൂപ്പിലെ എല്ല
 if (Config.LANG == 'ID') stag_dsc = 'Mengirim pesan balasan ke semua anggota dalam grup.'
 if (Config.LANG == 'PT') stag_dsc = 'Envia a mensagem respondida a todos os membros do grupo.'
 
-Alexa.addCommand({pattern: 'stam$', fromMe: true, desc: stag_dsc }, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'stam$', fromMe: true, desc: stag_dsc }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,SLang.NEED_REPLY, MessageType.text)
     grup = await message.client.groupMetadata(message.jid);
     var jids = [];
