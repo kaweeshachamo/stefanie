@@ -14,7 +14,7 @@ WhatsAlexa.addCommand({pattern: 'txttoimg', fromMe: false, desc: 'shows logo mak
 
     }));
 
-    WhatsAlexa.addCommand({ pattern: 'brand ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    WhatsAlexa.addCommand({ pattern: 'brand ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -24,7 +24,7 @@ WhatsAlexa.addCommand({pattern: 'txttoimg', fromMe: false, desc: 'shows logo mak
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'emoj ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
+    WhatsAlexa.addCommand({pattern: 'emoj ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
