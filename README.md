@@ -98,8 +98,6 @@ There are **50+** Features/Commands Are there in **this bot!** You can see **all
 
 ## ✨ Special Features ✨
 
-- [x] Alexa Voice Chatbot [ This is not amazon alexa ]
-
 - [x] simi simi chatbot
 
 - [ ] Replika chatbot
