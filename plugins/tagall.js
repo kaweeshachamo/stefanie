@@ -15,7 +15,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-WhatsAlexa.addCommand({pattern: 'tg ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
+WhatsAlexa.addCommand({pattern: 'tag ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
     if (!message.reply_message) {
         if (match[1] !== '') {
             grup = await message.client.groupMetadata(message.jid);
@@ -35,7 +35,7 @@ WhatsAlexa.addCommand({pattern: 'tg ?(.*)', fromMe: true, dontAddCommandList: tr
             mesaj = '';
             grup['participants'].map(
                 async (uye) => {
-                    mesaj += '🇱🇰 @' + uye.id.split('@')[0] + '\n';
+                    mesaj += '💗 @' + uye.id.split('@')[0] + '\n';
                     jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
                 }
             );
