@@ -1,6 +1,6 @@
-//https://github.com/MrChaby
 //https://github.com/MrChaby/Stefanie
-//https://github.com//edit/master/plugins/texttoimg.js
+// Copyright © 2021 WhatsAlexa by MrChaby
+//warnning don't  picked up API  ❗❗❗
 
 const WhatsAlexa = require('../events');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
