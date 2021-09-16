@@ -16,7 +16,7 @@ if (Config.WORKTYPE == 'private') {
               
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, {mimetype: Mimetype.png, quoted: message.data, contextInfo: { forwardingScore: 2, isForwarded: true }, caption: '```💕 Hey Bro!! I am still alive & kicking 😙```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n\n*Developer:* BuDy X\n\n*Git :* https://github.com/TOXIC-DEVIL/WhatsAlexa.git\n\n```💕 Copyright © 2021 💞\n Also Feel free to contribute & issue ( report issues & feature request on issue session of the ropo ).. ( https://github.com/TOXIC-DEVIL/WhatsAlexa ) 🙂❤️```' }); });
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, {mimetype: Mimetype.png, quoted: message.data, contextInfo: { forwardingScore: 2, isForwarded: true }, caption: '```💕 Hey Bro!! I am still alive & kicking 😙```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Developer:* MrChaby\n*Git :* https://github.com/MrChaby/Stefanie\n\n```💕 Copyright © 2021 WhatsAlexa 💞\n Also Feel free to contribute & issue ( report issues & feature request on issue session of the ropo ).. ( https://github.com/TOXIC-DEVIL/WhatsAlexa ) 🙂❤️```' }); });
             
               } else {
               
@@ -41,7 +41,7 @@ else if (Config.WORKTYPE == 'public') {
               
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, {mimetype: Mimetype.png, quoted: message.data, contextInfo: { forwardingScore: 2, isForwarded: true }, caption: '```💕 Hey Bro!! I am still alive & kicking 😙```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n\n*Developer:* BuDy X\n\n*Git :* https://github.com/TOXIC-DEVIL/WhatsAlexa.git\n\n```💕 Copyright © 2021 💞\n Also Feel free to contribute & issue ( report issues & feature request on issue session of the ropo ).. ( https://github.com/TOXIC-DEVIL/WhatsAlexa ) 🙂❤️```' }); });
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, {mimetype: Mimetype.png, quoted: message.data, contextInfo: { forwardingScore: 2, isForwarded: true }, caption: '```💕 Hey Bro!! I am still alive & kicking 😙```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Developer:* MrChaby\n*Git :* https://github.com/MrChaby/Stefanie\n\n```💕 Copyright © 2021 WhatsAlexa 💞\n Also Feel free to contribute & issue ( report issues & feature request on issue session of the ropo ).. ( https://github.com/TOXIC-DEVIL/WhatsAlexa ) 🙂❤️```' }); });
             
               } else {
               
