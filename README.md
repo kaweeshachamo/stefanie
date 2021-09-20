@@ -30,8 +30,7 @@ $ pkg install git
 
 $ pkg install nodejs
 
-$ git clone https://github.com/MrChaby/WhatsAlexa
-
+$ git clone https://github.com/MrChaby/Jessi-4r-whatsAlexa
 $ cd WhatsAlexa
 
 $ npm i @adiwajshing/baileys
@@ -48,7 +47,7 @@ $ node alexa.js
 
 ## 💫 Deploy WhatsAlexa on Heroku 💫
 
-[![Deploy-WhatsAlexa](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrChaby/Stefanie)
+[![Deploy-WhatsAlexa](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrChaby/Jessi-4r-whatsAlexa)
 
 ## ❔ F A Q ( Frequently Asked Questions ) ❔
 
