@@ -1,6 +1,6 @@
 {
   "name": "WhatsAlexa",
-  "version": "5 First Release",
+  "version": "v5 First Release",
   "description": "WhatsApp Bot.",
   "main": "./WhatsAlexa/bot.js",
   "scripts": {
