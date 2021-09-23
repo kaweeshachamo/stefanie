@@ -5,7 +5,6 @@ let FilterDb = require('./sql/filters');
 let Language = require('../language');
 let FLang = Language.getString('filters');
 let Lang = Language.getString('admin');
-let td = Config.WORKTYPE == 'public' ? false : true
 
  async function checkUsAdmin(message, user = message.data.participant) {
     var grup = await message.client.groupMetadata(message.jid);
