@@ -30,6 +30,7 @@ module.exports = {
     CK: process.env.CK === undefined ? '```Made by WhatasAlexa™\n| Copyright © 2021 |```' : process.env.CK,
     ANTILINK: process.env.ANTI_LINK === undefined ?  false  : process.env.ANTI_LINK,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
+    UNCLEBOTBUG: process.env.UNCLEBOTBUG === undefined ?  true  : process.env.UNCLEBOTBUG,
     BRANCH: 'master',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
