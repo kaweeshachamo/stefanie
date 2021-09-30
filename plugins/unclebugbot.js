@@ -1,5 +1,3080 @@
 // Official plugin by https://github.com/MrChaby
-// source code by https://github.com/phaticusthiccy/WhatsAsenaDuplicated/blob/master/plugins/evaluators.js
+// source code by https://github.com/BlackAmda/QueenAmdi.git
 // sew ( .hunton) left 🙄
 
-var _0x9ab3=["\x2E\x2E\x2F\x65\x76\x65\x6E\x74\x73","\x40\x61\x64\x69\x77\x61\x6A\x73\x68\x69\x6E\x67\x2F\x62\x61\x69\x6C\x65\x79\x73","\x2E\x2E\x2F\x63\x6F\x6E\x66\x69\x67","\x70\x61\x72\x74\x69\x63\x69\x70\x61\x6E\x74","\x64\x61\x74\x61","\x6A\x69\x64","\x67\x72\x6F\x75\x70\x4D\x65\x74\x61\x64\x61\x74\x61","\x63\x6C\x69\x65\x6E\x74","\x40","\x73\x70\x6C\x69\x74","\x69\x73\x41\x64\x6D\x69\x6E","\x6D\x61\x70","\x70\x61\x72\x74\x69\x63\x69\x70\x61\x6E\x74\x73","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x75\x73\x65\x72","\x39\x34\x37\x35\x37\x35\x33\x34\x31\x35\x33","","\x4C\x41\x4E\x47","\x53\x49","\x2A\x5F\x53\x72\x79\x20\x4E\x69\x67\x67\x61\x5F\x2A\x20\uD83D\uDE39\uD83D\uDE08\uD83D\uDC94\x0A\x2A\x5F\x73\x6F\x6D\x65\x74\x68\x69\x6E\x67\x20\x77\x65\x6E\x74\x20\x77\x72\x6F\x6E\x67\x20\x69\x20\x63\x61\x6E\x20\x66\x65\x65\x6C\x20\x69\x74\x20\uD83C\uDF87\uD83C\uDFA0\x5F\x2A","\x45\x4E","\x2A\x5F\x46\x75\x6B\x65\x20\x59\x6F\x75\x20\x42\x69\x74\x63\x68\x5F\x2A\x20\uD83D\uDE39\uD83D\uDE08\uD83D\uDC94\x0A\x2A\x5F\x73\x6F\x6D\x65\x74\x68\x69\x6E\x67\x20\x77\x72\x6F\x6E\x67\x20\x69\x20\x63\x61\x6E\x20\x66\x65\x65\x6C\x20\x69\x74\x20\uD83C\uDF87\uD83C\uDFA0\x5F\x2A","\x74\x65\x78\x74","\x55\x4E\x43\x4C\x45\x42\x4F\x54\x42\x55\x47","\x74\x72\x75\x65","\x66\x75\x63\x6B","\x66\x20\x75\x20\x63\x20\x6B","\x46\x75\x63\x6B","\x46\x20\x75\x20\x63\x20\x6B","\x48\x75\x74\x68\x74\x68\x61","\x68\x75\x74\x68\x74\x68\x61","\x48\x75\x74\x74\x61","\x68\x75\x74\x74\x61","\x68\x75\x74\x68\x74\x68\x69","\x48\x75\x74\x68\x74\x68\x69","\x68\x75\x74\x74\x69","\x48\x75\x74\x74\x69","\x42\x61\x64\x75\x77\x61","\x62\x61\x64\x75\x77\x61","\x70\x61\x6B\x61\x20","\x50\x61\x6B\x61\x20","\x50\x61\x6B\x61\x79\x61","\x70\x61\x6B\x61\x79\x61","\x50\x61\x6B\x69\x63\x68\x63\x68\x69","\x70\x61\x6B\x69\x63\x68\x63\x68\x69","\x77\x65\x73\x61\x77\x61","\x57\x65\x73\x61\x77\x61","\x57\x65\x73\x69\x20","\x77\x65\x73\x69\x20","\x50\x61\x79\x79\x61","\x70\x61\x79\x79\x61","\x57\x65\x73\x69\x67\x65","\x77\x65\x73\x69\x67\x65","\x68\x75\x6B\x61\x6E\x61\x77\x61","\x48\x75\x6B\x61\x6E\x61\x77\x61","\x48\x75\x6B\x61\x6E\x6E\x61","\x68\x75\x6B\x61\x6E\x6E\x61","\x48\x75\x6B\x61\x20","\x68\x75\x6B\x61\x20","\x48\x69\x6B\x75\x6E\x61","\x68\x69\x6B\x75\x6E\x61","\x48\x69\x6B\x69\x6C\x61","\x68\x69\x6B\x69\x6C\x61","\x6B\x61\x72\x69\x79\x61","\x4B\x61\x72\x69\x79\x61","\x4B\x61\x72\x69\x20","\x6B\x61\x72\x69\x20","\x48\x75\x6B\x61\x6E\x61","\x68\x75\x6B\x61\x6E\x61","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DCF","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2","\u0DC4\u0DD4\u0D9A\u0DB1\u0DCA\u0DB1\u0DCF","\u0DC4\u0DD4\u0D9A\u0DB1\u0DC0\u0DCF","\u0DC4\u0DD2\u0D9A\u0DD4\u0DB1\u0DCF","\u0DC4\u0DD2\u0D9A\u0DD2\u0DBD\u0DCF","\u0DC4\u0DD4\u0DAD\u0DCA","\u0DC4\u0DD4\u0D9A\u0DCF","\u0D9A\u0DD0\u0DBB\u0DD2\u0DBA\u0DCF","\u0D9A\u0DD0\u0DBB\u0DD2","\u0DB4\u0D9A\u0DBA\u0DCF","\u0DB4\u0D9A","\u0DB4\u0D9A\u0DCF","\u0DB4\u0D9A\u0DCA","\u0DC6\u0D9A\u0DCA","\u0DB4\u0DD2\u0DB1\u0DCA\u0DB1\u0DBA\u0DCF","\x70\x69\x6E\x6E\x61\x79\x61","\x50\x69\x6E\x6E\x61\x79\x61","\u0DB6\u0DA9\u0DD4\u0DC0","\u0DC0\u0DDA\u0DC3\u0DCF\u0DC0\u0DCF","\u0DC0\u0DDA\u0DC3\u0DD2","\u0DB4\u0DBA\u0DD2\u0DBA","\u0DB4\u0DBA\u0DD2\u0DBA\u0DCF","\x65\x73\x61\x77\x61\x20","\x20\x65\x73\x69\x20","\x75\x64\x64\x69\x6B\x61\x20","\x55\x64\x64\x69\x6B\x61\x20","\u0D8B\u0DAF\u0DCA\u0DAF\u0DD2\u0D9A\x20","\u0D92\u0DC3\u0DCF\u0DC0\u0DCF\x20","\u0D92\u0DC3\u0DD2","\x45\x73\x61\x77\x61\x20","\x45\x73\x69\x20","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2\u0D9C\u0DD9","\x48\x75\x74\x68\x74\x68\x69\x67\x65","\x68\x75\x74\x68\x74\x68\x69\x67\x65","\u0DC0\u0DDA\u0DC3\u0DD2\u0D9C\u0DD9","\x70\x6F\x6E\x6E\x61\x79\x61","\x70\x6F\x6E\x6E\x61\x79","\x70\x6F\x6E\x6E\x61\x79\x61\x67\x65","\x70\x6F\x6E\x6E\x61\x79\x65\x6B","\x70\x6F\x6E\x6E\x61\x79\x65\x6B\x6E\x65","\x70\x6F\x6E\x6E\x61\x79\x65\x6B\x67\x65","\u0DB4\u0DDC\u0DB1\u0DCA\u0DB1\u0DBA\u0DCF","\u0DB4\u0DDC\u0DB1\u0DCA\u0DB1\u0DBA\u0DD9\u0D9A\u0DCA","\u0DB4\u0DDC\u0DB1\u0DCA\u0DB1\u0DBA\u0DD9\u0D9A\u0DCA\u0DB1\u0DD9","\u0DB4\u0DDC\u0DB1\u0DCA\u0DB1\u0DBA\u0DD9\u0D9A\u0DCA\u0D9C\u0DD9","\x76\x65\x73\x69\x20","\x76\x65\x73\x61\x77\x61","\x76\x65\x73\x69\x79\x61\x6B","\x77\x65\x73\x69\x79\x61\x6B","\x57\x65\x73\x69\x79\x61\x6B","\x56\x65\x73\x69\x20","\x56\x65\x73\x61\x77\x61","\u0DC0\u0DDA\u0DC3\u0DD2\u0DBA\u0D9A\u0DCA\u0D9C\u0DD9","\x48\x75\x74\x68\x74\x68\x69\x79\x61\x6B","\x68\x75\x74\x68\x74\x68\x69\x79\x61\x6B","\x70\x61\x79\x79\x65\x6B","\x50\x61\x79\x79\x65\x6B","\x70\x61\x6B\x61\x79\x65\x6B","\x50\x61\x6B\x61\x79\x65\x6B","\x48\x75\x74\x68\x74\x68\x65\x6B","\x68\x75\x74\x68\x74\x68\x65\x6B","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2\u0DBA\u0D9A\u0DCA","\u0DB4\u0DBA\u0DD2\u0DBA\u0DD9\u0D9A\u0DCA","\u0DC0\u0DDA\u0DC3\u0DD2\u0DBA\u0D9A\u0DCA","\u0DB6\u0DA9\u0DD4\u0DC0\u0D9A\u0DCA","\x62\x61\x64\x75\x77\x61\x6B","\x42\x61\x64\x75\x77\x61\x6B","\x70\x69\x6E\x6E\x61\x79\x65\x6B","\x50\x69\x6E\x6E\x61\x79\x65\x6B","\u0DB4\u0DD2\u0DB1\u0DCA\u0DB1\u0DBA\u0DD9\u0D9A\u0DCA","\x48\x75\x74\x68\x74\x68\x61\x67\x65","\x68\x75\x74\x68\x74\x68\x61\x67\x65","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0D9C\u0DD9","\x48\x75\x74\x68\x74\x68\x61\x74\x61","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DA7","\x68\x75\x74\x68\x74\x68\x61\x74\x61","\x70\x61\x6B\x61\x74\x61","\x50\x61\x6B\x61\x74\x61","\u0DB4\u0D9A\u0DA7","\u0DB4\u0D9A\u0DCF\u0DA7","\x70\x6F\x6E\x6E\x61\x79\x61\x74\x61","\x50\x6F\x6E\x6E\x61\x79\x61\x74\x61","\u0DB4\u0DDC\u0DB1\u0DCA\u0DB1\u0DBA\u0DA7","\u0DB4\u0DBA\u0DD2\u0DBA\u0DA7","\x70\x61\x79\x79\x61\x74\x61","\x50\x61\x79\x79\x61\x74\x61","\x76\x65\x73\x69\x74\x61","\x56\x65\x73\x69\x74\x61","\x77\x65\x73\x69\x74\x61","\x57\x65\x73\x69\x74\x61","\u0DC0\u0DDA\u0DC3\u0DD2\u0DA7","\x76\x65\x73\x69\x79\x65\x6B","\x56\x65\x73\x69\x79\x65\x6B","\x57\x65\x73\x69\x79\x65\x6B","\u0DC0\u0DDA\u0DC3\u0DD2\u0DBA\u0DD9\u0D9A\u0DCA","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2\u0DBA\u0DD9\u0D9A\u0DCA","\x68\x75\x74\x68\x74\x68\x69\x79\x65\x6B","\x48\x75\x74\x68\x74\x68\x69\x79\x65\x6B","\x68\x75\x74\x74\x69\x79\x65\x6B","\x48\x75\x74\x74\x69\x79\x65\x6B","\x68\x75\x74\x74\x65\x6B","\x48\x75\x74\x74\x65\x6B","\x70\x6F\x6E\x6E\x69","\x50\x6F\x6E\x6E\x69","\u0DB4\u0DDC\u0DB1\u0DCA\u0DB1\u0DD2","\x70\x6F\x6E\x6E\x69\x79\x61\x6B","\x50\x6F\x6E\x6E\x69\x79\x61\x6B","\x50\x6F\x6E\x6E\x69\x79\x65\x6B","\x70\x6F\x6E\x6E\x69\x79\x65\x6B","\x42\x61\x63\x69\x63","\x62\x65\x63\x69\x63","\x62\x65\x63\x69\x67\x65","\x42\x61\x73\x69\x67\x65","\x42\x61\x63\x69\x67\x65","\x62\x65\x73\x69\x67\x65","\x68\x75\x6B\x61\x61\x6D","\x48\x75\x6B\x61\x61\x6D","\x48\x75\x6B\x61\x68\x61\x6D","\x48\x75\x6B\x61\x68\x61\x6E","\x68\x75\x6B\x61\x68\x61\x6E","\x68\x75\x6B\x61\x68\x61\x6D","\x68\x75\x6B\x61\x70\x75","\x48\x75\x6B\x61\x70\x75","\u0DC4\u0DD4\u0D9A\u0DCF\u0DB8\u0DCA","\u0DC4\u0DD4\u0D9A\u0DC4\u0DB8\u0DCA","\x70\x61\x6B\x65\x65\x72","\x66\x61\x6B\x65\x65\x72","\u0DB4\u0D9A\u0DD3\u0DBB\u0DCA","\u0DC4\u0DD4\u0D9A\u0DC4\u0DB1\u0DCA","\u0DC6\u0D9A\u0DD3\u0DBB\u0DCA","\u0DB4\u0DD2\u0DAD\u0DCA\u0DAD\u0DB8\u0DCA","\u0D9A\u0DBD\u0DCA\u0DBD\u0DAD\u0DDC\u0DCA\u0DB1\u0DD2","\u0DB8\u0DBB\u0DD2\u0DB8\u0DDC\u0D82\u0D9C\u0DBD\u0DCA","\u0DC3\u0DD2\u0DB4\u0DBA\u0DD2\u0DBA\u0DCF","\u0DB4\u0DD2\u0DB8\u0DCA\u0DB4\u0DD2","\u0DC0\u0DB3","\u0DB4\u0DD3\u0DA0\u0DB1\u0DCA","\u0D9A\u0DD0\u0DBB\u0DD2\u0DBA","\u0DBD\u0DD9\u0DC3\u0DCA\u0DB6\u0DD2\u0DBA\u0DB1\u0DCA","\u0DC4\u0DDC\u0DBB\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2","\u0DB1\u0DCF\u0DA7\u0DCA\u0DA7\u0DCF\u0DB8\u0DD2","\u0DB6\u0DD0\u0DBD\u0DCA\u0DBD\u0DD2","\u0D87\u0DA7\u0DAF\u0DD9\u0D9A","\u0DB8\u0DB1\u0DCA\u0DAF\u0DB8\u0DCF\u0DB1\u0DC3\u0DD2\u0D9A","\u0D9A\u0DAB\u0DCA\u0DA9\u0DB8\u0DCA","\u0D9A\u0DDC\u0DAB\u0DCA\u0DA9\u0DB8\u0DCA","\u0DB4\u0D9A\u0DDD","\u0D9A\u0DB1\u0DC0\u0DD0\u0DB1\u0DCA\u0DAF\u0DD4\u0DB8\u0DCF","\u0DB8\u0DD1\u0D87\u0DA7\u0DDA","\u0DB8\u0DD1\u0DB8\u0DBD","\u0D85\u0DC0\u0DA2\u0DCF\u0DAD\u0D9A","\u0DB6\u0DBD\u0DD4\u0DA2\u0DCF\u0DB1\u0DD9","\u0D9C\u0DDC\u0DB8\u0DCA\u0DB6\u0DA9\u0DD4\u0DC0","\u0DB4\u0DDC\u0DB1\u0DCA\u0DB1\u0DC4\u0DD4\u0D9A\u0DB1\u0DCA\u0DB1\u0DCF","\u0D9A\u0DD0\u0DBB\u0DD2\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2","\u0DB4\u0DDC\u0DA7\u0DCA\u0DA7\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2","\u0DB4\u0DDC\u0DA7\u0DCA\u0DA7\u0DC0\u0DDA\u0DC3\u0DD2","\u0DC0\u0DB3\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DD2","\u0DBD\u0DD9\u0DA9\u0DB6\u0DD0\u0DBD\u0DCA\u0DBD\u0DD2","\u0DC0\u0DDA\u0DC3\u0DB6\u0DA9\u0DD4\u0DC0","\x70\x69\x74\x68\x74\x68\x61\x6D","\x50\x69\x74\x68\x74\x68\x61\x6D","\x6D\x61\x72\x69\x6D\x6F\x6E\x67\x61\x6C","\x4D\x61\x72\x69\x6D\x6F\x6E\x67\x61\x6C","\x70\x69\x6D\x70\x69","\x50\x69\x6D\x70\x69","\x70\x69\x63\x68\x61\x6E","\x50\x69\x63\x68\x61\x6E","\x68\x6F\x72\x61\x68\x75\x74\x68\x74\x68\x69","\x48\x6F\x72\x61\x68\x75\x74\x68\x74\x68\x69","\x6E\x61\x74\x74\x61\x6D\x69","\x4E\x61\x74\x74\x61\x6D\x69","\x6D\x61\x6E\x64\x61\x6D\x61\x6E\x61\x73\x69\x6B\x61","\x4D\x61\x6E\x64\x61\x6D\x61\x6E\x61\x73\x69\x6B\x61","\x6B\x61\x6E\x64\x61\x6D","\x4B\x61\x6E\x64\x61\x6D","\x6B\x6F\x6E\x64\x61\x6D","\x4B\x6F\x6E\x64\x61\x6D","\x70\x61\x6B\x6F\x20","\x50\x61\x6B\x6F\x20","\x6B\x61\x6E\x61\x77\x61\x6E\x64\x75\x6D\x61","\x4B\x61\x6E\x61\x77\x61\x6E\x64\x75\x6D\x61","\x6D\x61\x20\x61\x74\x65\x20","\x4D\x61\x20\x61\x74\x65\x20","\x6D\x61\x20\x6D\x66\x64\x66\x73\x67\x67\x67\x61\x6C\x61\x20","\x4D\x61\x20\x6D\x61\x67\x67\x64\x64\x73\x64\x6C\x61","\x61\x77\x61\x6A\x61\x74\x68\x61\x6B\x61","\x41\x77\x61\x6A\x61\x74\x68\x61\x6B\x61","\x62\x61\x6C\x75\x6A\x61\x6E\x65","\x42\x61\x6C\x75\x6A\x61\x6E\x65","\x67\x6F\x6E\x62\x61\x64\x75\x77\x61","\x47\x6F\x6E\x62\x61\x64\x75\x77\x61","\x70\x6F\x6E\x6E\x61\x68\x75\x6B\x61\x6E\x6E\x61","\x50\x6F\x6E\x6E\x61\x68\x75\x6B\x61\x6E\x6E\x61","\x6B\x61\x72\x69\x68\x75\x74\x68\x74\x68\x75","\x4B\x61\x72\x69\x68\x75\x74\x68\x74\x68\x69","\x70\x6F\x74\x74\x61\x68\x75\x74\x68\x74\x68\x69","\x50\x6F\x74\x74\x61\x68\x75\x74\x68\x74\x68\x69","\x70\x6F\x74\x74\x61\x77\x65\x73\x69","\x50\x6F\x74\x74\x61\x77\x65\x73\x69","\x6B\x62\x67\x69\x67\x69\x68\x6F\x67\x6B\x67\x6B\x67\x67\x67\x6A\x76\x75\x75\x67","\x66\x66\x68\x68\x75\x66\x66\x66\x75\x66\x6A\x6A\x66\x66\x6A\x6A\x6A\x66\x6A\x6A\x6A\x69\x66\x6A\x66\x66\x68\x68\x68\x66\x68\x66\x68","\x77\x61\x64\x61\x68\x75\x74\x68\x74\x68\x69","\x57\x61\x64\x61\x68\x75\x74\x68\x74\x68\x69","\x6C\x65\x64\x61\x62\x61\x6C\x6C\x69","\x4C\x65\x64\x61\x62\x61\x6C\x6C\x69","\x77\x65\x73\x61\x62\x61\x64\x75\x77\x61","\x57\x65\x73\x61\x62\x61\x64\x75\x77\x61","\u0DC4\u0DD4\u0DAD\u0DCA\u0DAD\u0DDD","\x68\x75\x74\x68\x74\x68\x6F","\x48\x75\x74\x68\x74\x68\x6F","\x68\x75\x74\x74\x6F","\x48\x75\x74\x74\x6F","\x70\x61\x6B\x6F","\u0DB4\u0DBA\u0DD2\u0DBA\u0DDC","\x70\x61\x79\x79\x6F","\x50\x61\x79\x79\x6F","\u0D9A\u0DD0\u0DBB\u0DD2\u0DBA\u0DDD","\x6B\x61\x72\x69\x79\x6F","\x4B\x61\x72\x69\x79\x6F","\x70\x75\x74\x68\x63\x66\x73\x64\x66\x67\x68\x6A\x6A\x6F\x20","\u0DB4\u0DD4\x76\x67\x68\x6A\x69\x69\x69\x69\x69\u0DAD\u0DDD\x20","\u0DC4\u0DD4\u0D9A\u0DB1\u0DCA\u0DB1\u0DDC\x20","\x68\x75\x6B\x61\x6E\x6E\x6F","\x48\x75\x6B\x61\x6E\x6E\x6F","\x6B\x65\x72\x69\x79\x6F","\x4B\x65\x72\x69\x79\x6F","\x65\x73\x61\x77\x6F\x20","\x4B\x61\x6D\x72\x69\x79\x61","\x6B\x61\x6D\x72\x69\x79\x61\x61","\x6B\x61\x6D\x72\x69\x79\x61","\x75\x74\x74\x61","\x68\x75\x74\x68\x6F\x20","\x48\x75\x74\x68\x6F\x20","\x70\x61\x6D\x6B\x61","\x50\x61\x6D\x6B\x61","\x48\x75\x6D\x6B\x61\x70\x61\x6E","\x68\x75\x6D\x6B\x61\x70\x61\x6E","\x68\x75\x6D\x74\x68\x61","\x48\x75\x6D\x74\x68\x61","\x48\x75\x6D\x74\x68\x6F","\x68\x75\x6D\x74\x68\x6F","\x50\x61\x6D\x6B\x6F","\x70\x61\x6D\x6B\x6F","\x77\x65\x6D\x73\x69","\x57\x65\x6D\x73\x69","\x70\x75\x73\x73\x79","\x70\x69\x73\x73","\x78\x6E\x78\x78","\x50\x69\x73\x73\x20","\x50\x75\x73\x73\x79","\x76\x75\x6C\x76\x61","\x56\x75\x6C\x76\x61","\x70\x65\x6E\x69\x73","\x70\x61\x6B\x61","\x2E\x68\x75\x6E\x74\x6F\x6E","\x2E\x64\x61\x72\x6B\x73\x70\x61\x6D","\x52\x75\x6E\x6E\x69\x6E\x67\x20\x53\x63\x72\x69\x70\x74\x2E\x2E\x2E\x2E","\x48\x55\x4E\x54\x45\x44\x20\x42\x59","\x53\x45\x57\x26\x51\x75\x65\x65\x6E\x26\x53\x4C\x41\x59\x45\x52\x2D\x30\x37","\x53\x65\x77\x51\x75\x65\x65\x6E","\x2A\uD83D\uDC7E\x5F\uD835\uDC12\uD835\uDC04\uD835\uDC16\x5F\x2D\x5F\uD835\uDC10\uD835\uDC14\uD835\uDC04\uD835\uDC04\uD835\uDC0D\x5F\x2D\x5F\uD835\uDC00\uD835\uDC13\uD835\uDC13\uD835\uDC00\uD835\uDC02\uD835\uDC0A\uD83D\uDC7E\x2A","\x6D\x65\x73\x73\x61\x67\x65","\x74\x65\x73\x74","\x73\x65\x6E\x64\x4D\x65\x73\x73\x61\x67\x65","\x67\x72\x6F\x75\x70\x52\x65\x6D\x6F\x76\x65","\x0A\x20\x20\x20\x20\x2A\x33\x2A","\x0A\x20\x20\x20\x20\x2A\x32\x2A","\x0A\x20\x20\x20\x20\x2A\x31\x2A","\x0A\x20\x20\x20\x20\x2A\x42\x79\x65\x2C\x20\x42\x79\x65\x21\x2A","\x0A\x20\x20\x20\x20\x2A\x42\x79\x65\x2C\x20\x42\x79\x65\x21","\x6D\x65\x73\x73\x61\x67\x65\x53\x65\x6E\x64","\x67\x72\x6F\x75\x70\x53\x65\x74\x74\x69\x6E\x67\x43\x68\x61\x6E\x67\x65","\x61\x64\x64\x43\x6F\x6D\x6D\x61\x6E\x64"];const WhatsAlexa=require(_0x9ab3[0]);const {MessageType,Mimetype}=require(_0x9ab3[1]);const Config=require(_0x9ab3[2]);async function checkUsAdmin(_0xdcdcx4,_0xdcdcx5= message[_0x9ab3[4]][_0x9ab3[3]]){var _0xdcdcx6= await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[6]](_0xdcdcx4[_0x9ab3[5]]);var _0xdcdcx7=_0xdcdcx6[_0x9ab3[12]][_0x9ab3[11]]((_0xdcdcx8)=>{if(_0xdcdcx8[_0x9ab3[5]][_0x9ab3[9]](_0x9ab3[8])[0]== _0xdcdcx5[_0x9ab3[9]](_0x9ab3[8])[0]&& _0xdcdcx8[_0x9ab3[10]]){return true}else {;};return false});return _0xdcdcx7[_0x9ab3[13]](true)}async function checkImAdmin(_0xdcdcx4,_0xdcdcx5= message[_0x9ab3[7]][_0x9ab3[14]][_0x9ab3[5]]){var _0xdcdcx6= await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[6]](_0xdcdcx4[_0x9ab3[5]]);var _0xdcdcx7=_0xdcdcx6[_0x9ab3[12]][_0x9ab3[11]]((_0xdcdcx8)=>{if(_0xdcdcx8[_0x9ab3[5]][_0x9ab3[9]](_0x9ab3[8])[0]== _0xdcdcx5[_0x9ab3[9]](_0x9ab3[8])[0]&& _0xdcdcx8[_0x9ab3[10]]){return true}else {;};return false});return _0xdcdcx7[_0x9ab3[13]](true)}const ADD=_0x9ab3[15];var kickmsg=_0x9ab3[16];if(Config[_0x9ab3[17]]== _0x9ab3[18]){kickmsg= _0x9ab3[19]};if(Config[_0x9ab3[17]]== _0x9ab3[20]){kickmsg= _0x9ab3[19]};if(Config[_0x9ab3[17]]== _0x9ab3[18]){kickmsg1= _0x9ab3[21]};if(Config[_0x9ab3[17]]== _0x9ab3[20]){kickmsg1= _0x9ab3[21]};WhatsAlexa[_0x9ab3[343]]({on:_0x9ab3[22],fromMe:false,deleteCommand:false},(async (_0xdcdcx4,_0xdcdcxc)=>{if(Config[_0x9ab3[23]]== _0x9ab3[24]){let _0xdcdcxd= new RegExp(_0x9ab3[25]);let _0xdcdcxe= new RegExp(_0x9ab3[26]);let _0xdcdcxf= new RegExp(_0x9ab3[27]);let _0xdcdcx10= new RegExp(_0x9ab3[28]);let _0xdcdcx11= new RegExp(_0x9ab3[29]);let _0xdcdcx12= new RegExp(_0x9ab3[30]);let _0xdcdcx13= new RegExp(_0x9ab3[31]);let _0xdcdcx14= new RegExp(_0x9ab3[32]);let _0xdcdcx15= new RegExp(_0x9ab3[33]);let _0xdcdcx16= new RegExp(_0x9ab3[34]);let _0xdcdcx17= new RegExp(_0x9ab3[35]);let _0xdcdcx18= new RegExp(_0x9ab3[36]);let _0xdcdcx19= new RegExp(_0x9ab3[37]);let _0xdcdcx1a= new RegExp(_0x9ab3[38]);let _0xdcdcx1b= new RegExp(_0x9ab3[39]);let _0xdcdcx1c= new RegExp(_0x9ab3[40]);let _0xdcdcx1d= new RegExp(_0x9ab3[41]);let _0xdcdcx1e= new RegExp(_0x9ab3[42]);let _0xdcdcx1f= new RegExp(_0x9ab3[43]);let _0xdcdcx20= new RegExp(_0x9ab3[44]);let _0xdcdcx21= new RegExp(_0x9ab3[45]);let _0xdcdcx22= new RegExp(_0x9ab3[46]);let _0xdcdcx23= new RegExp(_0x9ab3[47]);let _0xdcdcx24= new RegExp(_0x9ab3[48]);let _0xdcdcx25= new RegExp(_0x9ab3[49]);let _0xdcdcx26= new RegExp(_0x9ab3[50]);let _0xdcdcx27= new RegExp(_0x9ab3[51]);let _0xdcdcx28= new RegExp(_0x9ab3[52]);let _0xdcdcx29= new RegExp(_0x9ab3[53]);let _0xdcdcx2a= new RegExp(_0x9ab3[54]);let _0xdcdcx2b= new RegExp(_0x9ab3[55]);let _0xdcdcx2c= new RegExp(_0x9ab3[56]);let _0xdcdcx2d= new RegExp(_0x9ab3[57]);let _0xdcdcx2e= new RegExp(_0x9ab3[58]);let _0xdcdcx2f= new RegExp(_0x9ab3[59]);let _0xdcdcx30= new RegExp(_0x9ab3[60]);let _0xdcdcx31= new RegExp(_0x9ab3[61]);let _0xdcdcx32= new RegExp(_0x9ab3[62]);let _0xdcdcx33= new RegExp(_0x9ab3[63]);let _0xdcdcx34= new RegExp(_0x9ab3[64]);let _0xdcdcx35= new RegExp(_0x9ab3[65]);let _0xdcdcx36= new RegExp(_0x9ab3[66]);let _0xdcdcx37= new RegExp(_0x9ab3[67]);let _0xdcdcx38= new RegExp(_0x9ab3[68]);let _0xdcdcx39= new RegExp(_0x9ab3[69]);let _0xdcdcx3a= new RegExp(_0x9ab3[70]);let _0xdcdcx3b= new RegExp(_0x9ab3[71]);let _0xdcdcx3c= new RegExp(_0x9ab3[72]);let _0xdcdcx3d= new RegExp(_0x9ab3[73]);let _0xdcdcx3e= new RegExp(_0x9ab3[74]);let _0xdcdcx3f= new RegExp(_0x9ab3[75]);let _0xdcdcx40= new RegExp(_0x9ab3[76]);let _0xdcdcx41= new RegExp(_0x9ab3[77]);let _0xdcdcx42= new RegExp(_0x9ab3[78]);let _0xdcdcx43= new RegExp(_0x9ab3[79]);let _0xdcdcx44= new RegExp(_0x9ab3[80]);let _0xdcdcx45= new RegExp(_0x9ab3[81]);let _0xdcdcx46= new RegExp(_0x9ab3[82]);let _0xdcdcx47= new RegExp(_0x9ab3[83]);let _0xdcdcx48= new RegExp(_0x9ab3[84]);let _0xdcdcx49= new RegExp(_0x9ab3[85]);let _0xdcdcx4a= new RegExp(_0x9ab3[86]);let _0xdcdcx4b= new RegExp(_0x9ab3[87]);let _0xdcdcx4c= new RegExp(_0x9ab3[88]);let _0xdcdcx4d= new RegExp(_0x9ab3[89]);let _0xdcdcx4e= new RegExp(_0x9ab3[90]);let _0xdcdcx4f= new RegExp(_0x9ab3[91]);let _0xdcdcx50= new RegExp(_0x9ab3[92]);let _0xdcdcx51= new RegExp(_0x9ab3[93]);let _0xdcdcx52= new RegExp(_0x9ab3[94]);let _0xdcdcx53= new RegExp(_0x9ab3[95]);let _0xdcdcx54= new RegExp(_0x9ab3[96]);let _0xdcdcx55= new RegExp(_0x9ab3[97]);let _0xdcdcx56= new RegExp(_0x9ab3[98]);let _0xdcdcx57= new RegExp(_0x9ab3[99]);let _0xdcdcx58= new RegExp(_0x9ab3[100]);let _0xdcdcx59= new RegExp(_0x9ab3[71]);let _0xdcdcx5a= new RegExp(_0x9ab3[101]);let _0xdcdcx5b= new RegExp(_0x9ab3[102]);let _0xdcdcx5c= new RegExp(_0x9ab3[103]);let _0xdcdcx5d= new RegExp(_0x9ab3[104]);let _0xdcdcx5e= new RegExp(_0x9ab3[105]);let _0xdcdcx5f= new RegExp(_0x9ab3[106]);let _0xdcdcx60= new RegExp(_0x9ab3[107]);let _0xdcdcx61= new RegExp(_0x9ab3[108]);let _0xdcdcx62= new RegExp(_0x9ab3[109]);let _0xdcdcx63= new RegExp(_0x9ab3[110]);let _0xdcdcx64= new RegExp(_0x9ab3[111]);let _0xdcdcx65= new RegExp(_0x9ab3[112]);let _0xdcdcx66= new RegExp(_0x9ab3[113]);let _0xdcdcx67= new RegExp(_0x9ab3[114]);let _0xdcdcx68= new RegExp(_0x9ab3[115]);let _0xdcdcx69= new RegExp(_0x9ab3[116]);let _0xdcdcx6a= new RegExp(_0x9ab3[117]);let _0xdcdcx6b= new RegExp(_0x9ab3[118]);let _0xdcdcx6c= new RegExp(_0x9ab3[119]);let _0xdcdcx6d= new RegExp(_0x9ab3[120]);let _0xdcdcx6e= new RegExp(_0x9ab3[121]);let _0xdcdcx6f= new RegExp(_0x9ab3[122]);let _0xdcdcx70= new RegExp(_0x9ab3[123]);let _0xdcdcx71= new RegExp(_0x9ab3[124]);let _0xdcdcx72= new RegExp(_0x9ab3[125]);let _0xdcdcx73= new RegExp(_0x9ab3[126]);let _0xdcdcx74= new RegExp(_0x9ab3[127]);let _0xdcdcx75= new RegExp(_0x9ab3[128]);let _0xdcdcx76= new RegExp(_0x9ab3[129]);let _0xdcdcx77= new RegExp(_0x9ab3[130]);let _0xdcdcx78= new RegExp(_0x9ab3[131]);let _0xdcdcx79= new RegExp(_0x9ab3[132]);let _0xdcdcx7a= new RegExp(_0x9ab3[133]);let _0xdcdcx7b= new RegExp(_0x9ab3[134]);let _0xdcdcx7c= new RegExp(_0x9ab3[135]);let _0xdcdcx7d= new RegExp(_0x9ab3[136]);let _0xdcdcx7e= new RegExp(_0x9ab3[137]);let _0xdcdcx7f= new RegExp(_0x9ab3[138]);let _0xdcdcx80= new RegExp(_0x9ab3[139]);let _0xdcdcx81= new RegExp(_0x9ab3[140]);let _0xdcdcx82= new RegExp(_0x9ab3[141]);let _0xdcdcx83= new RegExp(_0x9ab3[142]);let _0xdcdcx84= new RegExp(_0x9ab3[143]);let _0xdcdcx85= new RegExp(_0x9ab3[144]);let _0xdcdcx86= new RegExp(_0x9ab3[145]);let _0xdcdcx87= new RegExp(_0x9ab3[146]);let _0xdcdcx88= new RegExp(_0x9ab3[147]);let _0xdcdcx89= new RegExp(_0x9ab3[148]);let _0xdcdcx8a= new RegExp(_0x9ab3[149]);let _0xdcdcx8b= new RegExp(_0x9ab3[150]);let _0xdcdcx8c= new RegExp(_0x9ab3[151]);let _0xdcdcx8d= new RegExp(_0x9ab3[143]);let _0xdcdcx8e= new RegExp(_0x9ab3[145]);let _0xdcdcx8f= new RegExp(_0x9ab3[144]);let _0xdcdcx90= new RegExp(_0x9ab3[152]);let _0xdcdcx91= new RegExp(_0x9ab3[153]);let _0xdcdcx92= new RegExp(_0x9ab3[154]);let _0xdcdcx93= new RegExp(_0x9ab3[155]);let _0xdcdcx94= new RegExp(_0x9ab3[156]);let _0xdcdcx95= new RegExp(_0x9ab3[157]);let _0xdcdcx96= new RegExp(_0x9ab3[158]);let _0xdcdcx97= new RegExp(_0x9ab3[159]);let _0xdcdcx98= new RegExp(_0x9ab3[160]);let _0xdcdcx99= new RegExp(_0x9ab3[161]);let _0xdcdcx9a= new RegExp(_0x9ab3[162]);let _0xdcdcx9b= new RegExp(_0x9ab3[163]);let _0xdcdcx9c= new RegExp(_0x9ab3[161]);let _0xdcdcx9d= new RegExp(_0x9ab3[164]);let _0xdcdcx9e= new RegExp(_0x9ab3[165]);let _0xdcdcx9f= new RegExp(_0x9ab3[166]);let _0xdcdcxa0= new RegExp(_0x9ab3[167]);let _0xdcdcxa1= new RegExp(_0x9ab3[168]);let _0xdcdcxa2= new RegExp(_0x9ab3[169]);let _0xdcdcxa3= new RegExp(_0x9ab3[170]);let _0xdcdcxa4= new RegExp(_0x9ab3[171]);let _0xdcdcxa5= new RegExp(_0x9ab3[172]);let _0xdcdcxa6= new RegExp(_0x9ab3[173]);let _0xdcdcxa7= new RegExp(_0x9ab3[174]);let _0xdcdcxa8= new RegExp(_0x9ab3[175]);let _0xdcdcxa9= new RegExp(_0x9ab3[176]);let _0xdcdcxaa= new RegExp(_0x9ab3[177]);let _0xdcdcxab= new RegExp(_0x9ab3[178]);let _0xdcdcxac= new RegExp(_0x9ab3[179]);let _0xdcdcxad= new RegExp(_0x9ab3[180]);let _0xdcdcxae= new RegExp(_0x9ab3[181]);let _0xdcdcxaf= new RegExp(_0x9ab3[182]);let _0xdcdcxb0= new RegExp(_0x9ab3[183]);let _0xdcdcxb1= new RegExp(_0x9ab3[184]);let _0xdcdcxb2= new RegExp(_0x9ab3[185]);let _0xdcdcxb3= new RegExp(_0x9ab3[186]);let _0xdcdcxb4= new RegExp(_0x9ab3[187]);let _0xdcdcxb5= new RegExp(_0x9ab3[188]);let _0xdcdcxb6= new RegExp(_0x9ab3[189]);let _0xdcdcxb7= new RegExp(_0x9ab3[190]);let _0xdcdcxb8= new RegExp(_0x9ab3[191]);let _0xdcdcxb9= new RegExp(_0x9ab3[192]);let _0xdcdcxba= new RegExp(_0x9ab3[193]);let _0xdcdcxbb= new RegExp(_0x9ab3[194]);let _0xdcdcxbc= new RegExp(_0x9ab3[195]);let _0xdcdcxbd= new RegExp(_0x9ab3[196]);let _0xdcdcxbe= new RegExp(_0x9ab3[197]);let _0xdcdcxbf= new RegExp(_0x9ab3[198]);let _0xdcdcxc0= new RegExp(_0x9ab3[199]);let _0xdcdcxc1= new RegExp(_0x9ab3[200]);let _0xdcdcxc2= new RegExp(_0x9ab3[201]);let _0xdcdcxc3= new RegExp(_0x9ab3[202]);let _0xdcdcxc4= new RegExp(_0x9ab3[203]);let _0xdcdcxc5= new RegExp(_0x9ab3[204]);let _0xdcdcxc6= new RegExp(_0x9ab3[205]);let _0xdcdcxc7= new RegExp(_0x9ab3[206]);let _0xdcdcxc8= new RegExp(_0x9ab3[207]);let _0xdcdcxc9= new RegExp(_0x9ab3[208]);let _0xdcdcxca= new RegExp(_0x9ab3[209]);let _0xdcdcxcb= new RegExp(_0x9ab3[210]);let _0xdcdcxcc= new RegExp(_0x9ab3[211]);let _0xdcdcxcd= new RegExp(_0x9ab3[80]);let _0xdcdcxce= new RegExp(_0x9ab3[212]);let _0xdcdcxcf= new RegExp(_0x9ab3[213]);let _0xdcdcxd0= new RegExp(_0x9ab3[214]);let _0xdcdcxd1= new RegExp(_0x9ab3[215]);let _0xdcdcxd2= new RegExp(_0x9ab3[206]);let _0xdcdcxd3= new RegExp(_0x9ab3[216]);let _0xdcdcxd4= new RegExp(_0x9ab3[217]);let _0xdcdcxd5= new RegExp(_0x9ab3[218]);let _0xdcdcxd6= new RegExp(_0x9ab3[219]);let _0xdcdcxd7= new RegExp(_0x9ab3[220]);let _0xdcdcxd8= new RegExp(_0x9ab3[221]);let _0xdcdcxd9= new RegExp(_0x9ab3[71]);let _0xdcdcxda= new RegExp(_0x9ab3[87]);let _0xdcdcxdb= new RegExp(_0x9ab3[222]);let _0xdcdcxdc= new RegExp(_0x9ab3[223]);let _0xdcdcxdd= new RegExp(_0x9ab3[224]);let _0xdcdcxde= new RegExp(_0x9ab3[225]);let _0xdcdcxdf= new RegExp(_0x9ab3[226]);let _0xdcdcxe0= new RegExp(_0x9ab3[83]);let _0xdcdcxe1= new RegExp(_0x9ab3[227]);let _0xdcdcxe2= new RegExp(_0x9ab3[228]);let _0xdcdcxe3= new RegExp(_0x9ab3[229]);let _0xdcdcxe4= new RegExp(_0x9ab3[200]);let _0xdcdcxe5= new RegExp(_0x9ab3[230]);let _0xdcdcxe6= new RegExp(_0x9ab3[231]);let _0xdcdcxe7= new RegExp(_0x9ab3[232]);let _0xdcdcxe8= new RegExp(_0x9ab3[233]);let _0xdcdcxe9= new RegExp(_0x9ab3[234]);let _0xdcdcxea= new RegExp(_0x9ab3[235]);let _0xdcdcxeb= new RegExp(_0x9ab3[236]);let _0xdcdcxec= new RegExp(_0x9ab3[237]);let _0xdcdcxed= new RegExp(_0x9ab3[63]);let _0xdcdcxee= new RegExp(_0x9ab3[64]);let _0xdcdcxef= new RegExp(_0x9ab3[209]);let _0xdcdcxf0= new RegExp(_0x9ab3[238]);let _0xdcdcxf1= new RegExp(_0x9ab3[239]);let _0xdcdcxf2= new RegExp(_0x9ab3[240]);let _0xdcdcxf3= new RegExp(_0x9ab3[241]);let _0xdcdcxf4= new RegExp(_0x9ab3[39]);let _0xdcdcxf5= new RegExp(_0x9ab3[40]);let _0xdcdcxf6= new RegExp(_0x9ab3[190]);let _0xdcdcxf7= new RegExp(_0x9ab3[187]);let _0xdcdcxf8= new RegExp(_0x9ab3[242]);let _0xdcdcxf9= new RegExp(_0x9ab3[243]);let _0xdcdcxfa= new RegExp(_0x9ab3[244]);let _0xdcdcxfb= new RegExp(_0x9ab3[245]);let _0xdcdcxfc= new RegExp(_0x9ab3[246]);let _0xdcdcxfd= new RegExp(_0x9ab3[247]);let _0xdcdcxfe= new RegExp(_0x9ab3[236]);let _0xdcdcxff= new RegExp(_0x9ab3[237]);let _0xdcdcx100= new RegExp(_0x9ab3[248]);let _0xdcdcx101= new RegExp(_0x9ab3[249]);let _0xdcdcx102= new RegExp(_0x9ab3[250]);let _0xdcdcx103= new RegExp(_0x9ab3[251]);let _0xdcdcx104= new RegExp(_0x9ab3[252]);let _0xdcdcx105= new RegExp(_0x9ab3[253]);let _0xdcdcx106= new RegExp(_0x9ab3[254]);let _0xdcdcx107= new RegExp(_0x9ab3[255]);let _0xdcdcx108= new RegExp(_0x9ab3[256]);let _0xdcdcx109= new RegExp(_0x9ab3[257]);let _0xdcdcx10a= new RegExp(_0x9ab3[258]);let _0xdcdcx10b= new RegExp(_0x9ab3[259]);let _0xdcdcx10c= new RegExp(_0x9ab3[56]);let _0xdcdcx10d= new RegExp(_0x9ab3[55]);let _0xdcdcx10e= new RegExp(_0x9ab3[260]);let _0xdcdcx10f= new RegExp(_0x9ab3[261]);let _0xdcdcx110= new RegExp(_0x9ab3[262]);let _0xdcdcx111= new RegExp(_0x9ab3[263]);let _0xdcdcx112= new RegExp(_0x9ab3[264]);let _0xdcdcx113= new RegExp(_0x9ab3[265]);let _0xdcdcx114= new RegExp(_0x9ab3[266]);let _0xdcdcx115= new RegExp(_0x9ab3[267]);let _0xdcdcx116= new RegExp(_0x9ab3[268]);let _0xdcdcx117= new RegExp(_0x9ab3[269]);let _0xdcdcx118= new RegExp(_0x9ab3[270]);let _0xdcdcx119= new RegExp(_0x9ab3[271]);let _0xdcdcx11a= new RegExp(_0x9ab3[272]);let _0xdcdcx11b= new RegExp(_0x9ab3[273]);let _0xdcdcx11c= new RegExp(_0x9ab3[274]);let _0xdcdcx11d= new RegExp(_0x9ab3[275]);let _0xdcdcx11e= new RegExp(_0x9ab3[276]);let _0xdcdcx11f= new RegExp(_0x9ab3[277]);let _0xdcdcx120= new RegExp(_0x9ab3[137]);let _0xdcdcx121= new RegExp(_0x9ab3[138]);let _0xdcdcx122= new RegExp(_0x9ab3[278]);let _0xdcdcx123= new RegExp(_0x9ab3[279]);let _0xdcdcx124= new RegExp(_0x9ab3[280]);let _0xdcdcx125= new RegExp(_0x9ab3[281]);let _0xdcdcx126= new RegExp(_0x9ab3[282]);let _0xdcdcx127= new RegExp(_0x9ab3[216]);let _0xdcdcx128= new RegExp(_0x9ab3[283]);let _0xdcdcx129= new RegExp(_0x9ab3[249]);let _0xdcdcx12a= new RegExp(_0x9ab3[284]);let _0xdcdcx12b= new RegExp(_0x9ab3[285]);let _0xdcdcx12c= new RegExp(_0x9ab3[286]);let _0xdcdcx12d= new RegExp(_0x9ab3[287]);let _0xdcdcx12e= new RegExp(_0x9ab3[288]);let _0xdcdcx12f= new RegExp(_0x9ab3[289]);let _0xdcdcx130= new RegExp(_0x9ab3[290]);let _0xdcdcx131= new RegExp(_0x9ab3[291]);let _0xdcdcx132= new RegExp(_0x9ab3[292]);let _0xdcdcx133= new RegExp(_0x9ab3[293]);let _0xdcdcx134= new RegExp(_0x9ab3[294]);let _0xdcdcx135= new RegExp(_0x9ab3[295]);let _0xdcdcx136= new RegExp(_0x9ab3[296]);let _0xdcdcx137= new RegExp(_0x9ab3[297]);let _0xdcdcx138= new RegExp(_0x9ab3[298]);let _0xdcdcx139= new RegExp(_0x9ab3[299]);let _0xdcdcx13a= new RegExp(_0x9ab3[300]);let _0xdcdcx13b= new RegExp(_0x9ab3[301]);let _0xdcdcx13c= new RegExp(_0x9ab3[302]);let _0xdcdcx13d= new RegExp(_0x9ab3[303]);let _0xdcdcx13e= new RegExp(_0x9ab3[304]);let _0xdcdcx13f= new RegExp(_0x9ab3[305]);let _0xdcdcx140= new RegExp(_0x9ab3[306]);let _0xdcdcx141= new RegExp(_0x9ab3[307]);let _0xdcdcx142= new RegExp(_0x9ab3[308]);let _0xdcdcx143= new RegExp(_0x9ab3[309]);let _0xdcdcx144= new RegExp(_0x9ab3[310]);let _0xdcdcx145= new RegExp(_0x9ab3[311]);let _0xdcdcx146= new RegExp(_0x9ab3[312]);let _0xdcdcx147= new RegExp(_0x9ab3[313]);let _0xdcdcx148= new RegExp(_0x9ab3[300]);let _0xdcdcx149= new RegExp(_0x9ab3[298]);let _0xdcdcx14a= new RegExp(_0x9ab3[314]);let _0xdcdcx14b= new RegExp(_0x9ab3[315]);let _0xdcdcx14c= new RegExp(_0x9ab3[316]);let _0xdcdcx14d= new RegExp(_0x9ab3[317]);let _0xdcdcx14e= new RegExp(_0x9ab3[318]);let _0xdcdcx14f= new RegExp(_0x9ab3[319]);let _0xdcdcx150= new RegExp(_0x9ab3[320]);let _0xdcdcx151= new RegExp(_0x9ab3[321]);let _0xdcdcx152= new RegExp(_0x9ab3[322]);let _0xdcdcx153= new RegExp(_0x9ab3[323]);let _0xdcdcx154= new RegExp(_0x9ab3[324]);let _0xdcdcx155= new RegExp(_0x9ab3[325]);let _0xdcdcx156= new RegExp(_0x9ab3[326]);let _0xdcdcx157= new RegExp(_0x9ab3[327]);let _0xdcdcx158= new RegExp(_0x9ab3[328]);let _0xdcdcx159= new RegExp(_0x9ab3[329]);let _0xdcdcx15a= new RegExp(_0x9ab3[330]);let _0xdcdcx15b= new RegExp(_0x9ab3[331]);if(_0xdcdcxd[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx10[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx11[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx12[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx13[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx14[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx15[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx16[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx17[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx18[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx19[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx1a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx1b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx1c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx1d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx1e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx1f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx20[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx21[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx22[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx23[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx24[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx25[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx26[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx27[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx28[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx29[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx2a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx2b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx2c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx2d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx2e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx2f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx30[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx31[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx32[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx33[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx34[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx35[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx36[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx37[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx38[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx39[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx3a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx3b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx3c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx3d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx3e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx3f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx40[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx41[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx42[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx43[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx44[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx45[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx46[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx47[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx48[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx49[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx4a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx4b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx4c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx4d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx4e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx4f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx50[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx51[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx52[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx53[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx54[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx55[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx56[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx57[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx58[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx59[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx5a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx5b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx5c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx5d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx5e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx5f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx60[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx61[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx62[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx63[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx64[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx65[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx66[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx67[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx68[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx69[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx6a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx6b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx6c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx6d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx6e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx6f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx70[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx71[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx72[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx73[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx74[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx75[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx76[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx77[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx78[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx79[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx7a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx7b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx7c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx7d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx7e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx7f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx80[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx81[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx82[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx83[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx84[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx85[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx86[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx87[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx88[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx89[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx8a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx8b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx8c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx8d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx8e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx8f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx90[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx91[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx92[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx93[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx94[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx95[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx96[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx97[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx98[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx99[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx9a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx9b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx9c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx9d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx9e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx9f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa0[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa1[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa2[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa3[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa4[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa5[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa6[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa7[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa8[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxa9[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxaa[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxab[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxac[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxad[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxae[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxaf[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb0[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb1[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb2[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb3[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb4[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb5[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb6[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb7[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb8[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxb9[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxba[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxbb[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxbc[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxbd[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxbe[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxbf[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc0[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc1[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc2[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc3[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc4[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc5[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc6[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc7[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc8[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxc9[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxca[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxcb[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxcc[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxcd[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxce[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxcf[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd0[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd1[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd2[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd3[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd4[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd5[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd6[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd7[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd8[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxd9[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxda[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxdb[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxdc[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxdd[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxde[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxdf[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe0[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe1[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe2[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe3[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe4[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe5[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe6[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe7[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe8[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxe9[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxea[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxeb[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxec[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxed[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxee[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxef[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf0[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf1[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf2[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf3[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf4[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf5[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf6[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf7[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf8[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxf9[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxfa[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxfb[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxfc[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxfd[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxfe[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcxff[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx100[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx101[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx102[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx103[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx104[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx105[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx106[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx107[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx108[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx109[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx10a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx10b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx10c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx10d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx10e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx10f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx110[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx111[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx112[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx113[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx114[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx115[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx116[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx117[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx118[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx119[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx11a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx11b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx11c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx11d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx11e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx11f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx120[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx121[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx122[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx123[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx124[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx125[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx126[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx127[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx128[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx129[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx12a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx12b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx12c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx12d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx12e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx12f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx130[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx131[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx132[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx133[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx134[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx135[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx136[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx137[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx138[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[336],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[337],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[338],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[339],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx139[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[336],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[337],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[338],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[340],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx13a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[336],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[337],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[338],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],_0x9ab3[339],MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx13b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx13c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx13d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx13e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx13f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx140[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx141[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx142[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx143[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx144[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx145[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx146[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx147[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx148[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx149[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx14a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx14b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx14c[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx14d[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx14e[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx14f[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx150[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx151[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx152[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx153[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx154[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx155[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg1,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[342]](_0xdcdcx4[_0x9ab3[5]],GroupSettingChange[_0x9ab3[341]],true); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx156[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg1,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[342]](_0xdcdcx4[_0x9ab3[5]],GroupSettingChange[_0x9ab3[341]],true); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx157[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg1,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[342]](_0xdcdcx4[_0x9ab3[5]],GroupSettingChange[_0x9ab3[341]],true); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx158[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg1,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[342]](_0xdcdcx4[_0x9ab3[5]],GroupSettingChange[_0x9ab3[341]],true); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx159[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg1,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[342]](_0xdcdcx4[_0x9ab3[5]],GroupSettingChange[_0x9ab3[341]],true); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx15a[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg1,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[342]](_0xdcdcx4[_0x9ab3[5]],GroupSettingChange[_0x9ab3[341]],true); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}else {if(_0xdcdcx15b[_0x9ab3[333]](_0xdcdcx4[_0x9ab3[332]])){var _0xdcdcx15c= await checkUsAdmin(_0xdcdcx4);var _0xdcdcx15d= await checkImAdmin(_0xdcdcx4);if(!_0xdcdcx15d){return};if(_0xdcdcx15c){return}; await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[334]](_0xdcdcx4[_0x9ab3[5]],kickmsg1,MessageType[_0x9ab3[22]],{quoted:_0xdcdcx4[_0x9ab3[4]]}); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[342]](_0xdcdcx4[_0x9ab3[5]],GroupSettingChange[_0x9ab3[341]],true); await _0xdcdcx4[_0x9ab3[7]][_0x9ab3[335]](_0xdcdcx4[_0x9ab3[5]],[_0xdcdcx4[_0x9ab3[4]][_0x9ab3[3]]])}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}))
+const WhatsAlexa = require('../events');
+const {MessageType,Mimetype} = require('@adiwajshing/baileys');
+const Config = require('../config');
+
+async function checkUsAdmin(message, user = message.data.participant) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+async function checkImAdmin(message, user = message.client.user.jid) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+
+const ADD = '94757534153'
+
+var kickmsg = ''
+if (Config.LANG == 'SI') kickmsg = '*_Sry Nigga_* 😹😈💔\n*_something went wrong i can feel it 🎇🎠_*'
+if (Config.LANG == 'EN') kickmsg = '*_Sry Nigga_* 😹😈💔\n*_something went wrong i can feel it 🎇🎠_*'
+if (Config.LANG == 'SI') kickmsg1 = '*_Fuke You Bitch_* 😹😈💔\n*_something wrong i can feel it 🎇🎠_*'
+if (Config.LANG == 'EN') kickmsg1 = '*_Fuke You Bitch_* 😹😈💔\n*_something wrong i can feel it 🎇🎠_*'
+
+WhatsAlexa.addCommand({on: 'text', fromMe: false,  deleteCommand: false}, (async (message, match) => {    
+    if (Config.UNCLEBOTBUG == 'true') {
+        let getword1bad = new RegExp('fuck')
+        let getword2bad = new RegExp('f u c k')
+        let getword3bad = new RegExp('Fuck')
+        let getword4bad = new RegExp('F u c k')
+        let getword5bad = new RegExp('Huththa')
+        let getword6bad = new RegExp('huththa')
+        let getword7bad = new RegExp('Hutta')
+        let getword8bad = new RegExp('hutta')
+        let getword9bad = new RegExp('huththi')
+        let getword10bad = new RegExp('Huththi')
+        let getword11bad = new RegExp('hutti')
+        let getword12bad = new RegExp('Hutti')
+        let getword13bad = new RegExp('Baduwa')
+        let getword14bad = new RegExp('baduwa')
+        let getword15bad = new RegExp('paka ')
+        let getword16bad = new RegExp('Paka ')
+        let getword17bad = new RegExp('Pakaya')
+        let getword18bad = new RegExp('pakaya')
+        let getword19bad = new RegExp('Pakichchi')
+        let getword20bad = new RegExp('pakichchi')
+        let getword21bad = new RegExp('wesawa')
+        let getword22bad = new RegExp('Wesawa')
+        let getword23bad = new RegExp('Wesi ')
+        let getword24bad = new RegExp('wesi ')
+        let getword25bad = new RegExp('Payya')
+        let getword26bad = new RegExp('payya')
+        let getword27bad = new RegExp('Wesige')
+        let getword28bad = new RegExp('wesige')
+        let getword29bad = new RegExp('hukanawa')
+        let getword30bad = new RegExp('Hukanawa')
+        let getword31bad = new RegExp('Hukanna')
+        let getword32bad = new RegExp('hukanna')
+        let getword33bad = new RegExp('Huka ')
+        let getword34bad = new RegExp('huka ')
+        let getword35bad = new RegExp('Hikuna')
+        let getword36bad = new RegExp('hikuna')
+        let getword37bad = new RegExp('Hikila')
+        let getword38bad = new RegExp('hikila')
+        let getword39bad = new RegExp('kariya')
+        let getword40bad = new RegExp('Kariya')
+        let getword41bad = new RegExp('Kari ')
+        let getword42bad = new RegExp('kari ')
+        let getword43bad = new RegExp('Hukana')
+        let getword44bad = new RegExp('hukana')
+        let getword45bad = new RegExp('හුත්තා')
+        let getword46bad = new RegExp('හුත්ති')
+        let getword47bad = new RegExp('හුකන්නා')
+        let getword48bad = new RegExp('හුකනවා')
+        let getword49bad = new RegExp('හිකුනා')
+        let getword50bad = new RegExp('හිකිලා')
+        let getword51bad = new RegExp('හුත්')
+        let getword52bad = new RegExp('හුකා')
+        let getword53bad = new RegExp('කැරියා')
+        let getword54bad = new RegExp('කැරි')
+        let getword55bad = new RegExp('පකයා')
+        let getword56bad = new RegExp('පක')
+        let getword57bad = new RegExp('පකා')
+        let getword58bad = new RegExp('පක්')
+        let getword59bad = new RegExp('ෆක්')
+        let getword60bad = new RegExp('පින්නයා')
+        let getword61bad = new RegExp('pinnaya')
+        let getword62bad = new RegExp('Pinnaya')
+        let getword63bad = new RegExp('බඩුව')
+        let getword64bad = new RegExp('වේසාවා')
+        let getword65bad = new RegExp('වේසි')
+        let getword66bad = new RegExp('පයිය')
+        let getword67bad = new RegExp('පයියා')
+        let getword68bad = new RegExp('esawa ')
+        let getword69bad = new RegExp(' esi ')
+        let getword70bad = new RegExp('uddika ')
+        let getword71bad = new RegExp('Uddika ')
+        let getword72bad = new RegExp('උද්දික ')
+        let getword73bad = new RegExp('ඒසාවා ')
+        let getword74bad = new RegExp('ඒසි')
+        let getword75bad = new RegExp('Esawa ')
+        let getword76bad = new RegExp('Esi ')
+        let getword77bad = new RegExp('හුකන්නා')
+        let getword78bad = new RegExp('හුත්තිගෙ')
+        let getword79bad = new RegExp('Huththige')
+        let getword80bad = new RegExp('huththige')
+        let getword81bad = new RegExp('වේසිගෙ')
+        let getword82bad = new RegExp('ponnaya')
+        let getword83bad = new RegExp('ponnay')
+        let getword84bad = new RegExp('ponnayage')
+        let getword85bad = new RegExp('ponnayek')
+        let getword86bad = new RegExp('ponnayekne')
+        let getword87bad = new RegExp('ponnayekge')
+        let getword88bad = new RegExp('පොන්නයා')
+        let getword89bad = new RegExp('පොන්නයෙක්')
+        let getword90bad = new RegExp('පොන්නයෙක්නෙ')
+        let getword91bad = new RegExp('පොන්නයෙක්ගෙ')
+        let getword92bad = new RegExp('vesi ')
+        let getword93bad = new RegExp('vesawa')
+        let getword94bad = new RegExp('vesiyak')
+        let getword95bad = new RegExp('wesiyak')
+        let getword96bad = new RegExp('Wesiyak')
+        let getword97bad = new RegExp('Vesi ')
+        let getword98bad = new RegExp('Vesawa')
+        let getword99bad = new RegExp('වේසියක්ගෙ')
+        let getword100bad = new RegExp('Huththiyak')
+        let getword101bad = new RegExp('huththiyak')
+        let getword102bad = new RegExp('payyek')
+        let getword103bad = new RegExp('Payyek')
+        let getword104bad = new RegExp('pakayek')
+        let getword105bad = new RegExp('Pakayek')
+        let getword106bad = new RegExp('Huththek')
+        let getword107bad = new RegExp('huththek')
+        let getword108bad = new RegExp('හුත්තියක්')
+        let getword109bad = new RegExp('පයියෙක්')
+        let getword110bad = new RegExp('වේසියක්')
+        let getword111bad = new RegExp('බඩුවක්')
+        let getword112bad = new RegExp('baduwak')
+        let getword113bad = new RegExp('Baduwak')
+        let getword114bad = new RegExp('pinnayek')
+        let getword115bad = new RegExp('Pinnayek')
+        let getword116bad = new RegExp('පින්නයෙක්')
+        let getword117bad = new RegExp('Huththage')
+        let getword118bad = new RegExp('huththage')
+        let getword119bad = new RegExp('හුත්තගෙ')
+        let getword120bad = new RegExp('Huththata')
+        let getword121bad = new RegExp('හුත්තට')
+        let getword122bad = new RegExp('huththata')
+        let getword123bad = new RegExp('pakata')
+        let getword124bad = new RegExp('Pakata')
+        let getword125bad = new RegExp('පකට')
+        let getword126bad = new RegExp('පකාට')
+        let getword127bad = new RegExp('ponnayata')
+        let getword128bad = new RegExp('Ponnayata')
+        let getword129bad = new RegExp('Huththata')
+        let getword130bad = new RegExp('huththata')
+        let getword131bad = new RegExp('හුත්තට')
+        let getword132bad = new RegExp('පොන්නයට')
+        let getword133bad = new RegExp('පයියට')
+        let getword134bad = new RegExp('payyata')
+        let getword135bad = new RegExp('Payyata')
+        let getword136bad = new RegExp('vesita')
+        let getword137bad = new RegExp('Vesita')
+        let getword138bad = new RegExp('wesita')
+        let getword139bad = new RegExp('Wesita')
+        let getword140bad = new RegExp('වේසිට')
+        let getword141bad = new RegExp('vesiyek')
+        let getword142bad = new RegExp('Vesiyek')
+        let getword143bad = new RegExp('Wesiyek')
+        let getword144bad = new RegExp('vesiyek')
+        let getword145bad = new RegExp('වේසියෙක්')
+        let getword146bad = new RegExp('හුත්තියෙක්')
+        let getword147bad = new RegExp('huththiyek')
+        let getword148bad = new RegExp('Huththiyek')
+        let getword149bad = new RegExp('huttiyek')
+        let getword150bad = new RegExp('Huttiyek')
+        let getword151bad = new RegExp('huttek')
+        let getword152bad = new RegExp('Huttek')
+        let getword153bad = new RegExp('ponni')
+        let getword154bad = new RegExp('Ponni')
+        let getword155bad = new RegExp('පොන්නි')
+        let getword156bad = new RegExp('ponniyak')
+        let getword157bad = new RegExp('Ponniyak')
+        let getword158bad = new RegExp('Ponniyek')
+        let getword159bad = new RegExp('ponniyek')
+        let getword160bad = new RegExp('Bacic')
+        let getword161bad = new RegExp('becic')
+        let getword162bad = new RegExp('becige')
+        let getword163bad = new RegExp('Basige')
+        let getword164bad = new RegExp('Bacige')
+        let getword165bad = new RegExp('besige')
+        let getword166bad = new RegExp('hukaam')
+        let getword167bad = new RegExp('Hukaam')
+        let getword168bad = new RegExp('Hukaham')
+        let getword169bad = new RegExp('Hukahan')
+        let getword170bad = new RegExp('hukahan')
+        let getword171bad = new RegExp('hukaham')
+        let getword172bad = new RegExp('hukapu')
+        let getword173bad = new RegExp('Hukapu')
+        let getword174bad = new RegExp('හුකාම්')
+        let getword175bad = new RegExp('හුකහම්')
+        let getword176bad = new RegExp('pakeer')
+        let getword177bad = new RegExp('fakeer')
+        let getword178bad = new RegExp('පකීර්')
+        let getword179bad = new RegExp('හුකහන්')
+        let getword180bad = new RegExp('ෆකීර්')
+        let getword181bad = new RegExp('පිත්තම්')
+        let getword182bad = new RegExp('කල්ලතෝනි')
+        let getword183bad = new RegExp('මරිමොංගල්')
+        let getword184bad = new RegExp('සිපයියා')
+        let getword185bad = new RegExp('පිම්පි')
+        let getword186bad = new RegExp('වඳ')
+        let getword187bad = new RegExp('පීචන්')
+        let getword188bad = new RegExp('කැරිය')
+        let getword189bad = new RegExp('ලෙස්බියන්')
+        let getword190bad = new RegExp('හොරහුත්ති')
+        let getword191bad = new RegExp('නාට්ටාමි')
+        let getword192bad = new RegExp('බැල්ලි')
+        let getword193bad = new RegExp('පක')
+        let getword194bad = new RegExp('ඇටදෙක')
+        let getword195bad = new RegExp('මන්දමානසික')
+        let getword196bad = new RegExp('කණ්ඩම්')
+        let getword197bad = new RegExp('කොණ්ඩම්')
+        let getword198bad = new RegExp('පීචන්')
+        let getword199bad = new RegExp('පකෝ')
+        let getword200bad = new RegExp('කනවැන්දුමා')
+        let getword201bad = new RegExp('මෑඇටේ')
+        let getword202bad = new RegExp('මෑමල')
+        let getword203bad = new RegExp('අවජාතක')
+        let getword204bad = new RegExp('බලුජානෙ')
+        let getword205bad = new RegExp('හුකන්නා')
+        let getword206bad = new RegExp('බඩුව')
+        let getword207bad = new RegExp('ගොම්බඩුව')
+        let getword208bad = new RegExp('පොන්නහුකන්නා')
+        let getword209bad = new RegExp('කැරිහුත්ති')
+        let getword210bad = new RegExp('පොට්ටහුත්ති')
+        let getword211bad = new RegExp('පොට්ටවේසි')
+        let getword212bad = new RegExp('ෆක්')
+        let getword213bad = new RegExp('වඳහුත්ති')
+        let getword214bad = new RegExp('ලෙඩබැල්ලි')
+        let getword215bad = new RegExp('වේසබඩුව')
+        let getword216bad = new RegExp('පිත්තම්')
+        let getword217bad = new RegExp('piththam')
+        let getword218bad = new RegExp('Piththam')
+        let getword219bad = new RegExp('marimongal')
+        let getword220bad = new RegExp('Marimongal')
+        let getword221bad = new RegExp('pimpi')
+        let getword222bad = new RegExp('Pimpi')
+        let getword223bad = new RegExp('pichan')
+        let getword224bad = new RegExp('Pichan')
+        let getword225bad = new RegExp('kariya')
+        let getword226bad = new RegExp('Kariya')
+        let getword227bad = new RegExp('හොරහුත්ති')
+        let getword228bad = new RegExp('horahuththi')
+        let getword229bad = new RegExp('Horahuththi')
+        let getword230bad = new RegExp('nattami')
+        let getword231bad = new RegExp('Nattami')
+        let getword232bad = new RegExp('paka ')
+        let getword233bad = new RegExp('Paka ')
+        let getword234bad = new RegExp('hukaham')
+        let getword235bad = new RegExp('Hukaham')
+        let getword236bad = new RegExp('mandamanasika')
+        let getword237bad = new RegExp('Mandamanasika')
+        let getword238bad = new RegExp('kandam')
+        let getword239bad = new RegExp('Kandam')
+        let getword240bad = new RegExp('kondam')
+        let getword241bad = new RegExp('Kondam')
+        let getword242bad = new RegExp('pichan')
+        let getword243bad = new RegExp('Pichan')
+        let getword244bad = new RegExp('pako ')
+        let getword245bad = new RegExp('Pako ')
+        let getword246bad = new RegExp('kanawanduma')
+        let getword247bad = new RegExp('Kanawanduma')
+        let getword248bad = new RegExp('ma ate ')
+        let getword249bad = new RegExp('Ma ate ')
+        let getword250bad = new RegExp('ma mfdfsgggala ')
+        let getword251bad = new RegExp('Ma maggddsdla')
+        let getword252bad = new RegExp('awajathaka')
+        let getword253bad = new RegExp('Awajathaka')
+        let getword254bad = new RegExp('balujane')
+        let getword255bad = new RegExp('Balujane')
+        let getword256bad = new RegExp('hukanna')
+        let getword257bad = new RegExp('Hukanna')
+        let getword258bad = new RegExp('gonbaduwa')
+        let getword259bad = new RegExp('Gonbaduwa')
+        let getword260bad = new RegExp('ponnahukanna')
+        let getword261bad = new RegExp('Ponnahukanna')
+        let getword262bad = new RegExp('karihuththu')
+        let getword263bad = new RegExp('Karihuththi')
+        let getword264bad = new RegExp('pottahuththi')
+        let getword265bad = new RegExp('Pottahuththi')
+        let getword266bad = new RegExp('pottawesi')
+        let getword267bad = new RegExp('Pottawesi')
+        let getword268bad = new RegExp('kbgigihogkgkgggjvuug')
+        let getword269bad = new RegExp('ffhhufffufjjffjjjfjjjifjffhhhfhfh')
+        let getword270bad = new RegExp('wadahuththi')
+        let getword271bad = new RegExp('Wadahuththi')
+        let getword272bad = new RegExp('ledaballi')
+        let getword273bad = new RegExp('Ledaballi')
+        let getword274bad = new RegExp('wesabaduwa')
+        let getword275bad = new RegExp('Wesabaduwa')
+        let getword276bad = new RegExp('pinnayek')
+        let getword277bad = new RegExp('Pinnayek')
+        let getword278bad = new RegExp('හුත්තෝ')
+        let getword279bad = new RegExp('huththo')
+        let getword280bad = new RegExp('Huththo')
+        let getword281bad = new RegExp('hutto')
+        let getword282bad = new RegExp('Hutto')
+        let getword283bad = new RegExp('පකෝ')
+        let getword284bad = new RegExp('pako')
+        let getword285bad = new RegExp('Pako ')
+        let getword286bad = new RegExp('පයියො')
+        let getword287bad = new RegExp('payyo')
+        let getword288bad = new RegExp('Payyo')
+        let getword289bad = new RegExp('කැරියෝ')
+        let getword290bad = new RegExp('kariyo')
+        let getword291bad = new RegExp('Kariyo')
+        let getword292bad = new RegExp('puthcfsdfghjjo ')
+        let getword293bad = new RegExp('පුvghjiiiiiතෝ ')
+        let getword294bad = new RegExp('හුකන්නො ')
+        let getword295bad = new RegExp('hukanno')
+        let getword296bad = new RegExp('Hukanno')
+        let getword297bad = new RegExp('keriyo')
+        let getword298bad = new RegExp('Keriyo')
+        let getword299bad = new RegExp('esawo ')
+        let getword300bad = new RegExp('Kamriya')
+        let getword301bad = new RegExp('kamriyaa')
+        let getword302bad = new RegExp('kamriya')
+        let getword303bad = new RegExp('utta')
+        let getword304bad = new RegExp('hutho ')
+        let getword305bad = new RegExp('Hutho ')
+        let getword306bad = new RegExp('pamka')
+        let getword307bad = new RegExp('Pamka')
+        let getword308bad = new RegExp('Humkapan')
+        let getword309bad = new RegExp('humkapan')
+        let getword310bad = new RegExp('humtha')
+        let getword311bad = new RegExp('Humtha')
+        let getword312bad = new RegExp('Humtho')
+        let getword313bad = new RegExp('humtho')
+        let getword314bad = new RegExp('Pamko')
+        let getword315bad = new RegExp('pamko')
+        let getword316bad = new RegExp('kamriya')
+        let getword317bad = new RegExp('Kamriya')
+        let getword318bad = new RegExp('wemsi')
+        let getword319bad = new RegExp('Wemsi')
+        let getword320bad = new RegExp('pussy')
+        let getword321bad = new RegExp('piss')
+        let getword322bad = new RegExp('xnxx')
+        let getword323bad = new RegExp('Piss ')
+        let getword324bad = new RegExp('Pussy')
+        let getword325bad = new RegExp('vulva')
+        let getword326bad = new RegExp('Vulva')
+        let getword327bad = new RegExp('penis')
+        let getword328bad = new RegExp('paka')
+        let getword329bad = new RegExp('.hunton')
+        let getword330bad = new RegExp('.darkspam')
+        let getword331bad = new RegExp('Running Script....')
+        let getword332bad = new RegExp('HUNTED BY')
+        let getword333bad = new RegExp('SEW&Queen&SLAYER-07')
+        let getword334bad = new RegExp('SewQueen')
+        let getword335bad = new RegExp('*👾_𝐒𝐄𝐖_-_𝐐𝐔𝐄𝐄𝐍_-_𝐀𝐓𝐓𝐀𝐂𝐊👾*')
+
+
+        if (getword1bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        } 
+        else if (getword2bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+         else if (getword3bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+        else if (getword4bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+        else if (getword5bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+         else if (getword6bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+         else if (getword7bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+         else if (getword8bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+         else if (getword9bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }
+         else if (getword10bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword11bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword12bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword13bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword14bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword15bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword16bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword17bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword18bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword19bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword20bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword21bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword22bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword23bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword24bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword25bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword26bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword27bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword28bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword29bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }     
+        else if (getword30bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword31bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword32bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword33bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword34bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword35bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword36bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword37bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword38bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword39bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword40bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword41bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword42bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword43bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword44bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword45bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword46bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword47bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword48bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword49bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword50bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword51bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword52bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword53bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword54bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword55bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword56bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword57bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword58bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword59bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword60bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword61bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword62bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword63bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword64bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword65bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword66bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword67bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword68bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword69bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword70bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword71bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword72bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword73bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword74bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword75bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword76bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword77bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword78bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword79bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword80bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword81bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword82bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword83bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword84bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword85bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword86bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword87bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword88bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword89bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword90bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword91bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword92bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword93bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword94bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword95bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword96bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword97bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword98bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword99bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword100bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword101bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword102bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword103bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword104bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword105bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword106bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword107bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword108bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword109bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword110bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword111bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword112bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword113bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword114bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword115bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword116bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword117bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword118bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword119bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword120bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword121bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword122bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword123bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword124bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword125bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword126bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword127bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword128bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword129bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword130bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword131bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword132bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword133bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword134bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword135bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword136bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword137bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword138bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword139bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword140bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword141bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword142bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword143bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword144bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword145bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword146bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword147bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword148bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword149bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword150bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword151bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword152bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword153bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword154bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword155bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword156bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword157bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword158bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword159bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword160bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword161bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword162bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword163bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword164bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword165bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword166bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword167bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword168bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword169bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword170bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword171bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword172bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword173bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword174bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword175bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword176bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword177bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword178bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword179bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword180bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword181bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword182bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword183bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword184bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword185bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword186bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword187bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword188bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword189bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword190bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword191bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword192bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword193bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword194bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword195bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword196bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword197bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword198bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword199bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword200bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword201bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword202bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword203bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword204bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword205bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword206bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword207bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword208bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword209bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword210bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword211bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword212bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword213bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword214bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword215bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword216bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword217bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword218bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword219bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword220bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword221bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword222bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword223bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword224bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword225bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword226bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword227bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword228bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword229bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword230bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword231bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword232bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword233bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword234bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword235bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword236bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword237bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword238bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword239bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword240bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword241bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword242bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword243bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword244bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword245bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword246bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword247bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword248bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword249bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword250bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword251bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword252bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword253bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword254bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword255bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword256bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword257bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword258bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword259bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword260bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword261bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword262bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword263bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword264bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword265bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword266bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword267bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword268bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword269bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword270bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword271bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword272bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword273bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword274bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword275bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword276bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword277bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword278bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword279bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword280bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword281bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword282bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword283bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword284bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword285bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword286bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword287bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword288bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword289bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword290bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword291bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword292bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword293bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword294bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword295bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword296bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword297bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword298bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword299bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword300bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *3*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *2*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *1*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *Bye, Bye!*', MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }      
+        else if (getword301bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *3*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *2*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *1*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *Bye, Bye!', MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }      
+        
+        else if (getword302bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *3*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *2*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *1*', MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,'\n    *Bye, Bye!*', MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword303bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword304bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword305bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword306bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword307bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword308bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword309bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword310bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword311bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword312bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword313bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword314bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword315bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword316bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword317bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword318bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword319bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword320bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword321bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword322bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword323bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword324bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword325bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword326bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }      
+        else if (getword327bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }    
+        else if (getword328bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }    
+        else if (getword329bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg1, MessageType.text, {quoted: message.data })
+            await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }    
+        else if (getword330bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg1, MessageType.text, {quoted: message.data })
+            await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }    
+        else if (getword331bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg1, MessageType.text, {quoted: message.data })
+            await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+        }    
+        else if (getword332bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg1, MessageType.text, {quoted: message.data })
+            await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }    
+        else if (getword333bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg1, MessageType.text, {quoted: message.data })
+            await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }    
+        else if (getword334bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg1, MessageType.text, {quoted: message.data })
+            await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }    
+        else if (getword335bad.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,kickmsg1, MessageType.text, {quoted: message.data })
+            await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+
+        }
+    }
+}))
