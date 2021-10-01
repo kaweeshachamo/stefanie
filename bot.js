@@ -6,7 +6,7 @@ const config = require('./config');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./alexa/');
 const { DataTypes } = require('sequelize');
-const { getMessage } = require("./plugins/sql/greetings");
+const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const axios = require('axios');
 const got = require('got');
 
@@ -88,7 +88,7 @@ async function WhatsAlexa () {
     })    
 
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Hatzu')}${chalk.blue.bold('Hole')}
+        console.log(`${chalk.green.bold('connecting')}${chalk.blue.bold('WhatAlexa')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 ${chalk.blue.italic('Thanks to TOXIC-DEVIL')}`);
     });
@@ -447,7 +447,7 @@ ${chalk.blue.italic('Thanks to TOXIC-DEVIL')}`);
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Refreshing your old version string...'))
+            console.log(chalk.red.bold('ERROR...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
