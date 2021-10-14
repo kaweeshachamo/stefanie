@@ -45,7 +45,7 @@ WhatsAlexa.addCommand({pattern: 'insert ?(.*)', fromMe: true, desc: Lang.INSTALL
         try {
             require('./' + plugin_name);
         } catch (e) {
-            fs.unlinkSync('/root/WhatsAlexa/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/Jessi-4r-whatsAlexa/plugins/' + plugin_name + '.js')
             return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + e + '```', MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
         }
 
