@@ -1,5 +1,3 @@
-FROM fusuf/whatsasena:latest
-
 RUN git clone https://github.com/MrChaby/Jessi-4r-whatsAlexa /root/Jessi-4r-whatsAlexa
 WORKDIR /root/Jessi-4r-whatsAlexa/
 ENV TZ=Europe/Istanbul
