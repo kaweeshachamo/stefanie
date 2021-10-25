@@ -10,7 +10,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './whatsalexa.db' : proc
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: 'v5 First Release',
+    VERSION: 'v6 First Release',
     SESSION: process.env.SESSION === undefined ? '' : process.env.SESSION,
     LANG: process.env.LANGUAGE === undefined ? 'EN' : process.env.LANGUAGE.toUpperCase(),
     NOLOG: process.env.NO_LOG === undefined ? 'false' : process.env.NO_LOG,
