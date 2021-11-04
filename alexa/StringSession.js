@@ -20,7 +20,7 @@ class StringSession {
     }
 
     createStringSession(dict) {
-        return 'Alexa===' + Buffer.from(JSON.stringify(dict)).toString('base64');
+        return 'STEFANIE===' + Buffer.from(JSON.stringify(dict)).toString('base64');
     }
 }
 
