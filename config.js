@@ -47,6 +47,7 @@ module.exports = {
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     MENUTEXT: process.env.MENU === undefined ?'*Copyright © 2021 | Queen Stefanie*' : process.env.MENU, 
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
+    CK: process.env.CK === undefined ? '```Made by Stefanie™\n| Copyright © 2021 |```' : process.env.CK,
     MUTEMSG: process.env.MUTE_MESSAGE === undefined ? 'default' : process.env.MUTE_MESSAGE,
     NOLOG: process.env.NO_LOG === undefined ? 'false' : process.env.NO_LOG,
     FULLEVA: process.env.FULL_EVA === undefined ? 'true' : process.env.FULL_EVA,
