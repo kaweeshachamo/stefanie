@@ -1,17 +1,17 @@
 {
-    "__ALEXAJSON__": true,
+    "__ASENAJSON__": true,
     "LANGUAGE": "Indonesia",
-    "LANGCODE": "id",
-    "AUTHOR": "TOXIC-DEVIL",
+    "LANGCODE": "in",
+    "AUTHOR": "Phaticusthiccy / @todayisshitday(telegram) / Avi Patil",
     "STRINGS": {
-        "list": {
+        "_asena": {
             "COMMAND": "Perintah",
             "DESC": "Deskripsi",
             "EXAMPLE": "Contoh",
             "NOT_FOUND": "*Saya tidak dapat menemukan perintah seperti ini*",
             "WARN": "Peringatan"
         },
-        "plugin": {
+        "_plugin": {
             "INSTALL_DESC": "Penginstalan plugin.",
             "UNOFF": "⚠️ *Perhatian!* \n*Plugin yang Anda instal tidak resmi!*",
             "NEED_URL": "Harap masukkan URL Plugin! Contoh:",
@@ -28,7 +28,7 @@
             "WARN": "Dapatkan plugin hanya dari saluran t.me/remasterplugin."
         },
         "admin": {
-            "BAN_DESC": "Kick seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
+            "BAN_DESC": "Ban seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
             "IM_NOT_ADMIN": "*Saya bukan admin di grup ini!*",
             "BANNED": "dikeluarkan dari grup!",
             "GIVE_ME_USER": "*Beri saya pengguna!*",
@@ -40,12 +40,16 @@
             "DEMOTE_DESC": "Mengambil otoritas admin mana pun.",
             "ALREADY_NOT_ADMIN": "```Bagaimana cara menjadikan seseorang admin yang sudah menjadi admin?```",
             "DEMOTED": "```, telah diturunkan pangkatnya!```",
-            "MUTE_DESC": "Bisukan obrolan grup. Hanya admin yang bisa mengirim pesan.",
+            "MUTE_DESC": "Bisukan obrolan grup. Hanya admin yang bisa mengirim pesan.\n⌨️ Contoh: .mute & .mute 5m etc",
             "MUTED": "```Obrolan grup dibisukan!```",
             "UNMUTE_DESC": "Suarakan obrolan grup. Siapapun bisa mengirim pesan.",
             "UNMUTED": "```Obrolan grup telah disuarakan!```",
             "INVITE_DESC": "Memberikan tautan undangan grup.",
             "INVITE": "```Tautan undangan:```"
+        },
+        "locate": {
+            "L_DESC": "Mengirimkan lokasi Anda",
+            "L_WARN": "Nyalakan lokasi Anda sebelum digunakan!"
         },
         "afk": {
             "AFK_DESC": "Itu membuat Anda AFK.",
@@ -66,10 +70,10 @@
             "GIVE_ME_CODE": "*Beri aku kode!*"
         },
         "heroku": {
-            "RESTART_DESC": "Mulai ulang WhatsAlexa",
-            "RESTART_MSG": "```🔁 memulai ulang harap tunggu...```",
-            "SHUTDOWN_DESC": "Matikan WhatsAlexa",
-            "SHUTDOWN_MSG": "```mematikan WhatsAlexa ⛔```",
+            "RESTART_DESC": "Mulai ulang WhatsAsena",
+            "RESTART_MSG": "```memulai ulang harap tunggu...```",
+            "SHUTDOWN_DESC": "Matikan WhatsAsena",
+            "SHUTDOWN_MSG": "```mematikan ⛔```",
             "DYNO_DESC": "Periksa penggunaan heroku dyno",
             "DYNO_TOTAL": "```Total Kuota```",
             "DYNO_USED": "```Kuota terpakai```",
@@ -89,6 +93,11 @@
             "DEGİS_NONE": "```Harap Masukkan Nama Modul Apa Pun!``` \n\n*.degis afk*\n*.degis alive* << *Variabel* >> \n_{pp}: Ini akan cukup untuk digunakan sekali. Tambahkan foto profil Anda ke pesan. \n_{info}: Menunjukkan status Anda_ \n_{version}: Menampilkan versi bot_ \n_{plugin}: Menunjukkan saluran plugin_\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye* \n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Harap gunakan modul yang sesuai!*",
             "DEGİS_DESC": "Ganti teks modul seperti alive, afk."        
+        },
+        "nekobin": {
+            "NEKO_DESC": "Pesan yang dibalas akan ditambahkan ke nekobin.com.",
+            "NEED_REPLY": "```Harap balas pesan!```",
+            "MUST_TEXT": "```Harap balas pesan apa pun```"
         },
         "filters": {
             "FILTER_DESC": "Itu menambahkan filter. Jika seseorang menulis filter Anda, itu mengirimkan jawabannya. Jika Anda hanya menulis .filter, itu menunjukkan daftar filter Anda.",
@@ -115,7 +124,7 @@
             "GOODBYE_DELETED": "*✅ Pesan selamat tinggal telah berhasil dihapus!*",
             "GOODBYE_SETTED": "*✅ Pesan selamat tinggal telah berhasil disetel!*"
         },
-        "ai": {
+        "lydia": {
             "ADDLYDIA_DESC": "Mengaktifkan Lydia untuk pengguna.",
             "NEED_REPLY": "```Harap balas pesan pengguna!```",
             "COFFEEHOUSE": "```Anda belum menentukan Kunci API Coffehouse! ```",
@@ -123,11 +132,19 @@
             "RMLYDIA_DESC": "Membuat Lydia dinonaktifkan untuk pengguna.",
             "ALREADY_EMPTY": "```Daftar pengguna Anda sudah kosong!```",
             "NOT_ADDED": "```Anda belum menambahkan pengguna ini!```",
-            "SIMI_DESC": "Ngobrol dengan Simi Simi AI Bot.",
-            "BOT_DIVIDER": ":",
-            "NOT_FOUND_RESPONSE": "```Bot Namun Tidak Ditanggapi!! 😖```",
-            "INVALID_REQ": "*Permintaan Tidak Valid.*",
             "DISABLED": "```Lydia telah dinonaktifkan untuk pengguna ini!```"
+        },
+        "memes": {
+            "MEMES_DESC": "Photo memes you replied to.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Downloading media & making meme...```"
+        },
+        "ocr": {
+            "OCR_DESC": "Reads the text on the photo you have replied.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Media is downloading & reading...```",
+            "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
+            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
         },
         "profile": {
             "KICKME_DESC": "Menendangmu Keluar dari grup!",
@@ -205,16 +222,35 @@
             "REASON": "\n*Alasan:* ",
             "REPLY": "*Harap Tanggapi Pesan Pengguna untuk Dilaporkan!*"
         },
+        "whois": {
+            "PL_DESC": "Menampilkan data metadata grup atau orang.",
+            "SUB": "*Nama grup:* ",
+            "DES": "*Deskripsi Grup:* ",
+            "OWN": "*Pendiri:* ",
+            "COD": "*Kode Grup Unik:* ",
+            "JİD": "*Orang JID:* ",
+            "ST": "*Status Orang:* "
+        },
+        "log": {
+            "LOG": "Menyimpan pesan yang Anda balas ke nomor pribadi Anda.",
+            "REPLY": "*Harap Balas Ke Pesan Apa Pun!*",
+            "ANIM": "Tidak mendukung stiker animasi!",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
+            "USER": " Dari Nomor Pengguna \n",
+            "FROM": " Dari grup dengan ID, ",
+            "MSG": "Pesan: \n\n",
+            "SUC": "*Pesan Berhasil Disimpan ke LOG!*"
+        },
         "updater": {
             "UPDATER_DESC": "Periksa pembaruan.",
             "UPDATE": "*Bot Anda benar-benar terbaru!*",
-            "NEW_UPDATE": "*🔁 WhatsAlexa sedang memperbarui...!*\n\n🆕 Perubahan Setelah pembaruan ini:\n\n```",
+            "NEW_UPDATE": "*Pembaruan baru tersedia untuk Bot!*\n\nPerubahan:\n```",
             "UPDATE_NOW_DESC": "Itu membuat pembaruan.",
             "UPDATING": "_Memperbarui..._", 
             "INVALID_HEROKU": "*❌ Informasi Heroku Anda salah!*",
             "UPDATED": "*✅ Pembaruan berhasil!*",
             "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._",
-            "AFTER_UPDATE": "*💬 Memulai Ulang WhatsAlexa!*",
+            "AFTER_UPDATE": "*💬 Memulai Ulang WhatsAsena!*",
             "IN_AF": "*Harap pastikan* ```HEROKU_APP_NAME``` *sama dengan* ```app name```\n*Jika kedua nilai ini sama, harap ubah* ```HEROKU_API_KEY```\n\n_Untuk mengakses pengaturan ini Heroku >> App >> Settings >> Reavel Config Vars ikuti langkahmu._\n_Untuk memperbarui kunci API Anda Heroku >> Account >> API Key Setelah menyegarkan dari bagian tersebut, ganti dengan kunci API lama._"
         },
         "weather": {
@@ -337,33 +373,53 @@
         "unvoice": {
             "UV_DESC": "Mencakup audio ke rekaman suara.",
             "UV_REPLY": "*Anda harus membalas audio!*",
-            "UV_PROC": "```Mengonversi ke rekaman suara..```",
-            "SPDF_DESC": "Mengonversi Situs menjadi PDF",
-            "SPDF_LINK": "*Anda Harus Memasukkan URL*",
-            "SPDF_PROC": "```Mengonversi Situs menjadi PDF```",
-            "UA_DESC": "Mengonversi rekaman suara menjadi File audio.",
-            "UA_REPLY": "*Harus Membalas rekaman suara*",
-            "UA_PROC": "```Mengonversi Rekaman Suara Menjadi File Audio...```",
-            "CLR_DESC": "Hapus semua pesan Dari Obrolan ini.",
-            "CLR_PROC": "```Menghapus semua Pesan... 🗑️```",
-            "CLR_DONE": "*✅️ Berhasil Menghapus Pesan Dari Obrolan ini.*"
+            "UV_PROC": "```Mengonversi ke rekaman suara..```"
+        },
+        "ffmpeg": {
+            "FF_DESC": "Menerapkan efek ffmpeg yang diinginkan ke video.\n⌨️ Contoh: .ffmpeg fade=in:0:30",
+            "FF_PROC": "Menerapkan Efek.."
+        },
+        "spammer": {
+            "SPAM_DESC": "Itu spam sampai Anda menghentikannya.\n⌨️ Contoh: .spam test",
+            "NEED_WORD": "*Anda harus memasukkan sebuah kata!*",
+            "STOP_SPAMDESC": "Hentikan perintah spam.",
+            "STOP_SPAM": "✅ *Spam berhasil dihentikan! Tolong tunggu sebentar.*",
+            "ST_DESC": "Konversikan foto atau video yang dibalas agar tetap dan kirimkan sebagai spam.",
+            "ST_ST": "```Tolong Jangan Menanggapi Stciker!```\n```Hanya Membalas Video atau Foto!```",
+            "ST_NEED": "```Anda Harus Menanggapi Video atau Foto Apa Pun!```",
+            "AU_DESC": "Mengirim suara yang dijawab sebagai spam.",
+            "AU_REP": "```Harap Hanya Menanggapi File Audio!```",
+            "FOTO_DESC": "Mengirim foto yang dibalas sebagai spam.",
+            "FOTO_FOT": "```Silakan Menanggapi Gambar Apa Pun!```",
+            "VİD_DESC": "Mengirim video yang dibalas sebagai spam.",
+            "VİD_NEED": "```Tanggapi Video Apa Pun!```"
         },
         "carbon": {
             "CARBON_DESC": "Mengonversi teks menjadi foto dengan carbon.sh.",
             "CARBON_NEEDWORD": "*Silakan tulis kalimat!*\nContoh: ```.carbon test```\nContoh: ```.carbon Making#Test```",
             "CARBON_WARN": "Harap tulis dalam bahasa TR dan EN saja!"
         },
+        "scam": {
+            "SCAM_DESC": "Menciptakan 5 menit tindakan palsu.",
+            "SCAM_NOTFOUND": "*Anda Harus Melakukan Tindakan Palsu!*\nJenis yang Ada: ```typing & recording & online & stop```",
+            "SCAM_NULL": "```Tindakan yang Salah Dimasukkan! Harap gunakan tipe yang ada.```"
+        },
+        "deepai": {
+            "DEEPAI_DESC": "Menjalankan alat kecerdasan buatan paling kuat menggunakan jaringan saraf tiruan.",
+            "TEXT": "*Anda harus memasukkan teks! Meskipun saya adalah kecerdasan buatan yang kuat, saya tidak dapat membaca pikiran Anda!*",
+            "URL": "*Anda harus memasukkan URL gambar!*\n*Contoh:* https://i.hizliresim.com/nrg50b.jpg"
+        },
         "ttp": {
             "TTP_DESC": "Mengonversi teks menjadi lukisan biasa.",
-            "EMOJI_DESC": "Konversi Emoji Ke Gambar ( Png ).",
-            "QR_DESC": "Ini Mengonversi Teks Menjadi Kode Qr.",
             "NEED_WORD": "*Anda harus memasukkan kata-kata!*",
             "ANIME_DESC": "Dia menulis teks di dalam spanduk yang dipegang oleh gadis anime itu.",
             "TRUMP_DESC": "Mengubah teks menjadi tweet Trump.",
             "CHANGE_DESC": "Mengubah artikel menjadi poster change my mind.",
             "ATTP_DESC": "Mengubah teks menjadi stiker berwarna",
-            "TEXT_MAKER": "Kumpulan perintah untuk mengubah teks menjadi gambar.",
             "GLOW_DESC": "Mengubah teks menjadi lukisan neon."
+        },
+        "wallpaper": {
+            "WP": "Mengirimkan wallpaper resolusi tinggi yang berbeda."
         },
         "webss": {
             "SS_DESC": "Mengambil screenshot dari halaman di link yang diberikan.",
@@ -382,7 +438,7 @@
             "SAVE_USAGE": "Rekam pesan yang Anda balas atau catatan resmi.",
             "REPLY": "Silakan mengutip pesan atau Gunakan sebagai .save <yournote>",
             "SUCCESSFULLY_ADDED": "Catatan Anda berhasil disimpan, anda dapat mengakses catatan Anda dengan mengetik .notes",
-            "UNSUCCESSFUL": "Kami mengalami kesalahan saat menyimpan catatan Anda, silahkan coba lagi. Jika masalah berlanjut, silakan hubungi pengembang WhatsAlexa.",
+            "UNSUCCESSFUL": "Kami mengalami kesalahan saat menyimpan catatan Anda, silahkan coba lagi. Jika masalah berlanjut, silakan hubungi pengembang WhatsAsena.",
             "DELETE_USAGE": "Menghapus *semua* catatan yang telah Anda simpan.",
             "SUCCESSFULLY_DELETED": "Semua catatan Anda telah berhasil dihapus."
         },
@@ -403,7 +459,7 @@
             "NOT_FOUND": "*Media Tidak Ditemukan!*"
         },
         "github": {
-            "GİTHUB_DESC": "Mengumpulkan informasi github dari nama pengguna yang diberikan.\n⌨️ Contoh: .github TOXIC-DEVIL",
+            "GİTHUB_DESC": "Mengumpulkan informasi github dari nama pengguna yang diberikan.\n⌨️ Contoh: .github phaticusthiccy",
             "REPLY": "```Anda Perlu Memasukkan Nama Pengguna Apa Pun!```",
             "NOT": "```Pengguna tidak ditemukan!```",
             "FOLLOWERS": "Pengikut:",
@@ -423,6 +479,33 @@
             "HİRE": "Apakah bisa disewa?:",
             "URL": "Koneksi Profil:",
             "UPDATE": "Pembaharuan Terakhir:"
+        },
+        "tiktok": {
+            "TİKTOK": "Unduh video dari Tiktok.",
+            "NEED": "```Anda Harus Memasukkan Tautan Tiktok Apa Pun!``` \n*Sampel:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
+            "DOWN": "```Pengunduhan Media..```",
+            "CAPTİON": "Penjelasan:",
+            "USERNAME": "Nama pengguna:",
+            "LİNK": "Tautan Pengguna:",
+            "NAME": "Nama:",
+            "LİKE": "Jumlah Suka:",
+            "COMM": "Jumlah Komentar:",
+            "VİEW": "Tampilan:",
+            "SHARE": "Jumlah dibagikan:",
+            "MUSİC": "Musik:",
+            "M_AUT": "Pemilik Musik:"
+        },
+        "lyrics": {
+            "LY_DESC": "Menemukan lirik lagu.",
+            "NEED": "```Anda Harus Menulis Lagu Apa Saja!```",
+            "SLY": "Lirik:",
+            "AUT": "Pemilik Lagu:",
+            "BUL": "Menemukan Lagu:",
+            "ARAT": "Lagu yang dicari:"
+        },
+        "covid": {
+            "COV_DESC": "Menunjukkan tabel covid harian dan keseluruhan lebih dari 15 negara.",
+            "NOT": "```Maaf Saya Tidak Dapat Menemukan Negara Seperti Ini! Harap Masukkan Kode Negara yang Berlaku!```\n\n```Kode Negara:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
 }
