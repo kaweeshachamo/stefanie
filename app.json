@@ -1,81 +1,130 @@
 {
-    "name": "WhatsAlexa v2",
-    "description": "WhatsAlexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Modifiying as public @MrChaby. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].",
-    "logo": "https://i.ibb.co/KGMms2Z/Whats-Alexa.jpg",
-    "keywords": ["whatsapp", "Voice", "Alexa", "WhatsAlexa", "bot", "api", "ai"],
-    "repository": "https://github.com/Kaweeshachamodk/stefanie",
-    "website":   "https://github.com/MrChaby",
-    "success_url": "https://github.com/MrChaby",
+    "name": "Stefanie beta v9.2",
+    "description": "bot is a whats app user bot by virus fucker sir, modified version of asena",
+    "logo": "https://camo.githubusercontent.com/5b8ebcb7970898a06b7a1e4f062b449e44aa619735c4314563bca6068658593b/68747470733a2f2f74656c656772612e70682f66696c652f3539376532393436373266336134396138363465352e6a7067",
+    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
+    "repository": "https://github.com/xmain12/Stefanie-V-9.2-beta",
+    "website":   "https://t.me/xmaim12",
+    "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
     "env": {
-        "SESSION": {
-            "description": "Enter the copied SESSION here ( Copied code starting with Alexa===eyJj & ending with 9In0= ).",
+        "STEFANIE_SESSION": {
+            "description": "Qr.Js ile oluşturduğunuz özel session kodu. Type here yours Asena Session.",
             "required": true
         },
         "SUDO": {
-            "description": "Leave blank if you don't know how to use it! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 9199xxxxxxxx ( This is an Example of Indian number +91 )",
+            "description": "Leave blank if you don't know how to use it! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
             "required": false
         },
         "LANGUAGE": {
-            "description": "Bot languages. Malayalam => ML, Indonesia => ID, English => EN ( Enter any one only )",
+            "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => ID, Español => ES, Portuguese => pt, Russian => ru",
             "required": true,
-            "value": "EN"
+            "value": "en"
         },
-        "BOT_STATUS": {
-            "description": "Type the status of bot, statuses: online => Always Shows the online, offline => Always Shows offline, typing => Always Shows typing, recording => Always Shows recording.. NOTE : THE STATUS WILL BE PERMANENT, UNTIL THE BOT IS ALIVE / RUNNING / WORKING",
-            "required": false,
-            "value": "offline"
-        },
-        "WORK_TYPE": {
-            "description": "WhatsAlexa Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
-            "required": true,
-            "value": "public"
-        },
-        "FULL_ALEXA": {
-            "description": "Turn your account into a chatbot! Replys To The Private chat messages by the Alexa Chatbot.",
+        "ANTİ_LİNK": {
+            "description": "Link Engelleme Sistemi. Link Blocking System.",
             "required": true,
             "value": "false"
         },
-        "HANDLERS": {
-            "description": "Symbol used infront of a command ( Prefix ). NOTE : ONLY SYMBOL CAN BE USED, DON'T ENTER ANY OTHER LATIN WORDS / ALPHABETS, IF IT HAPPENS BOT WILL NOT WORK.",
+        "AUTO_BİO": {
+            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
             "required": true,
-            "value": "^[#]"
+            "value": "true"
+        },
+        "HANDLERS": {
+            "description": "Komutlar için. For commands.",
+            "required": true,
+            "value": "^[.!;#/]"
+        },
+        "FULL_EVA": {
+            "description": "Hesabınızı bir Chatbot'a Çevirin! Turn your account into a chatbot!",
+            "required": true,
+            "value": "true"
         },
         "NO_LOG": {
-            "description": "Set true if you don't want to see error log.",
+            "description": "Hata logu görmek istemiyorsanız true yapın. Set true if you don't want to see error log.",
             "required": true,
             "value": "false"
         },
         "SEND_READ": {
-            "description": "The bot reads the incoming messages ( only commands sent by others so privacy is not breaking there ).",
+            "description": "Görüldü atmak istiyorsanız true yazın. Write true if you want to throw seen.",
             "required": true,
             "value": "false"
         },
         "HEROKU": {
-            "description": "Type 'true' Iff the bot is running in  Heroku Else type 'false'.",
+            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
             "required": true,
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Enter your heroku api key [ You can get it from here : https://dashboard.heroku.com/account Scroll down to end, click reveal button & Copy the API KEY ].",
+            "description": "Herokuda API Keyiniz. Heroku API Key.",
             "required": true
         },
         "MUTE_MESSAGE": {
-            "description": "Customizable Mute Message! Use => default, to change back.",
+            "description": "Düzenlenebilir Mute Mesajı. Customizable Mute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
+        },
+        "BLOCK_CHAT": {
+            "description": "Choose in which chat the bot won't work there. Ex: 905xxxx && 905xxxx-1xxx or 905xxxx,905xxx...",
+            "required": false,
+            "value": "false"
         },
         "UNMUTE_MESSAGE": {
-            "description": "Customizable Unmute Message! Use => default, to change back.",
+            "description": "Düzenlenebilir Unmute Mesajı. Customizable Unmute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
+        "BLOCK_MESSAGE": {
+            "description": "Düzenlenebilir Block Mesajı. Customizable Block Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "UNBLOCK_MESSAGE": {
+            "description": "Düzenlenebilir Unblock Mesajı. Customizable Unblock Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "WORK_TYPE": {
+            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "required": true,
+            "value": "public"
+        },
         "HEROKU_APP_NAME": {
-            "description": "Re-Enter the heroku app name. [ Same name which you have entered on 'app-name' ( above )].",
+            "description": "Herokuda uygulama adı. Heroku APP Name.",
             "required": true
         },
         "DEBUG": {
-            "description": "Special For Developers, Leave it.",
+            "description": "Geliştiricilere özeldir.",
+            "required": true,
+            "value": "false"
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
+            "required": false
+        },
+        "BOT_NAME": {
+            "description": "give a name you disire to give your bot (for auto reply white to identify)",
+            "required": false,
+            "value": "👩‍🦰Queen Stefanie"
+        },
+        "OWNER_NAME": {
+            "description": "Enter the owner name, You must enter your name ( This name will be shown on some commands )",
+            "required": false,
+            "value": "Virus Fucker"
+        },
+        "OWNER_NUMBER": {
+            "description": "Enter the owner number, You must enter your number, Please don't enter the number with country code ( example : 91 for indian ) Also don't enter space & + on the number ( example : 91996132xxxx for indian ). ( This number will be shown on some commands )",
+            "required": false,
+            "value": "94777777777"
+        },
+        "NUMBER": {
+            "description": "Enter the owner number, You must enter your number, Please don't enter the number with country code ( example : 91 for indian ) Also don't enter space & + on the number ( example : 91996132xxxx for indian ). ( This number will be shown on some commands )",
+            "required": false,
+            "value": "94779529221"
+        },
+        "WHATS_LINK_BLOCK": {
+            "description": "Link Blocking System.- this one blocks whatsapp group  link",
             "required": true,
             "value": "false"
         },
@@ -84,8 +133,38 @@
             "required": false,
             "value": "default"
         },
+        "ALIVE_LOGO": {
+            "description": "Alive message Photo.",
+            "required": false,
+            "value": "https://telegra.ph/file/0edc0f3917fde20a7990a.jpg"
+       },
+        "MENU_LOGO": {
+            "description": "Menu message Photo.",
+            "required": false,
+            "value": "https://telegra.ph/file/0edc0f3917fde20a7990a.jpg"
+       },
         "BAN_MESSAGE": {
             "description": "Customizable Ban Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "THERI_LIST": {
+            "description": "Safe mode",
+            "required": true,
+            "value": "true"
+        },
+        "INBOX_BLOCK": {
+            "description": "Activate Inbox Block System true or false",
+            "required": false,
+            "value": "false"
+        },
+        "BOT_PRESENCE": {
+            "description": "Type the Presence of bot, presences: online => Always Shows the online, offline => Always Shows offline, typing => Always Shows typing, recording => Always Shows recording.. NOTE : THE PRESENCE WILL BE PERMANENT, UNTIL THE BOT IS ALIVE / RUNNING / WORKING",
+            "required": false,
+            "value": "online"
+        },
+        "ADD_MESSAGE": {
+            "description": "Customizable Add Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
@@ -109,13 +188,76 @@
             "required": false,
             "value": "default"
         },
-        "CK": {
-            "description": "Caption text.",
-            "required": false
+        "GAN_IMAGE": {
+            "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
+            "required": true,
+            "value": "https://i.hizliresim.com/loUtAb.jpg"
         },
-        "RBG_API": {
-            "description": "Removes the background of the photos. Get Api https://remove.bg",
-            "required": false
+        "NO_ONLINE": {
+            "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
+            "required": false,
+            "value": "true"
+        },
+        "AUTO_STICKER": {
+            "description": "If you likes Auto Sticker you can write 'true'. Otherwise false",
+            "required": false,
+            "value": "true"
+         },
+        "SONGD": {
+            "description": "Customizable Song Download message",
+            "required": false,
+            "value": "*Downloading Your Song...*"
+        },
+        "SONGU": {
+            "description": "Customizable Song upload message",
+            "required": false,
+            "value": "*Uploading Your Song...*"
+        },
+        "VIDGD": {
+
+            "description": "Customizable Video Download message",
+            "required": false,
+            "value": "*Downloading Your Video...*"
+        },
+        "VIDGU": {
+            "description": "Customizable Video upload message",
+            "required": false,
+            "value": "*Uploading Your Video....*"
+        },
+        "ALL_CAPTION": {
+            "description": "Caption for images and videos generated by pinky bot",
+            "required": false,
+            "value": "*Copyright © 2021 | Queen Stefanie*"
+        },
+        "TAG_HEADER": {
+            "description": "Heading when taging all",
+            "required": false,
+            "value": "*Copyright © 2021 | Queen Stefanie*"
+        },
+        "TIME_ZONE": {
+            "description": "type your time zone (pass this sri lankan users) ",
+            "required": false,
+            "value": "Asia/Colombo"
+        },
+        "EMOJI_COMMAND": {
+            "description": "You can change Command list emojis.)",
+            "required": true,
+            "value": "🛡️"
+        },
+        "EMOJI_DESCRIPTION": {
+            "description": "You can change command list emojis.)",
+            "required": true,
+            "value": "⚙️"
+        },
+        "EMOJI_WARNING": {
+            "description": "You can change command list emojis.)",
+            "required": true,
+            "value": "⚠"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "Pass This Step! - Bu Bölümü Geçin!",
+            "required": false,
+            "value": "true"
         }
     },
     "addons": [{

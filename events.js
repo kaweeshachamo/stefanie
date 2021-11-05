@@ -1,12 +1,21 @@
-let config = require('./config');
-let Commands = [];
+/* Copyright (C) 2020 Yusuf Usta.
+
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+
+WhatsAsena - Yusuf Usta
+*/
+
+// Komutları burada tutacağız.
+var config = require('./config');
+var Commands = [];
 
 function addCommand(info, func) {
-
-    let types = ['photo', 'image', 'text', 'message'];
+    // Basit bir fonksiyon, komut eklemek için.
+    var types = ['photo', 'image', 'text', 'message'];
 
     var infos = {
-        fromMe: info['fromMe'] === undefined ? false : info['fromMe'],
+        fromMe: info['fromMe'] === undefined ? true : info['fromMe'], // Or Sudo
         onlyGroup: info['onlyGroup'] === undefined ? false : info['onlyGroup'],
         onlyPinned: info['onlyPinned'] === undefined ? false : info['onlyPinned'],
         onlyPm: info['onlyPm'] === undefined ? false : info['onlyPm'],
