@@ -88,9 +88,9 @@ async function WhatsAlexa () {
     })    
 
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('connecting')}${chalk.blue.bold('WhatAlexa')}
+        console.log(`${chalk.green.bold('connecting')}${chalk.blue.bold('stefanie')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-${chalk.blue.italic('Thanks to TOXIC-DEVIL')}`);
+${chalk.blue.italic('Thanks to virus fucker')}`);
     });
     
 
@@ -130,7 +130,7 @@ ${chalk.blue.italic('Thanks to TOXIC-DEVIL')}`);
        );
         
          if (config.LANG == 'EN') {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: `『 WhatsAlexa 』\n\nHello ${conn.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using WhatsAlexa 💖`});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: `『 Stefanie 』\n\nHello ${conn.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using stefanie 💖`});
              
          } else if (config.LANG == 'ID') {
              await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: `『 WhatsAlexa 』\n\nHalo ${conn.user.name}!\n\n*🆘 Bantuan umum 🆘*\n\n🔹 *#alive:* Periksa apakah bot sedang berjalan.\n\n🔹 *#list:* Menampilkan daftar lengkap perintah.\n\n🔹 *#restart:* Ini me-restart bot.\n\n🔹 *#shutdown:* Ini Matikan/Matikan bot.\n\n *⚠ Peringatan, Jika Anda mematikan/mematikan, tidak ada perintah untuk menghidupkan bot Jadi Anda harus pergi ke heroku & Nyalakan worker. ⚠*.\n\nTerima Kasih Telah Menggunakan WhatsAlexa 💖`});
@@ -428,7 +428,7 @@ ${chalk.blue.italic('Thanks to TOXIC-DEVIL')}`);
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'EN') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WhatsAlexa an error has occurred!*\n_Report this error to the developer! [ MrChaby ]._\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*Stefanie an error has occurred!*\n_Report this error to the developer! [ Virus Fucker ]._\n\n*Error:* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
                                 await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 പിശക് 』*\n\n*WhatsAlexa പിശക് സംഭവിച്ചു!*\n_ഈ പിശക് ഡെവലപ്പറെ അറിയിക്കുക! [ MrChaby ]._\n\n*പിശക്:* ```' + error + '```\n\n' });
