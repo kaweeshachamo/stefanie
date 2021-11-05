@@ -22,7 +22,7 @@ module.exports = {
     XRUN: "xteam",
     ZRUN: "zenzapi",
     CHANNEL: 'https://t.me/remasterplugin',
-    SESSION: process.env.STEFANIE_SESSION === undefined ? '' : process.env.STEFANIE_SESSION,
+    SESSION: process.env.SESSION === undefined ? '' : process.env.SESSION,
     CAPTION_KEY: process.env.CP === undefined ? '*Copyright © 2021 | Queen Stefanie*' : process.env.CP,
     OWNER_NAME: process.env.OWNER_NAME === undefined ? 'Kaweesha Chamod' : process.env.OWNER_NAME,
     OWNER_NUMBER: process.env.OWNER_NUMBER === undefined ? '94779529221' : process.env.OWNER_NUMBER,
