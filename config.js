@@ -49,6 +49,7 @@ module.exports = {
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
     CK: process.env.CK === undefined ? '```Made by Stefanie™\n| Copyright © 2021 |```' : process.env.CK,
     MUTEMSG: process.env.MUTE_MESSAGE === undefined ? 'default' : process.env.MUTE_MESSAGE,
+    BOT_STATUS: process.env.BOT_STATUS === undefined ? 'online' : process.env.BOT_STATUS,
     NOLOG: process.env.NO_LOG === undefined ? 'false' : process.env.NO_LOG,
     FULLEVA: process.env.FULL_EVA === undefined ? 'true' : process.env.FULL_EVA,
     BLOCKMSG: process.env.BLOCK_MESSAGE === undefined ? 'default' : process.env.BLOCK_MESSAGE,
