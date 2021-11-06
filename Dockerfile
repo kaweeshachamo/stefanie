@@ -1,4 +1,4 @@
-FROM fusuf/whatsasena:latest
+FROM KTBwhitedevil:latest
 
 RUN git clone https://github.com/Kaweeshachamodk/stefanie /root/Jessi-4r-whatsAlexa
 WORKDIR /root/Jessi-4r-whatsAlexa/
