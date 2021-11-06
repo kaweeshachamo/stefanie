@@ -630,6 +630,12 @@
             "TEXT": "You must enter text!",
             "QR_DESC": "Converts the given text into a qr code image."
         },
+        "search":{
+            "USAGE": "Search modded apk in Moddroid site.",
+            "NEED_WORDS": "```Need words to search!```",
+            "GET_MODD": "```Queen stefanie searching Please wait..```",
+            "NOT_FOUND": "*I could not find this😚*"
+        },
         "amazone": {
             "APK": "GET mod app link.",
             "ANIM_DESC": "```Send Random Anime Wallpapers!```",
