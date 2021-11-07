@@ -48,6 +48,11 @@
             "DELETED": "*✅ Module successfully deleted!*",
             "WARN": "Get plugins only from t.me/remasterplugin channel."
         },
+        "effects": {
+            "NEED_WORD": "*You must enter a word*",
+            "QR_DESC": "It converts text to Qr code",
+            "NEED_TEXT": "*Words must be entered*"
+        },
         "admin": {
             "BAN_DESC": "Ban someone in the group. Reply to message or tag a person to use command.",
             "IM_NOT_ADMIN": "*I am not admin in this group!*",
