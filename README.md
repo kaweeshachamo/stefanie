@@ -6,5 +6,4 @@
 ```
 🔴 Specialy Don't use our API
 
-```E.g :- *1* = logo api's
-```
+```E.g :- *1* = logo api's```
