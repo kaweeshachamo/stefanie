@@ -4,3 +4,4 @@
 # All rights reserved VIRUS FUCKER https://Wa.me/94779529221
 # Credit : Mr Chabby:- Jessica
 ```
+🔴 Specialy Don't use our API
