@@ -5,3 +5,5 @@
 # Credit : Mr Chabby:- Jessica
 ```
 🔴 Specialy Don't use our API
+
+```E.g :- *1* = logo api's
