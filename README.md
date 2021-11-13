@@ -4,7 +4,7 @@
 # All rights reserved VIRUS FUCKER https://Wa.me/94779529221
 # Credit : Mr Chabby:- Jessica
 ```
-🔴 Specialy Don't use our API
+🔴 Specialy Don't use our API.❗
 
 ```E.g```
 
@@ -13,3 +13,5 @@
 ```:- 2 = Downloader's API'S```
 
 ```:- 3 = MAKER API'S```
+
+🔴 Don't use our Downloader plugins.❗
