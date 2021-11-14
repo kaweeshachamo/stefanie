@@ -1,3 +1,11 @@
+🔴stefanie 
+
+
+[![Forks](https://img.shields.io/github/forks/Kaweeshachamodk/stefanie?style=flat-square&color=black)](https://github.com/Kaweeshachamodk/stefanie/fork)
+
+[![Size](https://img.shields.io/github/repo-size/Kaweeshachamodk/stefanie?style=flat-square&color=black)](https://github.com/Kaweeshachamodk/stefanie/)   
+
+
 🔴 note this❗
 
 ```Exclusively from VIRUS FUCKER Project 
@@ -41,7 +49,3 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kaweeshachamodk/stefanie)
      </div>
-
-[![Forks](https://img.shields.io/github/forks/Kaweeshachamodk/stefanie?style=flat-square&color=black)](https://github.com/Kaweeshachamodk/stefanie/fork)
-
-[![Size](https://img.shields.io/github/repo-size/Kaweeshachamodk/stefanie?style=flat-square&color=black)](https://github.com/Kaweeshachamodk/stefanie/)   
