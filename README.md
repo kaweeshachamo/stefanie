@@ -32,3 +32,10 @@ This is an open source project, you are responsible for everything you do.
 Absolutely, Asena executives do not accept responsibility.
 By establishing the Asena, you are deemed to have accepted these responsibilities.
 ```
+
+### Simple Method
+  
+[![Run on Repl.it](https://repl.it/badge/github/quiec/stefanie)](https://replit.com/@Kaweeshachamodk/STEFANIE-BETA-NEW-6?v=1)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kaweeshachamodk/stefanie)
+     </div>
