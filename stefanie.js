@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 const {WAConnection} = require('@adiwajshing/baileys');
-const {StringSession} = require('./alexa/');
+const {StringSession} = require('./stefanie/');
 const fs = require('fs');
 
 async function Alexa () {
@@ -12,7 +12,7 @@ async function Alexa () {
     
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('WhatsAlexa')}
-${chalk.white.italic('Made By ')}${chalk.red.bold('TOXIC DEVIL Modifiying as public @MrChaby')}
+${chalk.white.italic('Made By ')}${chalk.red.bold('kaweesha chamod Modifiying as public @MrChaby')}
 
 ${chalk.blue.italic('🔄 Loading QR CODE...')}`);
     });
@@ -32,7 +32,7 @@ ${chalk.blue.italic('🔄 Loading QR CODE...')}`);
             chalk.red.bold('⚠ COPY THIS CODE, It is an IMPORTANT CODE... ⚠'))
             
         console.log(
-            chalk.blue.bold('Thank You For Using WhatsAlexa 💖'))
+            chalk.blue.bold('Thank You For Using stefanie 💖'))
 
         process.exit(0);
     });
