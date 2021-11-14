@@ -42,5 +42,5 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kaweeshachamodk/stefanie)
      </div>
 
-[![Forks](https://img.shields.io/github/forks/stefanie/stefanie?style=flat-square&color=orange)](https://github.com/Kaweeshachamodk/stefanie/fork)
+[![Forks](https://img.shields.io/github/forks/Kaweeshachamodk/stefanie?style=flat-square&color=orange)](https://github.com/Kaweeshachamodk/stefanie/fork)
 [![Size](https://img.shields.io/github/repo-size/Kaweeshachamodk/stefanie?style=flat-square&color=green)](https://github.com/Kaweeshachamodk/stefanie/)   
