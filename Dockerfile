@@ -1,8 +1,5 @@
-FROM quay.io/lyfe00011/test:beta
-
-RUN git clone https://github.com/Kaweeshachamodk/stefanie /root/WhatsAsenaDuplicated
-WORKDIR /root/WhatsAsenaDuplicated/
-RUN yarn install --no-audit
-RUN git clone https://github.com/Kaweeshachamodk/stefanie
-RUN cp -R /root/Utils/* /root/WhatsAsenaDuplicated 
+FROM quay.io/lyfe00011/bot:beta
+RUN git clone https://github.com/Kaweeshachamodk/stefanie.git /root/whatsAsena/
+RUN mv /root/bottus/* /root/whatsAsena/
+WORKDIR /root/whatsAsena/
 CMD ["node", "bot.js"]
