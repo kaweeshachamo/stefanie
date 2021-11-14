@@ -50,4 +50,4 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kaweeshachamodk/stefanie)
      </div>
 
-> [![Sinhala Youtube Tutorial](https://telegra.ph/file/c32d74b7afc8ffe2e7fef.png)(https://youtu.be/GNSARiAUfKA)]
+> [![Sinhala Youtube Tutorial](https://telegra.ph/file/c32d74b7afc8ffe2e7fef.png)] (https://youtu.be/GNSARiAUfKA)
