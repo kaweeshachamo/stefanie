@@ -5,18 +5,18 @@
 # Credit : usufusta-whatsappAsena
 */
 
-const Stefanie = require('../events');
+const Neotro = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 const ALang = Language.getString('amazone');
-const capt = "*Stefanie bot Tiktok Downloader* 🕊"
+const capt = "🦹‍♀️ *stefanie Tiktok Downloader* 🕊"
 
 if (Config.WORKTYPE == 'public') {
 	
-Stefanie.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: ALang.TIKTOk}, async (message, match) => {
+Neotro.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: ALang.TIKTOk}, async (message, match) => {
 
     const link = match[1]
 
@@ -45,7 +45,7 @@ Stefanie.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: ALang.TIKTOk
 					
 }) //pattern close
   
-  Stefanie.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontAddCommandList:true}, async (message, match) => {
+  Neotro.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontAddCommandList:true}, async (message, match) => {
 
     const link = match[1]
 
@@ -78,7 +78,7 @@ Stefanie.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: ALang.TIKTOk
 
 else if (Config.WORKTYPE == 'private') {
   
-  Stefanie.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontaddCommandList:false}, async (message, match) => {
+  Neotro.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontaddCommandList:false}, async (message, match) => {
 
     const link = match[1]
 
