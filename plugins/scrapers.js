@@ -986,7 +986,7 @@ else if (config.WORKTYPE == 'public') {
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '```✅' + video.title + '``` ✅ ' + video.url + '\n\n'
+            mesaj += '```⚽' + video.title + '``` 🎀' + video.url + '\n\n'
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text);
