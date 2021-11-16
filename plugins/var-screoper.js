@@ -22,13 +22,13 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
   if (config.LANG == 'EN') {
 
     W_ADM = '.tag Queen Stefanie Special Antispam opinion started❗\n\n✅1 :- WhatsApp Group link remover started\n✅2 :- Antispam option started\n✅3 :- Bad Word remover started\n✅4 :- special Inbox block opion started' 
-    W_PUB = '.tag Queen Stefanie Special Antispam opinion started❗\n\n✅1 :- WhatsApp Group link remover started\n✅2 :- Antispam option started\n✅3 :- Bad Word remover started\n✅4 :- special Inbox block opion started'
-    W_PRI = '.tag Queen Stefanie Special Antispam opinion started❗\n\n✅1 :- WhatsApp Group link remover started\n✅2 :- Antispam option started\n✅3 :- Bad Word remover started\n✅4 :- special Inbox block opion started'
+    W_PUB = 'Queen Stefanie විශේෂ ආරක්ශක පද්ධතිය අක්‍රීය කරන ලදි❗'
+    W_PRI = '.tag විශේෂ ආරක්ශක පද්ධතිය අක්‍රීය කරන ලදි❗'
     }
 
     if (config.LANG == 'SI') {
 
-      W_ADM = '👩‍🦰ඔබේ Bot ඇඩ්මින් ලෙස ක්‍රියාකරයි.'
+      W_ADM = 'විශේෂ ආරක්ශක පද්ධතිය අක්‍රීය කරන ලදි❗'
       W_PUB = '👩‍🦰ඔබේ Bot පොදු ආකාරයට ක්‍රියාකරයි.'
       W_PRI = '👩‍🦰ඔබේ Bot පෞද්ගලික ආකාරයට ක්‍රියාකරයි.'
     }
