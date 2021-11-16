@@ -134,7 +134,7 @@ if (config.LANG == 'RU') {
 
 if (config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+    /*Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
 
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
@@ -148,7 +148,7 @@ if (config.WORKTYPE == 'private') {
         } else {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
-    }));
+    }));*/
     var l_dsc = ''
     var alr_on = ''
     var alr_off = ''
@@ -217,7 +217,7 @@ if (config.WORKTYPE == 'private') {
         succ_on = 'Antilink Berhasil Dibuka!'
         succ_off = 'Antilink Berhasil Ditutup!'
     }
-    Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
+    /*Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
         const anti_status = `${config.ANT襤L襤NK}`
         if (match[1] == 'on') {
             if (anti_status == 'true') {
@@ -245,7 +245,7 @@ if (config.WORKTYPE == 'private') {
                 await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
             }
         }
-    }));
+    }));*/
     var auto_dsc = ''
     var alr_on_bio = ''
     var alr_off_bio = ''
@@ -314,7 +314,7 @@ if (config.WORKTYPE == 'private') {
         succ_on_bio = 'Autobio Berhasil Dibuka!'
         succ_off_bio = 'Autobio Berhasil Ditutup!'
     }
-    Asena.addCommand({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
+    /*Asena.addCommand({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
         const bio_status = `${config.AUTOB襤O}`
         if (match[1] == 'on') {
             if (bio_status == 'true') {
@@ -342,7 +342,7 @@ if (config.WORKTYPE == 'private') {
                 await message.client.sendMessage(message.jid, '*' + succ_off_bio + '*', MessageType.text)
             }
         }
-    }));
+    }));*/
     Asena.addCommand({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
@@ -558,7 +558,7 @@ if (config.WORKTYPE == 'private') {
         });
     }));
 
-    Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.G襤THUB_DESC }, async (message, match) => {
+    /*Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.G襤THUB_DESC }, async (message, match) => {
 
         const userName = match[1]
  
@@ -616,9 +616,9 @@ if (config.WORKTYPE == 'private') {
 
         await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
 
-    }));
+    }));*/
 
-    Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+    /*Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
                 //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
@@ -838,7 +838,7 @@ else if (config.WORKTYPE == 'public') {
         } else {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
-    }));
+    }));*/
     Asena.addCommand({pattern: 'detectlang$', fromMe: false, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
@@ -1022,7 +1022,7 @@ else if (config.WORKTYPE == 'public') {
         });
     }));
 
-    Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.G襤THUB_DESC }, async (message, match) => {
+    /*Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.G襤THUB_DESC }, async (message, match) => {
 
         const userName = match[1]
  
@@ -1283,6 +1283,6 @@ else if (config.WORKTYPE == 'public') {
                 MessageType.text
             );
         }
-    }));
+    }));*/
     
 }
