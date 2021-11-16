@@ -72,6 +72,7 @@ module.exports = {
     DISBGM: process.env.DISABLE_JID_BGM_FILTER === undefined ? false : process.env.DISABLE_JID_BGM_FILTER,
     MENU_EGS: process.env.MENU_EGS === undefined ? '📝' : process.env.MENU_EGS,
     MENU_TEG: process.env.MENU_TEG === undefined ? '🎯' : process.env.MENU_TEG,
+    SUPER_OPINION: process.env.SUPER_OPINION === undefined ? 'false' : process.env.SUPER_OPINION,
     EMOJI_COMMAND: process.env.EMOJI_COMMAND === undefined ? '🛡️' : process.env.EMOJI_COMMAND,
     EMOJI_DESCRIPTION: process.env.EMOJI_DESCRIPTION === undefined ? '⚙️' : process.env.EMOJI_DESCRIPTION,
     EMOJI_EXAMPLE: process.env.EMOJI_EXAMPLE === undefined ? '💬' : process.env.EMOJI_EXAMPLE,
