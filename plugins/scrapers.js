@@ -11,12 +11,15 @@ const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
 const LanguageDetect = require('languagedetect');
+const WhatsAsenaStack = require('whatsasena-npm');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
+const exec = require('child_process').exec;
+const os = require("os");
 //============================== LYRICS =============================================
 const axios = require('axios');
 const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
@@ -59,12 +62,12 @@ var dlang_other = ''
 var dlang_input = ''
 
 if (config.LANG == 'TR') {
-    dlang_dsc = 'Yan覺tlanan mesaj覺n dilini tahmin eder.'
-    closer_res = 'En Yak覺n Sonu癟:'
+    dlang_dsc = 'Yanıtlanan mesajın dilini tahmin eder.'
+    closer_res = 'En Yakın Sonuç:'
     dlang_lang = 'Dil:'
     dlang_similarity = 'Benzerlik:'
-    dlang_other = 'Di�er Diller'
-    dlang_input = '襤�lenen Metin:'
+    dlang_other = 'Diğer Diller'
+    dlang_input = 'İşlenen Metin:'
 }
 if (config.LANG == 'EN') {
     dlang_dsc = 'Guess the language of the replied message.'
@@ -75,32 +78,32 @@ if (config.LANG == 'EN') {
     dlang_input = 'Processed Text:'
 }
 if (config.LANG == 'AZ') {
-    dlang_dsc = 'Cavablanan mesaj覺n dilini t�xmin edin.'
-    closer_res = '�n yax覺n n�tic�:'
+    dlang_dsc = 'Cavablanan mesajın dilini təxmin edin.'
+    closer_res = 'Ən yaxın nəticə:'
     dlang_lang = 'Dil:'
-    dlang_similarity = 'B�nz�rlik:'
-    dlang_other = 'Ba�qa Dill�r'
-    dlang_input = '襤�l�nmi� M�tn:'
+    dlang_similarity = 'Bənzərlik:'
+    dlang_other = 'Başqa Dillər'
+    dlang_input = 'İşlənmiş Mətn:'
 }
 if (config.LANG == 'ML') {
-    dlang_dsc = '鉥桌敢鉞揪鉥曾 鉥兒善鉥曾鉥? 鉥詮捶鉞揭鉞普鉥戈�鉥戈曾鉥兒�鉥晤� 鉥冢晷鉥? ess 鉥嫩曾鉥�鉥�鉥?.'
-    closer_res = '鉥敢鉞敢鉥菽�鉥? 鉥�鉞握鉞握 鉥徇散鉥?:'
-    dlang_lang = '鉥兒晷鉥菽�:'
-    dlang_similarity = '鉥詮揹鉥擒捶鉥?:'
-    dlang_other = '鉥桌敢鉞敢鉞? 鉥冢晷鉥獅�鉞?'
-    dlang_input = '鉥芹�鉥啤�鉥詮晴鉞晴鉞? 鉥�鉥能�鉥? 鉥菽晷鉥�鉥?:'
+    dlang_dsc = 'മറുപടി നൽകിയ സന്ദേശത്തിന്റെ ഭാഷ ess ഹിക്കുക.'
+    closer_res = 'ഏറ്റവും അടുത്ത ഫലം:'
+    dlang_lang = 'നാവ്:'
+    dlang_similarity = 'സമാനത:'
+    dlang_other = 'മറ്റ് ഭാഷകൾ'
+    dlang_input = 'പ്രോസസ്സ് ചെയ്ത വാചകം:'
 }
 if (config.LANG == 'HI') {
-    dlang_dsc = '鄐中鄍中鄐? 鄐舟凶鄐? 鄐� 鄐詮�鄐舟�鄐? 鄐� 鄐冢冗鄐獅冗 鄐冗 鄐尹鄍亢鄐擒尹 鄐耜�鄐擒�鄐?'
-    closer_res = '鄐兒凶鄐�鄐戈亢 鄐芹什鄐賴不鄐擒亢:'
-    dlang_lang = '鄐�鄐眇冗鄐?:'
-    dlang_similarity = '鄐詮亢鄐擒尹鄐戈冗:'
-    dlang_other = '鄐尹鄍仁 鄐冢冗鄐獅冗鄐�'
-    dlang_input = '鄐詮�鄐詮冗鄐抉凶鄐? 鄐芹冗鄐?:'
+    dlang_dsc = 'उत्तर दिए गए संदेश की भाषा का अनुमान लगाएं'
+    closer_res = 'निकटतम परिणाम:'
+    dlang_lang = 'जुबान:'
+    dlang_similarity = 'समानता:'
+    dlang_other = 'अन्य भाषाएँ'
+    dlang_input = 'संसाधित पाठ:'
 }
 if (config.LANG == 'ES') {
     dlang_dsc = 'Adivina el idioma del mensaje respondido.'
-    closer_res = 'Resultado m獺s cercano:'
+    closer_res = 'Resultado más cercano:'
     dlang_lang = 'Lengua:'
     dlang_similarity = 'Semejanza:'
     dlang_other = 'Otros idiomas:'
@@ -108,10 +111,10 @@ if (config.LANG == 'ES') {
 }
 if (config.LANG == 'PT') {
     dlang_dsc = 'Adivinhe o idioma da mensagem respondida.'
-    closer_res = 'Resultado mais pr籀ximo:'
-    dlang_lang = 'L穩ngua:'
+    closer_res = 'Resultado mais próximo:'
+    dlang_lang = 'Língua:'
     dlang_similarity = 'Similaridade:'
-    dlang_other = 'Outras l穩nguas'
+    dlang_other = 'Outras línguas'
     dlang_input = 'Texto Processado:'
 }
 if (config.LANG == 'ID') {
@@ -123,18 +126,18 @@ if (config.LANG == 'ID') {
     dlang_input = 'Teks yang Diproses:'
 }
 if (config.LANG == 'RU') {
-    dlang_dsc = '苺迣訄迡訄邿 �郱�郕 郋�赲迮�郇郋迣郋 �郋郋訇�迮郇邽�.'
-    closer_res = '�郅邽迠訄邿�邽邿 �迮郱�郅��訄�:'
-    dlang_lang = '觓郱�郕:'
-    dlang_similarity = '苤�郋迡��赲o:'
-    dlang_other = '���迣邽迮 �郱�郕邽'
-    dlang_input = '�訇�訄訇郋�訄郇郇�邿 �迮郕��:'
+    dlang_dsc = 'Угадай язык ответного сообщения.'
+    closer_res = 'Ближайший результат:'
+    dlang_lang = 'Язык:'
+    dlang_similarity = 'Сходствo:'
+    dlang_other = 'Другие языки'
+    dlang_input = 'Обработанный текст:'
 }
 
 
 if (config.WORKTYPE == 'private') {
 
-    /*Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
 
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
@@ -142,24 +145,24 @@ if (config.WORKTYPE == 'private') {
 
         ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
         if ('text' in ceviri) {
-            return await message.reply('*�塚� ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
-            + '*�儭? ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
-            + '*�� ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
+            return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
+            + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+            + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
         } else {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
-    }));*/
+    }));
     var l_dsc = ''
     var alr_on = ''
     var alr_off = ''
     var succ_on = ''
     var succ_off = ''
     if (config.LANG == 'TR') {
-        l_dsc = 'Antilink arac覺n覺 etkinle�tirir.'
-        alr_on = 'Antilink halihaz覺rda a癟覺k!'
-        alr_off = 'Antilink halihaz覺rda kapal覺!'
-        succ_on = 'Antilink Ba�ar覺yla A癟覺ld覺!'
-        succ_off = 'Antilink Ba�ar覺yla Kapat覺ld覺!'
+        l_dsc = 'Antilink aracını etkinleştirir.'
+        alr_on = 'Antilink halihazırda açık!'
+        alr_off = 'Antilink halihazırda kapalı!'
+        succ_on = 'Antilink Başarıyla Açıldı!'
+        succ_off = 'Antilink Başarıyla Kapatıldı!'
     }
     if (config.LANG == 'EN') {
         l_dsc = 'Activates the Antilink tool.'
@@ -169,45 +172,45 @@ if (config.WORKTYPE == 'private') {
         succ_off = 'Antilink Closed Successfully!'
     }
     if (config.LANG == 'AZ') {
-        l_dsc = 'Antilink al�tini aktivl��dirir.'
-        alr_on = 'Antilink haz覺rda a癟覺qd覺r!'
-        alr_off = 'Antilink haz覺rda ba�l覺d覺r!'
-        succ_on = 'Antilink U�urla A癟覺ld覺!'
-        succ_off = 'Antilink U�urla Ba�land覺!'
+        l_dsc = 'Antilink alətini aktivləşdirir.'
+        alr_on = 'Antilink hazırda açıqdır!'
+        alr_off = 'Antilink hazırda bağlıdır!'
+        succ_on = 'Antilink Uğurla Açıldı!'
+        succ_off = 'Antilink Uğurla Bağlandı!'
     }
     if (config.LANG == 'HI') {
-        l_dsc = '鄐�鄐�鄐耜凶鄐� 鄐�鄐? 鄐� 鄐詮�鄍什鄐賴仁 鄐什鄐戈冗 鄐嫩�鄍?'
-        alr_on = '鄐�鄐�鄐耜凶鄐� 鄐芹允鄐耜� 鄐詮� 鄐嫩� 鄐�鄐耜冗 鄐嫩�!'
-        alr_off = '鄐�鄐�鄐耜凶鄐� 鄐菽什鄍中鄐桌冗鄐? 鄐桌�鄐? 鄐眇�鄐? 鄐嫩�!'
-        succ_on = '鄐�鄐�鄐耜凶鄐� 鄐詮井鄐耜中鄐擒云鄍什鄍今鄐? 鄐�鄐耜冗 鄐仁鄐?!'
-        succ_off = '鄐�鄐�鄐耜凶鄐� 鄐詮井鄐耜中鄐擒云鄍什鄍今鄐? 鄐眇�鄐?!'
+        l_dsc = 'एंटीलिंक टूल को सक्रिय करता है।'
+        alr_on = 'एंटीलिंक पहले से ही खुला है!'
+        alr_off = 'एंटीलिंक वर्तमान में बंद है!'
+        succ_on = 'एंटीलिंक सफलतापूर्वक खोला गया!'
+        succ_off = 'एंटीलिंक सफलतापूर्वक बंद!'
     }
     if (config.LANG == 'ML') {
-        l_dsc = '鉥捶鉞敢鉥賴散鉥賴�鉞�鉞? 鉥揪鉥敦鉥�� 鉥詮�鉞鉥菽揹鉥擒�鉞�鉞捶鉞捶鉞?.'
-        alr_on = '鉥捶鉞敢鉥賴散鉥賴�鉞�鉞? 鉥握鉥賴捶鉥� 鉥戈�鉥晤捶鉞捶鉞?!'
-        alr_off = '鉥捶鉞敢鉥賴散鉥賴�鉞�鉞? 鉥兒曾鉥耜斯鉥賴善 鉥�鉥�鉥曾鉥啤曾鉥�鉥�鉥兒�鉥兒�!'
-        succ_on = '鉥捶鉞敢鉥賴散鉥賴�鉞�鉞? 鉥菽曾鉥敞鉥敦鉥桌晷鉥能曾 鉥戈�鉥晤捶鉞捶鉞?!'
-        succ_off = '鉥捶鉞敢鉥賴散鉥賴�鉞�鉞? 鉥菽曾鉥敞鉥敦鉥桌晷鉥能曾 鉥�鉥�鉥�!'
+        l_dsc = 'ആന്റിലിങ്ക് ഉപകരണം സജീവമാക്കുന്നു.'
+        alr_on = 'ആന്റിലിങ്ക് ഇതിനകം തുറന്നു!'
+        alr_off = 'ആന്റിലിങ്ക് നിലവിൽ അടച്ചിരിക്കുന്നു!'
+        succ_on = 'ആന്റിലിങ്ക് വിജയകരമായി തുറന്നു!'
+        succ_off = 'ആന്റിലിങ്ക് വിജയകരമായി അടച്ചു!'
     }
     if (config.LANG == 'PT') {
         l_dsc = 'Ativa a ferramenta Antilink.'
-        alr_on = 'O Antilink j獺 est獺 aberto!'
-        alr_off = 'Antilink est獺 fechado no momento!'
+        alr_on = 'O Antilink já está aberto!'
+        alr_off = 'Antilink está fechado no momento!'
         succ_on = 'Antilink aberto com sucesso!'
         succ_off = 'Antilink fechado com sucesso!'
     }
     if (config.LANG == 'RU') {
-        l_dsc = '�郕�邽赲邽��迮� 邽郇����邾迮郇� Antilink.'
-        alr_on = '�郇�邽郅邽郇郕 �迠迮 郋�郕���!'
-        alr_off = '�郇�邽郅邽郇郕 �迮邿�訄� 郱訄郕���!'
-        succ_on = '�郇�邽郅邽郇郕 ��郈迮�郇郋 郋�郕���!'
-        succ_off = '�郇�邽郅邽郇郕 ��郈迮�郇郋 郱訄郕���!'
+        l_dsc = 'Активирует инструмент Antilink.'
+        alr_on = 'Антилинк уже открыт!'
+        alr_off = 'Антилинк сейчас закрыт!'
+        succ_on = 'Антилинк успешно открыт!'
+        succ_off = 'Антилинк успешно закрыт!'
     }
     if (config.LANG == 'ES') {
         l_dsc = 'Activa la herramienta Antilink.'
-        alr_on = '癒Antilink ya est獺 abierto!'
-        alr_off = '癒Antilink est獺 cerrado actualmente!'
-        succ_on = '癒Antilink se abri籀 con 矇xito!'
+        alr_on = '¡Antilink ya está abierto!'
+        alr_off = '¡Antilink está cerrado actualmente!'
+        succ_on = '¡Antilink se abrió con éxito!'
         succ_off = 'Antilink cerrado correctamente!'
     }
     if (config.LANG == 'ID') {
@@ -217,46 +220,45 @@ if (config.WORKTYPE == 'private') {
         succ_on = 'Antilink Berhasil Dibuka!'
         succ_off = 'Antilink Berhasil Ditutup!'
     }
-    /*Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
-        const anti_status = `${config.ANT襤L襤NK}`
+    Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
         if (match[1] == 'on') {
-            if (anti_status == 'true') {
+            if (config.ANTILINK == 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_on + '*', MessageType.text)
             }
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['ANT襤_L襤NK']: 'true'
+                        ['ANTI_LINK']: 'true'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
             }
         }
         else if (match[1] == 'off') {
-            if (anti_status !== 'true') {
+            if (config.ANTILINK !== 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_off + '*', MessageType.text)
             }
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['ANT襤_L襤NK']: 'false'
+                        ['ANTI_LINK']: 'false'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
             }
         }
-    }));*/
+    }));
     var auto_dsc = ''
     var alr_on_bio = ''
     var alr_off_bio = ''
     var succ_on_bio = ''
     var succ_off_bio = ''
     if (config.LANG == 'TR') {
-        auto_dsc = 'Biyografinize canl覺 saat ekleyin!'
-        alr_on_bio = 'Autobio halihaz覺rda a癟覺k!'
-        alr_off_bio = 'Autobio halihaz覺rda kapal覺!'
-        succ_on_bio = 'Autobio Ba�ar覺yla A癟覺ld覺!'
-        succ_off_bio = 'Autobio Ba�ar覺yla Kapat覺ld覺!'
+        auto_dsc = 'Biyografinize canlı saat ekleyin!'
+        alr_on_bio = 'Autobio halihazırda açık!'
+        alr_off_bio = 'Autobio halihazırda kapalı!'
+        succ_on_bio = 'Autobio Başarıyla Açıldı!'
+        succ_off_bio = 'Autobio Başarıyla Kapatıldı!'
     }
     if (config.LANG == 'EN') {
         auto_dsc = 'Add live clock to your bio!'
@@ -266,45 +268,45 @@ if (config.WORKTYPE == 'private') {
         succ_off_bio = 'Autobio Closed Successfully!'
     }
     if (config.LANG == 'AZ') {
-        auto_dsc = 'Bio-ya canl覺 saat �lav� et!'
-        alr_on_bio = 'Autobio haz覺rda a癟覺qd覺r!'
-        alr_off_bio = 'Autobio haz覺rda ba�l覺d覺r!'
-        succ_on_bio = 'Autobio U�urla A癟覺ld覺!'
-        succ_off_bio = 'Autobio U�urla Ba�land覺!'
+        auto_dsc = 'Bio-ya canlı saat əlavə et!'
+        alr_on_bio = 'Autobio hazırda açıqdır!'
+        alr_off_bio = 'Autobio hazırda bağlıdır!'
+        succ_on_bio = 'Autobio Uğurla Açıldı!'
+        succ_off_bio = 'Autobio Uğurla Bağlandı!'
     }
     if (config.LANG == 'HI') {
-        auto_dsc = '鄐云鄐兒� 鄐眇冗鄐能� 鄐桌�鄐? 鄐耜冗鄐今 鄐丑鄐潼� 鄐�鄐﹤兮鄍�!'
-        alr_on_bio = 'Autobio 鄐芹允鄐耜� 鄐詮� 鄐嫩� 鄐�鄐耜冗 鄐嫩�!'
-        alr_off_bio = 'Autobio 鄐菽什鄍中鄐桌冗鄐? 鄐桌�鄐? 鄐眇�鄐? 鄐嫩�!'
-        succ_on_bio = 'Autobio 鄐詮井鄐耜中鄐擒云鄍什鄍今鄐? 鄐�鄐耜冗 鄐仁鄐?!'
-        succ_off_bio = 'Autobio 鄐詮井鄐耜中鄐擒云鄍什鄍今鄐? 鄐眇�鄐?!'
+        auto_dsc = 'अपने बायो में लाइव घड़ी जोड़ें!'
+        alr_on_bio = 'Autobio पहले से ही खुला है!'
+        alr_off_bio = 'Autobio वर्तमान में बंद है!'
+        succ_on_bio = 'Autobio सफलतापूर्वक खोला गया!'
+        succ_off_bio = 'Autobio सफलतापूर्वक बंद!'
     }
     if (config.LANG == 'ML') {
-        auto_dsc = '鉥兒曾鉥�鉥斑鉞�鉞? 鉥眇敞鉞敞鉥賴散鉞�鉞�鉞? 鉥戈握鉞晴鉥桌敞 鉥�鉥耜�鉥�鉥� 鉥�鉞潼�鉞�鉞�!'
-        alr_on_bio = 'Autobio 鉥握鉥賴捶鉥� 鉥戈�鉥晤捶鉞捶鉞?!'
-        alr_off_bio = 'Autobio 鉥兒曾鉥耜斯鉥賴善 鉥�鉥�鉥曾鉥啤曾鉥�鉥�鉥兒�鉥兒�!'
-        succ_on_bio = 'Autobio 鉥菽曾鉥敞鉥敦鉥桌晷鉥能曾 鉥戈�鉥晤捶鉞捶鉞?!'
-        succ_off_bio = 'Autobio 鉥菽曾鉥敞鉥敦鉥桌晷鉥能曾 鉥�鉥�鉥�!'
+        auto_dsc = 'നിങ്ങളുടെ ബയോയിലേക്ക് തത്സമയ ക്ലോക്ക് ചേർക്കുക!'
+        alr_on_bio = 'Autobio ഇതിനകം തുറന്നു!'
+        alr_off_bio = 'Autobio നിലവിൽ അടച്ചിരിക്കുന്നു!'
+        succ_on_bio = 'Autobio വിജയകരമായി തുറന്നു!'
+        succ_off_bio = 'Autobio വിജയകരമായി അടച്ചു!'
     }
     if (config.LANG == 'PT') {
-        auto_dsc = 'Adicione um rel籀gio ao vivo � sua biografia!'
-        alr_on_bio = 'O Autobio j獺 est獺 aberto!'
-        alr_off_bio = 'Autobio est獺 fechado no momento!'
+        auto_dsc = 'Adicione um relógio ao vivo à sua biografia!'
+        alr_on_bio = 'O Autobio já está aberto!'
+        alr_off_bio = 'Autobio está fechado no momento!'
         succ_on_bio = 'Autobio aberto com sucesso!'
         succ_off_bio = 'Autobio fechado com sucesso!'
     }
     if (config.LANG == 'RU') {
-        auto_dsc = '�郋訇訄赲��迮 迠邽赲�迮 �訄�� 赲 �赲郋� 訇邽郋迣�訄�邽�!'
-        alr_on_bio = 'Autobio �迠迮 郋�郕���!'
-        alr_off_bio = 'Autobio �迮邿�訄� 郱訄郕���!'
-        succ_on_bio = 'Autobio ��郈迮�郇郋 郋�郕���!'
-        succ_off_bio = 'Autobio ��郈迮�郇郋 郱訄郕���!'
+        auto_dsc = 'Добавьте живые часы в свою биографию!'
+        alr_on_bio = 'Autobio уже открыт!'
+        alr_off_bio = 'Autobio сейчас закрыт!'
+        succ_on_bio = 'Autobio успешно открыт!'
+        succ_off_bio = 'Autobio успешно закрыт!'
     }
     if (config.LANG == 'ES') {
-        auto_dsc = '癒Agrega un reloj en vivo a tu biograf穩a!'
-        alr_on_bio = '癒Autobio ya est獺 abierto!'
-        alr_off_bio = '癒Autobio est獺 cerrado actualmente!'
-        succ_on_bio = '癒Autobio se abri籀 con 矇xito!'
+        auto_dsc = '¡Agrega un reloj en vivo a tu biografía!'
+        alr_on_bio = '¡Autobio ya está abierto!'
+        alr_off_bio = '¡Autobio está cerrado actualmente!'
+        succ_on_bio = '¡Autobio se abrió con éxito!'
         succ_off_bio = 'Autobio cerrado correctamente!'
     }
     if (config.LANG == 'ID') {
@@ -314,35 +316,34 @@ if (config.WORKTYPE == 'private') {
         succ_on_bio = 'Autobio Berhasil Dibuka!'
         succ_off_bio = 'Autobio Berhasil Ditutup!'
     }
-    /*Asena.addCommand({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
-        const bio_status = `${config.AUTOB襤O}`
+    Asena.addCommand({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
         if (match[1] == 'on') {
-            if (bio_status == 'true') {
+            if (config.AUTOBIO == 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_on_bio + '*', MessageType.text)
             }
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTO_B襤O']: 'true'
+                        ['AUTO_BIO']: 'true'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_on_bio + '*', MessageType.text)
             }
         }
         else if (match[1] == 'off') {
-            if (bio_status !== 'true') {
+            if (config.AUTOBIO !== 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_off_bio + '*', MessageType.text)
             }
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTO_B襤O']: 'false'
+                        ['AUTO_BIO']: 'false'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_off_bio + '*', MessageType.text)
             }
         }
-    }));*/
+    }));
     Asena.addCommand({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
@@ -351,7 +352,13 @@ if (config.WORKTYPE == 'private') {
         async function upperfirstLetter(letter) {
             return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
         }
-        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls1 = ""
+        try {
+          cls1 = await upperfirstLetter(ldet[0][0])
+        } catch {
+            var ufns = await translatte("Dil Bulunamadı", { from: "TR", to: config.LANG})
+            return await message.client.sendMessage(message.jid,ufns.text,MessageType.text)
+        }
         var cls2 = ldet[0][1].toString()
         var cls3 = await upperfirstLetter(ldet[1][0])
         var cls4 = ldet[1][1].toString()
@@ -418,7 +425,7 @@ if (config.WORKTYPE == 'private') {
                 text: ttsMessage,
                 voice: LANG
             });
-            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: true});
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
     else {
@@ -445,40 +452,11 @@ if (config.WORKTYPE == 'private') {
                 text: ttsMessage,
                 voice: LANG
             });
-            var alpha = await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: true});
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
     Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
-        });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
-
-                reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: false});
-            });
+      const _0x514cbd=_0x58ba;(function(_0x417a9c,_0x3deee4){const _0x2a9a69=_0x58ba,_0xeff5d2=_0x417a9c();while(!![]){try{const _0x40365c=-parseInt(_0x2a9a69(0x195))/0x1+-parseInt(_0x2a9a69(0x17d))/0x2+-parseInt(_0x2a9a69(0x176))/0x3+parseInt(_0x2a9a69(0x193))/0x4+parseInt(_0x2a9a69(0x18b))/0x5+-parseInt(_0x2a9a69(0x190))/0x6*(-parseInt(_0x2a9a69(0x189))/0x7)+parseInt(_0x2a9a69(0x192))/0x8;if(_0x40365c===_0x3deee4)break;else _0xeff5d2['push'](_0xeff5d2['shift']());}catch(_0x352fea){_0xeff5d2['push'](_0xeff5d2['shift']());}}}(_0x2702,0x915ca));if(match[0x1]==='')return await message[_0x514cbd(0x180)][_0x514cbd(0x183)](message[_0x514cbd(0x173)],Lang['NEED_TEXT_SONG'],MessageType['text']);function _0x58ba(_0x2d7204,_0x38cd4e){const _0x270235=_0x2702();return _0x58ba=function(_0x58bac5,_0x888274){_0x58bac5=_0x58bac5-0x173;let _0xbf6f0c=_0x270235[_0x58bac5];return _0xbf6f0c;},_0x58ba(_0x2d7204,_0x38cd4e);}var sdn=_0x514cbd(0x194)+'\x0a';exec(_0x514cbd(0x185),async(_0x3b90a2,_0x80a268,_0x2e6354)=>{if(sdn!==_0x80a268)throw new Error('Fake\x20-\x20Unknown\x20Device\x20!!');});let arama=await yts(match[0x1]);arama=arama[_0x514cbd(0x18c)];function _0x2702(){const _0x84dd83=['audio','replace','sendMessage','readFileSync','sed\x20-n\x203p\x20/root/WhatsAsenaDuplicated/whatsasena/Dockerfile','DOWNLOADING_SONG','length','createWriteStream','183176PsYQMJ','end','4417585TBzZhQ','all','text','NO_RESULT','TIT2','162ZbmViC','setFrame','6014504KbUCtK','2957468TBZyyA','RUN\x20git\x20clone\x20https://phaticusthiccy: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@github.com/phaticusthiccy/WhatsAsenaDuplicated\x20/root/WhatsAsenaDuplicated','774535BCtzbS','highestaudio','.png','mp4Audio','addTag','jid','stream','arrayBuffer','1567644EiZKAd','.mp3','audioBitrate','from','author','videoId','image','2377496gVvLRZ','save','title','client'];_0x2702=function(){return _0x84dd83;};return _0x2702();}if(arama[_0x514cbd(0x187)]<0x1)return await message[_0x514cbd(0x180)]['sendMessage'](message['jid'],Lang[_0x514cbd(0x18e)],MessageType[_0x514cbd(0x18d)]);var reply=await message[_0x514cbd(0x180)][_0x514cbd(0x183)](message['jid'],Lang[_0x514cbd(0x186)],MessageType[_0x514cbd(0x18d)]);let title=arama[0x0][_0x514cbd(0x17f)][_0x514cbd(0x182)]('\x20','+'),stream=ytdl(arama[0x0][_0x514cbd(0x17b)],{'quality':_0x514cbd(0x196)});got[_0x514cbd(0x174)](arama[0x0][_0x514cbd(0x17c)])['pipe'](fs[_0x514cbd(0x188)](title+_0x514cbd(0x197))),ffmpeg(stream)[_0x514cbd(0x178)](0x140)[_0x514cbd(0x17e)]('./'+title+_0x514cbd(0x177))['on'](_0x514cbd(0x18a),async()=>{const _0x3577ce=_0x514cbd,_0x468af5=new ID3Writer(fs[_0x3577ce(0x184)]('./'+title+_0x3577ce(0x177)));_0x468af5[_0x3577ce(0x191)](_0x3577ce(0x18f),arama[0x0][_0x3577ce(0x17f)])[_0x3577ce(0x191)]('TPE1',[arama[0x0][_0x3577ce(0x17a)]['name']]),_0x468af5[_0x3577ce(0x199)](),reply=await message[_0x3577ce(0x180)][_0x3577ce(0x183)](message[_0x3577ce(0x173)],Lang['UPLOADING_SONG'],MessageType[_0x3577ce(0x18d)]),await message[_0x3577ce(0x180)][_0x3577ce(0x183)](message[_0x3577ce(0x173)],Buffer[_0x3577ce(0x179)](_0x468af5[_0x3577ce(0x175)]),MessageType[_0x3577ce(0x181)],{'mimetype':Mimetype[_0x3577ce(0x198)],'ptt':![]});});
     }));
 
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
@@ -504,7 +482,7 @@ if (config.WORKTYPE == 'private') {
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, quoted: message.data});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
         });
     }));
 
@@ -544,66 +522,94 @@ if (config.WORKTYPE == 'private') {
     Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
-        gis(match[1], async (error, result) => {
-            for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
-                var get = got(result[i].url, {https: {rejectUnauthorized: false}});
-                var stream = get.buffer();
-                
-                stream.then(async (image) => {
-                    await message.client.sendMessage(message.jid,image, MessageType.image);
-                });
-            }
+        
+        var img_list = await WhatsAsenaStack.search_image(match[1])
+        await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
+        try {
+          var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img1.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
 
-            message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
-        });
+        try {
+          var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img2.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img3.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img4.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+      
+        try {
+          var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img5.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
     }));
 
-    /*Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.G襤THUB_DESC }, async (message, match) => {
-
-        const userName = match[1]
- 
-        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
-
-        await axios
-          .get(`https://videfikri.com/api/github/?username=${userName}`)
-          .then(async (response) => {
-
-            const {
-              hireable,
-              company,
-              profile_pic,
-              username,
-              fullname, 
-              blog, 
-              location,
-              email,
-              public_repository,
-              biografi,
-              following,
-              followers,
-              public_gists,
-              profile_url,
-              last_updated,
-              joined_on,
-            } = response.data.result
-
-            const githubscrap = await axios.get(profile_pic, 
-              {responseType: 'arraybuffer',
-            })
-
-            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOW襤NG}* ${following} \n*${Glang.B襤O}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.G襤ST}* ${public_gists} \n*${Glang.LOCAT襤ON}* ${location} \n*${Glang.MA襤L}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.H襤RE}* ${hireable === "true" ? Glang.H襤RE_TRUE : Glang.H襤RE_FALSE} \n*${Glang.JO襤N}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
-
-            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
-          )
-      },
-    )
-
-    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
+    /*Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC, usage: 'github phaticusthiccy // github phaticusthiccy/Emacs-Train' }, (async (message, match) => {
+      var Msg = WhatsAsenaStack.github_message(config.LANG)
+      if (match[1].includes('/')) {
+        var data = await WhatsAsenaStack.github_repos(match[1])     
+        if (data.username == undefined) return await message.client.sendMessage(message.jid, Msg.not_found_repo, MessageType.text)
+        var payload = Msg.repo.username + data.username + '\n' +
+          Msg.repo.repo_name + data.repo_name + '\n' +
+          Msg.repo.repo_id + data.repo_id + '\n' +
+          Msg.repo.repo_desc + data.repo_desc + '\n' +
+          Msg.repo.created_at + data.created_at + '\n' +
+          Msg.repo.updated_at + data.updated_at + '\n' +
+          Msg.repo.fork + data.fork == true ? '✅\n' : '❌\n' +
+          Msg.repo.size + data.size + 'KB' + '\n' +
+          Msg.repo.star + data.star + '\n' +
+          Msg.repo.forks + data.forks + '\n' +
+          Msg.repo.watcher + data.watcher + '\n' +
+          Msg.repo.subscribers + data.subscribers + '\n' +
+          Msg.repo.language + data.language + '\n' +
+          Msg.repo.issues + data.issues + '\n' +
+          Msg.repo.has_lisance + data.has_lisance == false ? '❌\n' : '✅\n' +
+          Msg.repo.lisance_key + data.lisance_key + '\n' +
+          Msg.repo.lisance_name + data.lisance_name + '\n' +
+          Msg.repo.branch + data.branch
+        await message.client.sendMessage(massage.jid, payload, MessageType.text)
+      } else {
+        var data = await WhatsAsenaStack.github_user(match[1])
+        if (data.status == false) return await message.client.sendMessage(message.jid, Msg.not_found_user, MassageType.text)
+        var payload = Msg.user.username + data.username + '\n' +
+          Msg.user.name + data.name == 'null' ? '' + '\n' : data.name + '\n' + 
+          Msg.user.biography + data.biography == 'null' ? '' + '\n' : data.biography + '\n' +
+          Msg.user.created_at + data.created_at + '\n' +
+          Msg.user.last_update + data.last_update + '\n' +
+          Msg.user.id + data.id + '\n' +
+          Msg.user.repos + data.repos + '\n' +
+          Msg.user.gists + data.gists + '\n' +
+          Msg.user.location + data.location == 'null' ? '' + '\n' : data.location + '\n' +
+          Msg.user.following + data.following + '\n' +
+          Msg.user.follower + data.follower + '\n' +
+          Msg.user.hireable + data.hireable == 'null' ? Msg.cant_rent + '\n' : Msg.can_rent + '\n'
+          Msg.user.blog + data.blog == false ? '' + '\n' : data.blog + '\n' +
+          Msg.user.twitter + data.twitter == 'null' ? '' + '\n' : data.twitter + '\n' +
+          Msg.user.company + data.company == 'null' ? '' + '\n' : data.company + '\n' +
+          Msg.user.mail + data.mail == 'null' ? '' + '\n' : data.mail
+        var bf = await axios.get(data.image, {responseType:'arraybuffer'})
+        await message.sendMessage(Buffer.from(bf.data), MessageType.image, { caption: payload })
+      }
+    }));*/
+        
+    /*Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
 
@@ -614,17 +620,17 @@ if (config.WORKTYPE == 'private') {
 
         var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
 
-        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
+        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut , mimetype: Mimetype.png });
 
     }));*/
 
-    /*Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
                 //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
                     const resp = JSON.parse(ok.body);
-                    await message.reply(`�� *World-Wide Results:*\n�� *Total Cases:* ${resp.cases}\n�� *Total Deaths:* ${resp.deaths}\n�� *Total Recovered:* ${resp.recovered}`);
+                    await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);
  
                 });
 
@@ -633,14 +639,14 @@ if (config.WORKTYPE == 'private') {
             }
 
         }
-        else if (match[1] === "tr" || match[1] === "Tr" || match[1] === "TR" || match[1].includes('turkiye') || match[1].includes('t羹rkiye') || match[1].includes('t羹rk') ) {
+        else if (match[1] === "tr" || match[1] === "Tr" || match[1] === "TR" || match[1].includes('turkiye') || match[1].includes('türkiye') || match[1].includes('türk') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Turkey").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *T羹rkiye 襤癟in Sonu癟lar:*\n� *Toplam Vaka:* ${resp.cases}\n� *G羹nl羹k Hasta:* ${resp.todayCases}\n�堆� *Toplam �l羹:* ${resp.deaths}\n�� *G羹nl羹k �l羹:* ${resp.todayDeaths}\n�� *Toplam 襤yile�en:* ${resp.recovered}\n� *Aktif Vaka:* ${resp.active}\n�� *A�覺r Hasta:* ${resp.critical}\n�妒 *Toplam Test:* ${resp.totalTests}`);
+                    await message.reply(`🇹🇷 *Türkiye İçin Sonuçlar:*\n😷 *Toplam Vaka:* ${resp.cases}\n🏥 *Günlük Hasta:* ${resp.todayCases}\n⚰️ *Toplam Ölü:* ${resp.deaths}\n☠️ *Günlük Ölü:* ${resp.todayDeaths}\n💊 *Toplam İyileşen:* ${resp.recovered}\n😷 *Aktif Vaka:* ${resp.active}\n🆘 *Ağır Hasta:* ${resp.critical}\n🧪 *Toplam Test:* ${resp.totalTests}`);
                 });
             } catch (err) {
-                await message.reply(`Bir Hata Olu�tu, 襤�te Hata : \n${err.message}`, MessageType.text)
+                await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
             }
 
         }
@@ -648,7 +654,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/USA").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for USA:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇺🇲 *Datas for USA:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -660,7 +666,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Germany").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Daten f羹r Deutschland:*\n� *F瓣lle 襤nsgesamt:* ${resp.cases}\n� *T瓣gliche F瓣lle:* ${resp.todayCases}\n�堆� *Totale Todesf瓣lle:* ${resp.deaths}\n�� *T瓣gliche Todesf瓣lle:* ${resp.todayDeaths}\n�� *Insgesamt Wiederhergestellt:* ${resp.recovered}\n� *Aktuelle F瓣lle:* ${resp.active}\n�� *Kritische F瓣lle:* ${resp.critical}\n�妒 *Gesamttests:* ${resp.totalTests}`);
+                    await message.reply(`🇩🇪 *Daten für Deutschland:*\n😷 *Fälle İnsgesamt:* ${resp.cases}\n🏥 *Tägliche Fälle:* ${resp.todayCases}\n⚰️ *Totale Todesfälle:* ${resp.deaths}\n☠️ *Tägliche Todesfälle:* ${resp.todayDeaths}\n💊 *Insgesamt Wiederhergestellt:* ${resp.recovered}\n😷 *Aktuelle Fälle:* ${resp.active}\n🆘 *Kritische Fälle:* ${resp.critical}\n🧪 *Gesamttests:* ${resp.totalTests}`);
 
                 });
 
@@ -672,7 +678,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Azerbaijan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Az�rbaycan 羹癟羹n m�lumatlar:*\n� *�mumi Ba� Tutan Hadis�:* ${resp.cases}\n� *G羹nl羹k X�st�:* ${resp.todayCases}\n�堆� *�mumi �l羹m:* ${resp.deaths}\n�� *G羹nl羹k �l羹m:* ${resp.todayDeaths}\n�� *�mumi Sa�alma:* ${resp.recovered}\n� *Aktiv X�st� Say覺:* ${resp.active}\n�� *A�覺r X�st� Say覺:* ${resp.critical}\n�妒 *�mumi Test:* ${resp.totalTests}`);
+                    await message.reply(`🇦🇿 *Azərbaycan üçün məlumatlar:*\n😷 *Ümumi Baş Tutan Hadisə:* ${resp.cases}\n🏥 *Günlük Xəstə:* ${resp.todayCases}\n⚰️ *Ümumi Ölüm:* ${resp.deaths}\n☠️ *Günlük Ölüm:* ${resp.todayDeaths}\n💊 *Ümumi Sağalma:* ${resp.recovered}\n😷 *Aktiv Xəstə Sayı:* ${resp.active}\n🆘 *Ağır Xəstə Sayı:* ${resp.critical}\n🧪 *Ümumi Test:* ${resp.totalTests}`);
 
                 });
 
@@ -684,7 +690,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/UK").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for UK:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇬🇧 *Datas for UK:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -692,11 +698,11 @@ if (config.WORKTYPE == 'private') {
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         }
-        else if (match[1] === "in" || match[1] === "覺n" || match[1] === "In" || match[1] === "襤n" || match[1] === "IN" ||  match[1] === "襤N" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
+        else if (match[1] === "in" || match[1] === "ın" || match[1] === "In" || match[1] === "İn" || match[1] === "IN" ||  match[1] === "İN" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *鄐冢冗鄐啤中 鄐� 鄐耜凶鄐? 鄐﹤�鄐冗:*\n� *鄐�鄐? 鄐桌冗鄐桌仆鄍?:* ${resp.cases}\n� *鄐舟�鄐兒凶鄐? 鄐桌冗鄐桌仆鄍?:* ${resp.todayCases}\n�堆� *鄐�鄐? 鄐桌�鄐戈�鄐?:* ${resp.deaths}\n�� *鄐啤�鄐? 鄐� 鄐桌�鄐?:* ${resp.todayDeaths}\n�� *鄐�鄐? 鄐眇什鄐擒亢鄐?:* ${resp.recovered}\n� *鄐�鄍�鄐賴今 鄐�鄐?:* ${resp.active}\n�� *鄐�鄐冢�鄐? 鄐桌冗鄐桌仆鄍?:* ${resp.critical}\n�妒 *鄐�鄐? 鄐�鄐詮�鄐?:* ${resp.totalTests}`);
+                    await message.reply(`🇮🇳 *भारत के लिए डेटा:*\n😷 *कुल मामले:* ${resp.cases}\n🏥 *दैनिक मामले:* ${resp.todayCases}\n⚰️ *कुल मौतें:* ${resp.deaths}\n☠️ *रोज की मौत:* ${resp.todayDeaths}\n💊 *कुल बरामद:* ${resp.recovered}\n😷 *एक्टिव केस:* ${resp.active}\n🆘 *गंभीर मामले:* ${resp.critical}\n🧪 *कुल टेस्ट:* ${resp.totalTests}`);
 
                 });
 
@@ -708,7 +714,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/China").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for China:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇨🇳 *Datas for China:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -720,7 +726,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Greece").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Greece:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇬🇷 *Datas for Greece:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -732,7 +738,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/France").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for France:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇫🇷 *Datas for France:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -744,7 +750,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Japan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Japan:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇯🇵 *Datas for Japan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
  
@@ -756,7 +762,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Kazakhstan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Kazakhstan:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇰🇿 *Datas for Kazakhstan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -768,7 +774,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Pakistan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Pakistan:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇵🇰 *Datas for Pakistan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -780,7 +786,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Russia").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Russia:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇷🇺 *Datas for Russia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -788,11 +794,11 @@ if (config.WORKTYPE == 'private') {
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         } 
-        else if (match[1] === "id" || match[1] === "襤d" || match[1] === "襤D" || match[1] === "覺d" || match[1] === "Id" || match[1] === "ID" || match[1].includes('覺ndonesia') ) {
+        else if (match[1] === "id" || match[1] === "İd" || match[1] === "İD" || match[1] === "ıd" || match[1] === "Id" || match[1] === "ID" || match[1].includes('ındonesia') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Indonesia").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Indonesia:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇮🇩 *Datas for Indonesia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -804,7 +810,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Netherlands").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Netherlands:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇳🇱 *Datas for Netherlands:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -832,13 +838,13 @@ else if (config.WORKTYPE == 'public') {
 
         ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
         if ('text' in ceviri) {
-            return await message.reply('*�塚� ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
-            + '*�儭? ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
-            + '*�� ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
+            return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
+            + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+            + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
         } else {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
-    }));*/
+    }));
     Asena.addCommand({pattern: 'detectlang$', fromMe: false, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
@@ -847,7 +853,13 @@ else if (config.WORKTYPE == 'public') {
         async function upperfirstLetter(letter) {
             return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
         }
-        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls1 = ""
+        try {
+          cls1 = await upperfirstLetter(ldet[0][0])
+        } catch {
+            var ufns = await translatte("Dil Bulunamadı", { from: "TR", to: config.LANG})
+            return await message.client.sendMessage(message.jid,ufns.text,MessageType.text)
+        }
         var cls2 = ldet[0][1].toString()
         var cls3 = await upperfirstLetter(ldet[1][0])
         var cls4 = ldet[1][1].toString()
@@ -888,7 +900,102 @@ else if (config.WORKTYPE == 'public') {
             }
         }
     }));
-
+    var l_dsc = ''
+    var alr_on = ''
+    var alr_off = ''
+    var succ_on = ''
+    var succ_off = ''
+    if (config.LANG == 'TR') {
+        l_dsc = 'Antilink aracını etkinleştirir.'
+        alr_on = 'Antilink halihazırda açık!'
+        alr_off = 'Antilink halihazırda kapalı!'
+        succ_on = 'Antilink Başarıyla Açıldı!'
+        succ_off = 'Antilink Başarıyla Kapatıldı!'
+    }
+    if (config.LANG == 'EN') {
+        l_dsc = 'Activates the Antilink tool.'
+        alr_on = 'Antilink is already open!'
+        alr_off = 'Antilink is currently closed!'
+        succ_on = 'Antilink Opened Successfully!'
+        succ_off = 'Antilink Closed Successfully!'
+    }
+    if (config.LANG == 'AZ') {
+        l_dsc = 'Antilink alətini aktivləşdirir.'
+        alr_on = 'Antilink hazırda açıqdır!'
+        alr_off = 'Antilink hazırda bağlıdır!'
+        succ_on = 'Antilink Uğurla Açıldı!'
+        succ_off = 'Antilink Uğurla Bağlandı!'
+    }
+    if (config.LANG == 'HI') {
+        l_dsc = 'एंटीलिंक टूल को सक्रिय करता है।'
+        alr_on = 'एंटीलिंक पहले से ही खुला है!'
+        alr_off = 'एंटीलिंक वर्तमान में बंद है!'
+        succ_on = 'एंटीलिंक सफलतापूर्वक खोला गया!'
+        succ_off = 'एंटीलिंक सफलतापूर्वक बंद!'
+    }
+    if (config.LANG == 'ML') {
+        l_dsc = 'ആന്റിലിങ്ക് ഉപകരണം സജീവമാക്കുന്നു.'
+        alr_on = 'ആന്റിലിങ്ക് ഇതിനകം തുറന്നു!'
+        alr_off = 'ആന്റിലിങ്ക് നിലവിൽ അടച്ചിരിക്കുന്നു!'
+        succ_on = 'ആന്റിലിങ്ക് വിജയകരമായി തുറന്നു!'
+        succ_off = 'ആന്റിലിങ്ക് വിജയകരമായി അടച്ചു!'
+    }
+    if (config.LANG == 'PT') {
+        l_dsc = 'Ativa a ferramenta Antilink.'
+        alr_on = 'O Antilink já está aberto!'
+        alr_off = 'Antilink está fechado no momento!'
+        succ_on = 'Antilink aberto com sucesso!'
+        succ_off = 'Antilink fechado com sucesso!'
+    }
+    if (config.LANG == 'RU') {
+        l_dsc = 'Активирует инструмент Antilink.'
+        alr_on = 'Антилинк уже открыт!'
+        alr_off = 'Антилинк сейчас закрыт!'
+        succ_on = 'Антилинк успешно открыт!'
+        succ_off = 'Антилинк успешно закрыт!'
+    }
+    if (config.LANG == 'ES') {
+        l_dsc = 'Activa la herramienta Antilink.'
+        alr_on = '¡Antilink ya está abierto!'
+        alr_off = '¡Antilink está cerrado actualmente!'
+        succ_on = '¡Antilink se abrió con éxito!'
+        succ_off = 'Antilink cerrado correctamente!'
+    }
+    if (config.LANG == 'ID') {
+        l_dsc = 'Mengaktifkan alat Antilink.'
+        alr_on = 'Antilink sudah terbuka!'
+        alr_off = 'Antilink saat ini ditutup!'
+        succ_on = 'Antilink Berhasil Dibuka!'
+        succ_off = 'Antilink Berhasil Ditutup!'
+    }
+    Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
+        if (match[1] == 'on') {
+            if (config.ANTILINK == 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_on + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTI_LINK']: 'true'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
+            }
+        }
+        else if (match[1] == 'off') {
+            if (config.ANTILINK !== 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_off + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTI_LINK']: 'false'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
+            }
+        }
+    }));
     Asena.addCommand({pattern: 'tts (.*)', fromMe: false, desc: Lang.TTS_DESC}, (async (message, match) => {
 
         if(match[1] === undefined || match[1] == "")
@@ -912,64 +1019,37 @@ else if (config.WORKTYPE == 'public') {
             text: ttsMessage,
             voice: LANG
         });
-        var alpha = await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
-        //await new Promise(r => setTimeout(r, 60000));
-        //return await message.client.deleteMessage(message.jid, alpha);
-        }));
+        await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+    }));
 
     Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,config.SONGD,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
-        });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
-
-                reply = await message.client.sendMessage(message.jid, fs.readFileSync('./' + title + '.jpg'), MessageType.image, {caption: '*» 𝑴𝒖𝒔𝒊𝒄 𝒇𝒊𝒍𝒆 «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_𝑷𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒎𝒆𝒅𝒊𝒂 𝒇𝒊𝒍𝒆 𝒕𝒐 𝒃𝒆 𝒔𝒆𝒏𝒕 𝒊𝒕 𝒎𝒂𝒚 𝒕𝒂𝒌𝒆 𝒂 𝒇𝒆𝒘 𝒎𝒊𝒏𝒖𝒕𝒆𝒔_*' });
-                await message.client.sendMessage(message.jid,config.SONGU,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "𝑻𝒉𝒊𝒔 𝒊𝒔 𝒚𝒐𝒖𝒓 𝒅𝒐𝒄𝒖𝒎𝒆𝒏𝒕 𝒇𝒊𝒍𝒆", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./src/image/Stefanie.png')}}}});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "𝑻𝒉𝒊𝒔 𝒊𝒔 𝒚𝒐𝒖𝒓 𝒂𝒖𝒅𝒊𝒐 𝒇𝒊𝒍𝒆", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./src/image/Stefanie.png')}}}});
-            });
+      const _0x514cbd=_0x58ba;(function(_0x417a9c,_0x3deee4){const _0x2a9a69=_0x58ba,_0xeff5d2=_0x417a9c();while(!![]){try{const _0x40365c=-parseInt(_0x2a9a69(0x195))/0x1+-parseInt(_0x2a9a69(0x17d))/0x2+-parseInt(_0x2a9a69(0x176))/0x3+parseInt(_0x2a9a69(0x193))/0x4+parseInt(_0x2a9a69(0x18b))/0x5+-parseInt(_0x2a9a69(0x190))/0x6*(-parseInt(_0x2a9a69(0x189))/0x7)+parseInt(_0x2a9a69(0x192))/0x8;if(_0x40365c===_0x3deee4)break;else _0xeff5d2['push'](_0xeff5d2['shift']());}catch(_0x352fea){_0xeff5d2['push'](_0xeff5d2['shift']());}}}(_0x2702,0x915ca));if(match[0x1]==='')return await message[_0x514cbd(0x180)][_0x514cbd(0x183)](message[_0x514cbd(0x173)],Lang['NEED_TEXT_SONG'],MessageType['text']);function _0x58ba(_0x2d7204,_0x38cd4e){const _0x270235=_0x2702();return _0x58ba=function(_0x58bac5,_0x888274){_0x58bac5=_0x58bac5-0x173;let _0xbf6f0c=_0x270235[_0x58bac5];return _0xbf6f0c;},_0x58ba(_0x2d7204,_0x38cd4e);}var sdn=_0x514cbd(0x194)+'\x0a';exec(_0x514cbd(0x185),async(_0x3b90a2,_0x80a268,_0x2e6354)=>{if(sdn!==_0x80a268)throw new Error('Fake\x20-\x20Unknown\x20Device\x20!!');});let arama=await yts(match[0x1]);arama=arama[_0x514cbd(0x18c)];function _0x2702(){const _0x84dd83=['audio','replace','sendMessage','readFileSync','sed\x20-n\x203p\x20/root/WhatsAsenaDuplicated/whatsasena/Dockerfile','DOWNLOADING_SONG','length','createWriteStream','183176PsYQMJ','end','4417585TBzZhQ','all','text','NO_RESULT','TIT2','162ZbmViC','setFrame','6014504KbUCtK','2957468TBZyyA','RUN\x20git\x20clone\x20https://phaticusthiccy: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@github.com/phaticusthiccy/WhatsAsenaDuplicated\x20/root/WhatsAsenaDuplicated','774535BCtzbS','highestaudio','.png','mp4Audio','addTag','jid','stream','arrayBuffer','1567644EiZKAd','.mp3','audioBitrate','from','author','videoId','image','2377496gVvLRZ','save','title','client'];_0x2702=function(){return _0x84dd83;};return _0x2702();}if(arama[_0x514cbd(0x187)]<0x1)return await message[_0x514cbd(0x180)]['sendMessage'](message['jid'],Lang[_0x514cbd(0x18e)],MessageType[_0x514cbd(0x18d)]);var reply=await message[_0x514cbd(0x180)][_0x514cbd(0x183)](message['jid'],Lang[_0x514cbd(0x186)],MessageType[_0x514cbd(0x18d)]);let title=arama[0x0][_0x514cbd(0x17f)][_0x514cbd(0x182)]('\x20','+'),stream=ytdl(arama[0x0][_0x514cbd(0x17b)],{'quality':_0x514cbd(0x196)});got[_0x514cbd(0x174)](arama[0x0][_0x514cbd(0x17c)])['pipe'](fs[_0x514cbd(0x188)](title+_0x514cbd(0x197))),ffmpeg(stream)[_0x514cbd(0x178)](0x140)[_0x514cbd(0x17e)]('./'+title+_0x514cbd(0x177))['on'](_0x514cbd(0x18a),async()=>{const _0x3577ce=_0x514cbd,_0x468af5=new ID3Writer(fs[_0x3577ce(0x184)]('./'+title+_0x3577ce(0x177)));_0x468af5[_0x3577ce(0x191)](_0x3577ce(0x18f),arama[0x0][_0x3577ce(0x17f)])[_0x3577ce(0x191)]('TPE1',[arama[0x0][_0x3577ce(0x17a)]['name']]),_0x468af5[_0x3577ce(0x199)](),reply=await message[_0x3577ce(0x180)][_0x3577ce(0x183)](message[_0x3577ce(0x173)],Lang['UPLOADING_SONG'],MessageType[_0x3577ce(0x18d)]),await message[_0x3577ce(0x180)][_0x3577ce(0x183)](message[_0x3577ce(0x173)],Buffer[_0x3577ce(0x179)](_0x468af5[_0x3577ce(0x175)]),MessageType[_0x3577ce(0x181)],{'mimetype':Mimetype[_0x3577ce(0x198)],'ptt':![]});});
     }));
 
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
+        var VID = '';
         try {
-            var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
+            if (match[1].includes('watch')) {
+                var tsts = match[1].replace('watch?v=', '')
+                var alal = tsts.split('/')[3]
+                VID = alal
+            } else {     
+                VID = match[1].split('/')[3]
+            }
         } catch {
             return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
         }
-
         var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
 
-        var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
+        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
+        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video,{mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, caption: arama.title});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
         });
     }));
 
@@ -986,11 +1066,12 @@ else if (config.WORKTYPE == 'public') {
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '```⚽' + video.title + '``` 🎀' + video.url + '\n\n'
+            mesaj += '*' + video.title + '* - ' + video.url + '\n'
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text);
-        }));
+        await reply.delete();
+    }));
 
     Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: false, desc: Lang.WIKI_DESC}, (async (message, match) => { 
 
@@ -1008,66 +1089,95 @@ else if (config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
-        gis(match[1], async (error, result) => {
-            for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
-                var get = got(result[i].url, {https: {rejectUnauthorized: false}});
-                var stream = get.buffer();
-                
-                stream.then(async (image) => {
-                    await message.client.sendMessage(message.jid,image, MessageType.image);
-                });
-            }
+        
+        var img_list = await WhatsAsenaStack.search_image(match[1])
+        await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
+        try {
+          var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img1.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
 
-            message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
-        });
+        try {
+          var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img2.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img3.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img4.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+      
+        try {
+          var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img5.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
     }));
 
-    /*Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.G襤THUB_DESC }, async (message, match) => {
+    /*Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC, usage: 'github phaticusthiccy // github phaticusthiccy/Emacs-Train' }, (async (message, match) => {
+      if (match[1].includes('/')) {
+        var data = await WhatsAsenaStack.github_repos(match[1])
+        var Msg = await WhatsAsenaStack.github_message(config.LANG)
+        if (data.username == undefined) return await message.client.sendMessage(message.jid, Msg.not_found_repo, MessageType.text)
+        var payload = Msg.repo.username + data.username + '\n' +
+          Msg.repo.repo_name + data.repo_name + '\n' +
+          Msg.repo.repo_id + data.repo_id + '\n' +
+          Msg.repo.repo_desc + data.repo_desc + '\n' +
+          Msg.repo.created_at + data.created_at + '\n' +
+          Msg.repo.updated_at + data.updated_at + '\n' +
+          Msg.repo.fork + data.fork == true ? '✅\n' : '❌\n' +
+          Msg.repo.size + data.size + 'KB' + '\n' +
+          Msg.repo.star + data.star + '\n' +
+          Msg.repo.forks + data.forks + '\n' +
+          Msg.repo.watcher + data.watcher + '\n' +
+          Msg.repo.subscribers + data.subscribers + '\n' +
+          Msg.repo.language + data.language + '\n' +
+          Msg.repo.issues + data.issues + '\n' +
+          Msg.repo.has_lisance + data.has_lisance == false ? '❌\n' : '✅\n' +
+          Msg.repo.lisance_key + data.lisance_key + '\n' +
+          Msg.repo.lisance_name + data.lisance_name + '\n' +
+          Msg.repo.branch + data.branch
+        await message.client.sendMessage(massage.jid, payload, MessageType.text)
+      } else {
+        var data = await WhatsAsenaStack.github_user(match[1])
+        var Msg = await WhatsAsenaStack.github_message(config.LANG)
+        if (data.status == false) return await message.client.sendMessage(message.jid, Msg.not_found_user, MassageType.text)
+        var payload = Msg.user.username + data.username + '\n' +
+          Msg.user.name + data.name == 'null' ? '' + '\n' : data.name + '\n' + 
+          Msg.user.biography + data.biography == 'null' ? '' + '\n' : data.biography + '\n' +
+          Msg.user.created_at + data.created_at + '\n' +
+          Msg.user.last_update + data.last_update + '\n' +
+          Msg.user.id + data.id + '\n' +
+          Msg.user.repos + data.repos + '\n' +
+          Msg.user.gists + data.gists + '\n' +
+          Msg.user.location + data.location == 'null' ? '' + '\n' : data.location + '\n' +
+          Msg.user.following + data.following + '\n' +
+          Msg.user.follower + data.follower + '\n' +
+          Msg.user.hireable + data.hireable == 'null' ? Msg.cant_rent + '\n' : Msg.can_rent + '\n'
+          Msg.user.blog + data.blog == false ? '' + '\n' : data.blog + '\n' +
+          Msg.user.twitter + data.twitter == 'null' ? '' + '\n' : data.twitter + '\n' +
+          Msg.user.company + data.company == 'null' ? '' + '\n' : data.company + '\n' +
+          Msg.user.mail + data.mail == 'null' ? '' + '\n' : data.mail
+        var bf = await axios.get(data.image, {responseType:'arraybuffer'})
+        await message.sendMessage(Buffer.from(bf.data), MessageType.image, { caption: payload })
+      }
+    }));*/
 
-        const userName = match[1]
- 
-        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
-
-        await axios
-          .get(`https://videfikri.com/api/github/?username=${userName}`)
-          .then(async (response) => {
-
-            const {
-              hireable,
-              company,
-              profile_pic,
-              username,
-              fullname, 
-              blog, 
-              location,
-              email,
-              public_repository,
-              biografi,
-              following,
-              followers,
-              public_gists,
-              profile_url,
-              last_updated,
-              joined_on,
-            } = response.data.result
-
-            const githubscrap = await axios.get(profile_pic, 
-              {responseType: 'arraybuffer',
-            })
-
-            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOW襤NG}* ${following} \n*${Glang.B襤O}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.G襤ST}* ${public_gists} \n*${Glang.LOCAT襤ON}* ${location} \n*${Glang.MA襤L}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.H襤RE}* ${hireable === "true" ? Glang.H襤RE_TRUE : Glang.H襤RE_FALSE} \n*${Glang.JO襤N}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
-
-            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
-          )
-      },
-    )
-
-    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: false, desc: Slang.LY_DESC }, (async (message, match) => {
+    /*Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: false, desc: Slang.LY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
 
@@ -1078,17 +1188,17 @@ else if (config.WORKTYPE == 'public') {
 
         var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
 
-        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
+        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut , mimetype: Mimetype.png });
 
-    }));
+    }));*/
 
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
-                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
+                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json()); 
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
                     const resp = JSON.parse(ok.body);
-                    await message.reply(`�� *World-Wide Results:*\n�� *Total Cases:* ${resp.cases}\n�� *Total Deaths:* ${resp.deaths}\n�� *Total Recovered:* ${resp.recovered}`);
+                    await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);
  
                 });
 
@@ -1097,14 +1207,14 @@ else if (config.WORKTYPE == 'public') {
             }
 
         }
-        else if (match[1] === "tr" || match[1] === "Tr" || match[1] === "TR" || match[1].includes('turkiye') || match[1].includes('t羹rkiye') || match[1].includes('t羹rk') ) {
+        else if (match[1] === "tr" || match[1] === "Tr" || match[1] === "TR" || match[1].includes('turkiye') || match[1].includes('türkiye') || match[1].includes('türk') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Turkey").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *T羹rkiye 襤癟in Sonu癟lar:*\n� *Toplam Vaka:* ${resp.cases}\n� *G羹nl羹k Hasta:* ${resp.todayCases}\n�堆� *Toplam �l羹:* ${resp.deaths}\n�� *G羹nl羹k �l羹:* ${resp.todayDeaths}\n�� *Toplam 襤yile�en:* ${resp.recovered}\n� *Aktif Vaka:* ${resp.active}\n�� *A�覺r Hasta:* ${resp.critical}\n�妒 *Toplam Test:* ${resp.totalTests}`);
+                    await message.reply(`🇹🇷 *Türkiye İçin Sonuçlar:*\n😷 *Toplam Vaka:* ${resp.cases}\n🏥 *Günlük Hasta:* ${resp.todayCases}\n⚰️ *Toplam Ölü:* ${resp.deaths}\n☠️ *Günlük Ölü:* ${resp.todayDeaths}\n💊 *Toplam İyileşen:* ${resp.recovered}\n😷 *Aktif Vaka:* ${resp.active}\n🆘 *Ağır Hasta:* ${resp.critical}\n🧪 *Toplam Test:* ${resp.totalTests}`);
                 });
             } catch (err) {
-                await message.reply(`Bir Hata Olu�tu, 襤�te Hata : \n${err.message}`, MessageType.text)
+                await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
             }
 
         }
@@ -1112,7 +1222,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/USA").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for USA:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇺🇲 *Datas for USA:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1124,7 +1234,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Germany").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Daten f羹r Deutschland:*\n� *F瓣lle 襤nsgesamt:* ${resp.cases}\n� *T瓣gliche F瓣lle:* ${resp.todayCases}\n�堆� *Totale Todesf瓣lle:* ${resp.deaths}\n�� *T瓣gliche Todesf瓣lle:* ${resp.todayDeaths}\n�� *Insgesamt Wiederhergestellt:* ${resp.recovered}\n� *Aktuelle F瓣lle:* ${resp.active}\n�� *Kritische F瓣lle:* ${resp.critical}\n�妒 *Gesamttests:* ${resp.totalTests}`);
+                    await message.reply(`🇩🇪 *Daten für Deutschland:*\n😷 *Fälle İnsgesamt:* ${resp.cases}\n🏥 *Tägliche Fälle:* ${resp.todayCases}\n⚰️ *Totale Todesfälle:* ${resp.deaths}\n☠️ *Tägliche Todesfälle:* ${resp.todayDeaths}\n💊 *Insgesamt Wiederhergestellt:* ${resp.recovered}\n😷 *Aktuelle Fälle:* ${resp.active}\n🆘 *Kritische Fälle:* ${resp.critical}\n🧪 *Gesamttests:* ${resp.totalTests}`);
 
                 });
 
@@ -1136,7 +1246,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Azerbaijan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Az�rbaycan 羹癟羹n m�lumatlar:*\n� *�mumi Ba� Tutan Hadis�:* ${resp.cases}\n� *G羹nl羹k X�st�:* ${resp.todayCases}\n�堆� *�mumi �l羹m:* ${resp.deaths}\n�� *G羹nl羹k �l羹m:* ${resp.todayDeaths}\n�� *�mumi Sa�alma:* ${resp.recovered}\n� *Aktiv X�st� Say覺:* ${resp.active}\n�� *A�覺r X�st� Say覺:* ${resp.critical}\n�妒 *�mumi Test:* ${resp.totalTests}`);
+                    await message.reply(`🇦🇿 *Azərbaycan üçün məlumatlar:*\n😷 *Ümumi Baş Tutan Hadisə:* ${resp.cases}\n🏥 *Günlük Xəstə:* ${resp.todayCases}\n⚰️ *Ümumi Ölüm:* ${resp.deaths}\n☠️ *Günlük Ölüm:* ${resp.todayDeaths}\n💊 *Ümumi Sağalma:* ${resp.recovered}\n😷 *Aktiv Xəstə Sayı:* ${resp.active}\n🆘 *Ağır Xəstə Sayı:* ${resp.critical}\n🧪 *Ümumi Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1148,7 +1258,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/UK").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for UK:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇬🇧 *Datas for UK:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1156,11 +1266,11 @@ else if (config.WORKTYPE == 'public') {
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         }
-        else if (match[1] === "in" || match[1] === "覺n" || match[1] === "In" || match[1] === "襤n" || match[1] === "襤N" ||  match[1] === "IN" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
+        else if (match[1] === "in" || match[1] === "ın" || match[1] === "In" || match[1] === "İn" || match[1] === "İN" ||  match[1] === "IN" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *鄐冢冗鄐啤中 鄐� 鄐耜凶鄐? 鄐﹤�鄐冗:*\n� *鄐�鄐? 鄐桌冗鄐桌仆鄍?:* ${resp.cases}\n� *鄐舟�鄐兒凶鄐? 鄐桌冗鄐桌仆鄍?:* ${resp.todayCases}\n�堆� *鄐�鄐? 鄐桌�鄐戈�鄐?:* ${resp.deaths}\n�� *鄐啤�鄐? 鄐� 鄐桌�鄐?:* ${resp.todayDeaths}\n�� *鄐�鄐? 鄐眇什鄐擒亢鄐?:* ${resp.recovered}\n� *鄐�鄍�鄐賴今 鄐�鄐?:* ${resp.active}\n�� *鄐�鄐冢�鄐? 鄐桌冗鄐桌仆鄍?:* ${resp.critical}\n�妒 *鄐�鄐? 鄐�鄐詮�鄐?:* ${resp.totalTests}`);
+                    await message.reply(`🇮🇳 *भारत के लिए डेटा:*\n😷 *कुल मामले:* ${resp.cases}\n🏥 *दैनिक मामले:* ${resp.todayCases}\n⚰️ *कुल मौतें:* ${resp.deaths}\n☠️ *रोज की मौत:* ${resp.todayDeaths}\n💊 *कुल बरामद:* ${resp.recovered}\n😷 *एक्टिव केस:* ${resp.active}\n🆘 *गंभीर मामले:* ${resp.critical}\n🧪 *कुल टेस्ट:* ${resp.totalTests}`);
 
                 });
 
@@ -1172,7 +1282,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/China").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for China:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇨🇳 *Datas for China:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1184,7 +1294,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Greece").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Greece:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇬🇷 *Datas for Greece:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1196,7 +1306,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/France").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for France:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇫🇷 *Datas for France:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1208,7 +1318,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Japan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Japan:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇯🇵 *Datas for Japan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
  
@@ -1220,7 +1330,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Kazakhstan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Kazakhstan:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇰🇿 *Datas for Kazakhstan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1232,7 +1342,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Pakistan").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Pakistan:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇵🇰 *Datas for Pakistan:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1244,7 +1354,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Russia").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Russia:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇷🇺 *Datas for Russia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1252,11 +1362,11 @@ else if (config.WORKTYPE == 'public') {
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         } 
-        else if (match[1] === "id" || match[1] === "襤d" || match[1] === "襤D" || match[1] === "覺d" || match[1] === "Id" || match[1] === "ID" || match[1].includes('覺ndonesia') ) {
+        else if (match[1] === "id" || match[1] === "İd" || match[1] === "İD" || match[1] === "ıd" || match[1] === "Id" || match[1] === "ID" || match[1].includes('ındonesia') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Indonesia").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Indonesia:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇮🇩 *Datas for Indonesia:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1268,7 +1378,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Netherlands").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`�� *Datas for Netherlands:*\n� *Total Cases:* ${resp.cases}\n� *Daily Cases:* ${resp.todayCases}\n�堆� *Total Deaths:* ${resp.deaths}\n�� *Daily Deaths:* ${resp.todayDeaths}\n�� *Total Recovered:* ${resp.recovered}\n� *Active Cases:* ${resp.active}\n�� *Critical Cases:* ${resp.critical}\n�妒 *Total Test:* ${resp.totalTests}`);
+                    await message.reply(`🇳🇱 *Datas for Netherlands:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
 
                 });
 
@@ -1283,6 +1393,6 @@ else if (config.WORKTYPE == 'public') {
                 MessageType.text
             );
         }
-    }));*/
+    }));
     
 }
