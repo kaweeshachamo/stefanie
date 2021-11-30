@@ -45,7 +45,7 @@ Neotro.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: ALang.TIKTOk},
 					
 }) //pattern close
   
-  Neotro.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontAddCommandList:true}, async (message, match) => {
+  /*Neotro.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontAddCommandList:true}, async (message, match) => {
 
     const link = match[1]
 
@@ -72,7 +72,7 @@ Neotro.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: ALang.TIKTOk},
 							)
 					})
 					
-}) //pattern close
+})*/ //pattern close
   
 } /* public close*/
 
