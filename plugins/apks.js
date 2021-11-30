@@ -136,9 +136,9 @@ if (Config.WORKTYPE == 'private') {
       await message.sendMessage('💎 *SCREEN RECORDER* 💎\npremium unlocked.\n📌 bit.ly/drkgrabr');
    }));
 
-   Asena.addCommand({pattern: 'tiktok', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   /*Asena.addCommand({pattern: 'tiktok', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
       await message.sendMessage('💎 *TIKTOK MOD* 💎\npremium unlocked.\n📌 bit.ly/drktiktok');
-   }));
+   }));*/
 
    Asena.addCommand({pattern: 'pmath', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
       await message.sendMessage('💎 *PHOTOMATH* 💎\npremium unlocked.\n📌 bit.ly/drkphotomath');
@@ -286,9 +286,9 @@ Asena.addCommand({pattern: 'capcut', fromMe: false, dontAddCommandList: true}, (
       await message.sendMessage('💎 *SCREEN RECORDER* 💎\npremium unlocked.\n📌 bit.ly/drkgrabr');
    }));
 
-   Asena.addCommand({pattern: 'tiktok', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+   /*Asena.addCommand({pattern: 'tiktok', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
       await message.sendMessage('💎 *TIKTOK MOD* 💎\npremium unlocked.\n📌 bit.ly/drktiktok');
-   }));
+   }));*/
 
    Asena.addCommand({pattern: 'pmath', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
       await message.sendMessage('💎 *PHOTOMATH* 💎\npremium unlocked.\n📌 bit.ly/drkphotomath');
